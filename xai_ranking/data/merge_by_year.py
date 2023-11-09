@@ -9,7 +9,7 @@ def merge_by_year(folder_path, save_merged):
     """
     csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
 
-    # dictionary with year as key, list of datasets about that year as value
+    #  dictionary with year as key, list of datasets about that year as value
     dfs_by_year = {}
     for csv_file in csv_files:
         year = csv_file.split('_')[-1][:4]
