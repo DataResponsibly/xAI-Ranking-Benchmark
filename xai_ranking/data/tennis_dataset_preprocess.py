@@ -38,27 +38,28 @@ def process(df, sheet_name):
             adj_columns.append('standing_player2')
         else:
             # adj_columns.append(col + '_' + df_name if df_name not in col.replace("_", "") else col)
-            adj_columns.append(col + '_' + df_name)
+            adj_columns.append(df_name + '__' + col)
 
     df.columns = adj_columns
 
     return df
 
 
-def read_xls():
+def read_xls(excel_file='../../data/external/ATP_data/3.1_ATP_info.xlsx', path_save_csv='../../data/interim/'):
     """
     Reads original excel file with data about tennis players, cleans the data,
-    and saves each worksheet tab to csv file
+    and saves each worksheet tab to csv file in folder with path path_save_csv
     """
-    excel_file = '../../data/external/ATP_data/3.1_ATP_info.xlsx'
     xls = pd.ExcelFile(excel_file)
 
     for sheet_name in xls.sheet_names:
         df_raw = xls.parse(sheet_name)
         df = process(df_raw, sheet_name)
-        csv_file = f'../../data/interim/{sheet_name.replace(" ", "_").lower()}.csv'
-        df.to_csv(csv_file, index=False)
+        csv_file = path_save_csv + f'{sheet_name.replace(" ", "_").lower()}.csv'
+        df.to_csv(csv_file)
 
 
 if __name__=="__main__":
-    read_xls()
+    path_xls_file = '../../data/external/ATP_data/3.1_ATP_info.xlsx'
+    path_save_csv = '../../data/interim/'
+    read_xls(path_xls_file, path_save_csv)
