@@ -1,0 +1,603 @@
+,Label,Score,Score bucket,Feature,Contribution
+0,John Isner,314.00000000000006,314.0,Serve Rating,0.0
+1,John Isner,314.00000000000006,314.0,% 1st Serve,2.5625000000000004
+2,John Isner,314.00000000000006,314.0,% 1st Serve Points Won,8.954166666666666
+3,John Isner,314.00000000000006,314.0,% 2nd Serve Points Won,1.6333333333333333
+4,John Isner,314.00000000000006,314.0,% Service Games Won,11.502083333333331
+5,John Isner,314.00000000000006,314.0,Avg. Aces/ Match,12.352083333333333
+6,John Isner,314.00000000000006,314.0,Avg. Double Faults/Match,0.12083333333333321
+7,Nick Kyrgios,308.1,308.1,Serve Rating,0.0
+8,Nick Kyrgios,308.1,308.1,% 1st Serve,2.2958333333333334
+9,Nick Kyrgios,308.1,308.1,% 1st Serve Points Won,7.883333333333333
+10,Nick Kyrgios,308.1,308.1,% 2nd Serve Points Won,4.106249999999999
+11,Nick Kyrgios,308.1,308.1,% Service Games Won,13.7375
+12,Nick Kyrgios,308.1,308.1,Avg. Aces/ Match,8.45
+13,Nick Kyrgios,308.1,308.1,Avg. Double Faults/Match,-0.47291666666666676
+14,Reilly Opelka,307.0999999999999,307.1,Serve Rating,0.0
+15,Reilly Opelka,307.0999999999999,307.1,% 1st Serve,0.1875
+16,Reilly Opelka,307.0999999999999,307.1,% 1st Serve Points Won,8.4
+17,Reilly Opelka,307.0999999999999,307.1,% 2nd Serve Points Won,5.483333333333335
+18,Reilly Opelka,307.0999999999999,307.1,% Service Games Won,12.037500000000001
+19,Reilly Opelka,307.0999999999999,307.1,Avg. Aces/ Match,8.285416666666666
+20,Reilly Opelka,307.0999999999999,307.1,Avg. Double Faults/Match,0.6062499999999997
+21,Hubert Hurkacz,299.09999999999997,299.1,Serve Rating,0.0
+22,Hubert Hurkacz,299.09999999999997,299.1,% 1st Serve,-1.0875
+23,Hubert Hurkacz,299.09999999999997,299.1,% 1st Serve Points Won,8.568749999999998
+24,Hubert Hurkacz,299.09999999999997,299.1,% 2nd Serve Points Won,3.9541666666666657
+25,Hubert Hurkacz,299.09999999999997,299.1,% Service Games Won,13.954166666666664
+26,Hubert Hurkacz,299.09999999999997,299.1,Avg. Aces/ Match,7.458333333333332
+27,Hubert Hurkacz,299.09999999999997,299.1,Avg. Double Faults/Match,1.1520833333333331
+28,Matteo Berrettini,292.0,292.0,Serve Rating,0.0
+29,Matteo Berrettini,292.0,292.0,% 1st Serve,-0.7083333333333333
+30,Matteo Berrettini,292.0,292.0,% 1st Serve Points Won,10.589583333333332
+31,Matteo Berrettini,292.0,292.0,% 2nd Serve Points Won,0.502083333333333
+32,Matteo Berrettini,292.0,292.0,% Service Games Won,13.37916666666667
+33,Matteo Berrettini,292.0,292.0,Avg. Aces/ Match,8.310416666666667
+34,Matteo Berrettini,292.0,292.0,Avg. Double Faults/Match,0.9270833333333327
+35,Nicolas Jarry,291.8,291.8,Serve Rating,0.0
+36,Nicolas Jarry,291.8,291.8,% 1st Serve,-0.15416666666666667
+37,Nicolas Jarry,291.8,291.8,% 1st Serve Points Won,14.072916666666666
+38,Nicolas Jarry,291.8,291.8,% 2nd Serve Points Won,-2.4416666666666664
+39,Nicolas Jarry,291.8,291.8,% Service Games Won,11.897916666666667
+40,Nicolas Jarry,291.8,291.8,Avg. Aces/ Match,8.10625
+41,Nicolas Jarry,291.8,291.8,Avg. Double Faults/Match,0.5187499999999997
+42,Novak Djokovic,290.7,290.7,Serve Rating,0.0
+43,Novak Djokovic,290.7,290.7,% 1st Serve,0.9249999999999997
+44,Novak Djokovic,290.7,290.7,% 1st Serve Points Won,9.270833333333332
+45,Novak Djokovic,290.7,290.7,% 2nd Serve Points Won,5.889583333333334
+46,Novak Djokovic,290.7,290.7,% Service Games Won,13.34375
+47,Novak Djokovic,290.7,290.7,Avg. Aces/ Match,0.35625
+48,Novak Djokovic,290.7,290.7,Avg. Double Faults/Match,1.2145833333333325
+49,Maxime Cressy,289.3,289.3,Serve Rating,0.0
+50,Maxime Cressy,289.3,289.3,% 1st Serve,-3.687499999999999
+51,Maxime Cressy,289.3,289.3,% 1st Serve Points Won,10.474999999999996
+52,Maxime Cressy,289.3,289.3,% 2nd Serve Points Won,3.8104166666666655
+53,Maxime Cressy,289.3,289.3,% Service Games Won,14.48125
+54,Maxime Cressy,289.3,289.3,Avg. Aces/ Match,11.512500000000001
+55,Maxime Cressy,289.3,289.3,Avg. Double Faults/Match,-6.591666666666667
+56,Ben Shelton,286.59999999999997,286.6,Serve Rating,0.0
+57,Ben Shelton,286.59999999999997,286.6,% 1st Serve,-7.3895833333333325
+58,Ben Shelton,286.59999999999997,286.6,% 1st Serve Points Won,11.956249999999995
+59,Ben Shelton,286.59999999999997,286.6,% 2nd Serve Points Won,3.8479166666666647
+60,Ben Shelton,286.59999999999997,286.6,% Service Games Won,16.35833333333333
+61,Ben Shelton,286.59999999999997,286.6,Avg. Aces/ Match,5.814583333333333
+62,Ben Shelton,286.59999999999997,286.6,Avg. Double Faults/Match,-2.587499999999999
+63,Stefanos Tsitsipas,286.6,286.6,Serve Rating,0.0
+64,Stefanos Tsitsipas,286.6,286.6,% 1st Serve,-1.8020833333333333
+65,Stefanos Tsitsipas,286.6,286.6,% 1st Serve Points Won,9.010416666666666
+66,Stefanos Tsitsipas,286.6,286.6,% 2nd Serve Points Won,5.606249999999999
+67,Stefanos Tsitsipas,286.6,286.6,% Service Games Won,12.283333333333335
+68,Stefanos Tsitsipas,286.6,286.6,Avg. Aces/ Match,2.831249999999999
+69,Stefanos Tsitsipas,286.6,286.6,Avg. Double Faults/Match,1.0708333333333324
+70,Felix Auger-Aliassime,286.1,286.1,Serve Rating,0.0
+71,Felix Auger-Aliassime,286.1,286.1,% 1st Serve,-0.06666666666666665
+72,Felix Auger-Aliassime,286.1,286.1,% 1st Serve Points Won,9.766666666666666
+73,Felix Auger-Aliassime,286.1,286.1,% 2nd Serve Points Won,-1.4374999999999996
+74,Felix Auger-Aliassime,286.1,286.1,% Service Games Won,12.097916666666665
+75,Felix Auger-Aliassime,286.1,286.1,Avg. Aces/ Match,7.7354166666666675
+76,Felix Auger-Aliassime,286.1,286.1,Avg. Double Faults/Match,-1.0958333333333328
+77,Casper Ruud,284.09999999999997,284.1,Serve Rating,0.0
+78,Casper Ruud,284.09999999999997,284.1,% 1st Serve,1.1479166666666654
+79,Casper Ruud,284.09999999999997,284.1,% 1st Serve Points Won,6.508333333333333
+80,Casper Ruud,284.09999999999997,284.1,% 2nd Serve Points Won,6.185416666666665
+81,Casper Ruud,284.09999999999997,284.1,% Service Games Won,11.045833333333329
+82,Casper Ruud,284.09999999999997,284.1,Avg. Aces/ Match,-0.3729166666666667
+83,Casper Ruud,284.09999999999997,284.1,Avg. Double Faults/Match,1.360416666666665
+84,Daniil Medvedev,283.09999999999997,283.1,Serve Rating,0.0
+85,Daniil Medvedev,283.09999999999997,283.1,% 1st Serve,-0.739583333333333
+86,Daniil Medvedev,283.09999999999997,283.1,% 1st Serve Points Won,8.841666666666667
+87,Daniil Medvedev,283.09999999999997,283.1,% 2nd Serve Points Won,0.21041666666666659
+88,Daniil Medvedev,283.09999999999997,283.1,% Service Games Won,12.720833333333337
+89,Daniil Medvedev,283.09999999999997,283.1,Avg. Aces/ Match,4.579166666666666
+90,Daniil Medvedev,283.09999999999997,283.1,Avg. Double Faults/Match,-1.7374999999999992
+91,Taylor Fritz,283.1,283.1,Serve Rating,0.0
+92,Taylor Fritz,283.1,283.1,% 1st Serve,-4.012499999999998
+93,Taylor Fritz,283.1,283.1,% 1st Serve Points Won,8.560416666666665
+94,Taylor Fritz,283.1,283.1,% 2nd Serve Points Won,3.249999999999998
+95,Taylor Fritz,283.1,283.1,% Service Games Won,8.760416666666664
+96,Taylor Fritz,283.1,283.1,Avg. Aces/ Match,6.808333333333332
+97,Taylor Fritz,283.1,283.1,Avg. Double Faults/Match,1.6333333333333326
+98,Brandon Nakashima,283.0,283.0,Serve Rating,0.0
+99,Brandon Nakashima,283.0,283.0,% 1st Serve,-0.558333333333333
+100,Brandon Nakashima,283.0,283.0,% 1st Serve Points Won,6.304166666666668
+101,Brandon Nakashima,283.0,283.0,% 2nd Serve Points Won,4.216666666666665
+102,Brandon Nakashima,283.0,283.0,% Service Games Won,9.04583333333333
+103,Brandon Nakashima,283.0,283.0,Avg. Aces/ Match,1.7604166666666656
+104,Brandon Nakashima,283.0,283.0,Avg. Double Faults/Match,2.2312499999999993
+105,Marin Cilic,282.5,282.5,Serve Rating,0.0
+106,Marin Cilic,282.5,282.5,% 1st Serve,-8.566666666666668
+107,Marin Cilic,282.5,282.5,% 1st Serve Points Won,11.454166666666666
+108,Marin Cilic,282.5,282.5,% 2nd Serve Points Won,1.1666666666666659
+109,Marin Cilic,282.5,282.5,% Service Games Won,10.341666666666667
+110,Marin Cilic,282.5,282.5,Avg. Aces/ Match,8.077083333333334
+111,Marin Cilic,282.5,282.5,Avg. Double Faults/Match,-0.4729166666666663
+112,Arthur Rinderknech,281.2,281.2,Serve Rating,0.0
+113,Arthur Rinderknech,281.2,281.2,% 1st Serve,1.4687499999999987
+114,Arthur Rinderknech,281.2,281.2,% 1st Serve Points Won,6.30625
+115,Arthur Rinderknech,281.2,281.2,% 2nd Serve Points Won,-3.1312499999999988
+116,Arthur Rinderknech,281.2,281.2,% Service Games Won,8.512500000000001
+117,Arthur Rinderknech,281.2,281.2,Avg. Aces/ Match,5.577083333333333
+118,Arthur Rinderknech,281.2,281.2,Avg. Double Faults/Match,2.2666666666666657
+119,Thiago Monteiro,281.00000000000006,281.0,Serve Rating,0.0
+120,Thiago Monteiro,281.00000000000006,281.0,% 1st Serve,2.0374999999999996
+121,Thiago Monteiro,281.00000000000006,281.0,% 1st Serve Points Won,2.7208333333333328
+122,Thiago Monteiro,281.00000000000006,281.0,% 2nd Serve Points Won,6.15625
+123,Thiago Monteiro,281.00000000000006,281.0,% Service Games Won,5.793749999999999
+124,Thiago Monteiro,281.00000000000006,281.0,Avg. Aces/ Match,0.46250000000000013
+125,Thiago Monteiro,281.00000000000006,281.0,Avg. Double Faults/Match,2.829166666666664
+126,Alexander Zverev,280.49999999999994,280.5,Serve Rating,0.0
+127,Alexander Zverev,280.49999999999994,280.5,% 1st Serve,8.4625
+128,Alexander Zverev,280.49999999999994,280.5,% 1st Serve Points Won,5.799999999999999
+129,Alexander Zverev,280.49999999999994,280.5,% 2nd Serve Points Won,-4.412499999999998
+130,Alexander Zverev,280.49999999999994,280.5,% Service Games Won,8.510416666666668
+131,Alexander Zverev,280.49999999999994,280.5,Avg. Aces/ Match,1.5708333333333333
+132,Alexander Zverev,280.49999999999994,280.5,Avg. Double Faults/Match,-0.9312499999999995
+133,Andrey Rublev,280.09999999999997,280.1,Serve Rating,0.0
+134,Andrey Rublev,280.09999999999997,280.1,% 1st Serve,-6.808333333333335
+135,Andrey Rublev,280.09999999999997,280.1,% 1st Serve Points Won,9.06666666666667
+136,Andrey Rublev,280.09999999999997,280.1,% 2nd Serve Points Won,1.5499999999999992
+137,Andrey Rublev,280.09999999999997,280.1,% Service Games Won,9.595833333333333
+138,Andrey Rublev,280.09999999999997,280.1,Avg. Aces/ Match,2.4999999999999996
+139,Andrey Rublev,280.09999999999997,280.1,Avg. Double Faults/Match,1.9708333333333328
+140,Denis Shapovalov,279.2,279.2,Serve Rating,0.0
+141,Denis Shapovalov,279.2,279.2,% 1st Serve,-6.793750000000001
+142,Denis Shapovalov,279.2,279.2,% 1st Serve Points Won,9.31875
+143,Denis Shapovalov,279.2,279.2,% 2nd Serve Points Won,4.0124999999999975
+144,Denis Shapovalov,279.2,279.2,% Service Games Won,10.160416666666665
+145,Denis Shapovalov,279.2,279.2,Avg. Aces/ Match,3.831249999999998
+146,Denis Shapovalov,279.2,279.2,Avg. Double Faults/Match,-3.6541666666666655
+147,Carlos Alcaraz,278.69999999999993,278.7,Serve Rating,0.0
+148,Carlos Alcaraz,278.69999999999993,278.7,% 1st Serve,-0.5020833333333333
+149,Carlos Alcaraz,278.69999999999993,278.7,% 1st Serve Points Won,1.3041666666666667
+150,Carlos Alcaraz,278.69999999999993,278.7,% 2nd Serve Points Won,8.316666666666668
+151,Carlos Alcaraz,278.69999999999993,278.7,% Service Games Won,9.38125
+152,Carlos Alcaraz,278.69999999999993,278.7,Avg. Aces/ Match,-3.872916666666665
+153,Carlos Alcaraz,278.69999999999993,278.7,Avg. Double Faults/Match,1.2479166666666648
+154,Pablo Carreno Busta,278.5,278.5,Serve Rating,0.0
+155,Pablo Carreno Busta,278.5,278.5,% 1st Serve,0.5979166666666662
+156,Pablo Carreno Busta,278.5,278.5,% 1st Serve Points Won,-0.6625000000000001
+157,Pablo Carreno Busta,278.5,278.5,% 2nd Serve Points Won,9.995833333333332
+158,Pablo Carreno Busta,278.5,278.5,% Service Games Won,6.495833333333335
+159,Pablo Carreno Busta,278.5,278.5,Avg. Aces/ Match,-3.831249999999998
+160,Pablo Carreno Busta,278.5,278.5,Avg. Double Faults/Match,2.279166666666665
+161,Rafael Nadal,277.9,277.9,Serve Rating,0.0
+162,Rafael Nadal,277.9,277.9,% 1st Serve,-2.2249999999999996
+163,Rafael Nadal,277.9,277.9,% 1st Serve Points Won,3.6854166666666646
+164,Rafael Nadal,277.9,277.9,% 2nd Serve Points Won,7.389583333333333
+165,Rafael Nadal,277.9,277.9,% Service Games Won,8.160416666666666
+166,Rafael Nadal,277.9,277.9,Avg. Aces/ Match,-2.3270833333333325
+167,Rafael Nadal,277.9,277.9,Avg. Double Faults/Match,-0.9333333333333331
+168,Borna Coric,276.8,276.8,Serve Rating,0.0
+169,Borna Coric,276.8,276.8,% 1st Serve,-6.8687499999999995
+170,Borna Coric,276.8,276.8,% 1st Serve Points Won,4.7749999999999995
+171,Borna Coric,276.8,276.8,% 2nd Serve Points Won,5.481249999999998
+172,Borna Coric,276.8,276.8,% Service Games Won,6.118749999999998
+173,Borna Coric,276.8,276.8,Avg. Aces/ Match,1.00625
+174,Borna Coric,276.8,276.8,Avg. Double Faults/Match,2.237499999999999
+175,Steve Johnson,276.2,276.2,Serve Rating,0.0
+176,Steve Johnson,276.2,276.2,% 1st Serve,-14.868750000000004
+177,Steve Johnson,276.2,276.2,% 1st Serve Points Won,10.9
+178,Steve Johnson,276.2,276.2,% 2nd Serve Points Won,3.3895833333333316
+179,Steve Johnson,276.2,276.2,% Service Games Won,8.002083333333335
+180,Steve Johnson,276.2,276.2,Avg. Aces/ Match,5.343749999999999
+181,Steve Johnson,276.2,276.2,Avg. Double Faults/Match,-1.0166666666666662
+182,Lorenzo Sonego,275.7,275.7,Serve Rating,0.0
+183,Lorenzo Sonego,275.7,275.7,% 1st Serve,3.658333333333332
+184,Lorenzo Sonego,275.7,275.7,% 1st Serve Points Won,1.375
+185,Lorenzo Sonego,275.7,275.7,% 2nd Serve Points Won,-0.27708333333333335
+186,Lorenzo Sonego,275.7,275.7,% Service Games Won,4.0124999999999975
+187,Lorenzo Sonego,275.7,275.7,Avg. Aces/ Match,-0.3791666666666669
+188,Lorenzo Sonego,275.7,275.7,Avg. Double Faults/Match,2.360416666666665
+189,Karen Khachanov,275.4,275.4,Serve Rating,0.0
+190,Karen Khachanov,275.4,275.4,% 1st Serve,-3.75
+191,Karen Khachanov,275.4,275.4,% 1st Serve Points Won,3.868749999999999
+192,Karen Khachanov,275.4,275.4,% 2nd Serve Points Won,1.147916666666666
+193,Karen Khachanov,275.4,275.4,% Service Games Won,5.106249999999998
+194,Karen Khachanov,275.4,275.4,Avg. Aces/ Match,2.422916666666666
+195,Karen Khachanov,275.4,275.4,Avg. Double Faults/Match,0.9541666666666659
+196,Jack Draper,275.09999999999997,275.1,Serve Rating,0.0
+197,Jack Draper,275.09999999999997,275.1,% 1st Serve,-12.147916666666662
+198,Jack Draper,275.09999999999997,275.1,% 1st Serve Points Won,8.14375
+199,Jack Draper,275.09999999999997,275.1,% 2nd Serve Points Won,0.4895833333333331
+200,Jack Draper,275.09999999999997,275.1,% Service Games Won,9.637499999999998
+201,Jack Draper,275.09999999999997,275.1,Avg. Aces/ Match,2.7187499999999996
+202,Jack Draper,275.09999999999997,275.1,Avg. Double Faults/Match,-0.09166666666666667
+203,Roberto Bautista Agut,274.6,274.6,Serve Rating,0.0
+204,Roberto Bautista Agut,274.6,274.6,% 1st Serve,-0.35624999999999984
+205,Roberto Bautista Agut,274.6,274.6,% 1st Serve Points Won,1.0041666666666667
+206,Roberto Bautista Agut,274.6,274.6,% 2nd Serve Points Won,5.070833333333331
+207,Roberto Bautista Agut,274.6,274.6,% Service Games Won,5.74375
+208,Roberto Bautista Agut,274.6,274.6,Avg. Aces/ Match,-6.033333333333331
+209,Roberto Bautista Agut,274.6,274.6,Avg. Double Faults/Match,2.320833333333332
+210,Grigor Dimitrov,274.3,274.3,Serve Rating,0.0
+211,Grigor Dimitrov,274.3,274.3,% 1st Serve,-5.9
+212,Grigor Dimitrov,274.3,274.3,% 1st Serve Points Won,7.285416666666667
+213,Grigor Dimitrov,274.3,274.3,% 2nd Serve Points Won,1.152083333333333
+214,Grigor Dimitrov,274.3,274.3,% Service Games Won,5.397916666666665
+215,Grigor Dimitrov,274.3,274.3,Avg. Aces/ Match,-1.6312499999999999
+216,Grigor Dimitrov,274.3,274.3,Avg. Double Faults/Match,0.445833333333333
+217,Benjamin Bonzi,273.59999999999997,273.6,Serve Rating,0.0
+218,Benjamin Bonzi,273.59999999999997,273.6,% 1st Serve,-10.412499999999998
+219,Benjamin Bonzi,273.59999999999997,273.6,% 1st Serve Points Won,5.18125
+220,Benjamin Bonzi,273.59999999999997,273.6,% 2nd Serve Points Won,3.8374999999999995
+221,Benjamin Bonzi,273.59999999999997,273.6,% Service Games Won,6.985416666666666
+222,Benjamin Bonzi,273.59999999999997,273.6,Avg. Aces/ Match,-0.9541666666666663
+223,Benjamin Bonzi,273.59999999999997,273.6,Avg. Double Faults/Match,1.112499999999999
+224,Holger Rune,273.3,273.3,Serve Rating,0.0
+225,Holger Rune,273.3,273.3,% 1st Serve,-3.9437499999999988
+226,Holger Rune,273.3,273.3,% 1st Serve Points Won,2.03125
+227,Holger Rune,273.3,273.3,% 2nd Serve Points Won,3.935416666666665
+228,Holger Rune,273.3,273.3,% Service Games Won,7.054166666666665
+229,Holger Rune,273.3,273.3,Avg. Aces/ Match,-3.616666666666665
+230,Holger Rune,273.3,273.3,Avg. Double Faults/Match,-0.7104166666666663
+231,Jannik Sinner,272.40000000000003,272.4,Serve Rating,0.0
+232,Jannik Sinner,272.40000000000003,272.4,% 1st Serve,-13.54583333333334
+233,Jannik Sinner,272.40000000000003,272.4,% 1st Serve Points Won,6.412499999999999
+234,Jannik Sinner,272.40000000000003,272.4,% 2nd Serve Points Won,4.014583333333332
+235,Jannik Sinner,272.40000000000003,272.4,% Service Games Won,6.970833333333333
+236,Jannik Sinner,272.40000000000003,272.4,Avg. Aces/ Match,-0.5458333333333334
+237,Jannik Sinner,272.40000000000003,272.4,Avg. Double Faults/Match,0.4437499999999997
+238,Jan-Lennard Struff,271.9,271.9,Serve Rating,0.0
+239,Jan-Lennard Struff,271.9,271.9,% 1st Serve,-15.245833333333337
+240,Jan-Lennard Struff,271.9,271.9,% 1st Serve Points Won,8.008333333333335
+241,Jan-Lennard Struff,271.9,271.9,% 2nd Serve Points Won,1.5020833333333325
+242,Jan-Lennard Struff,271.9,271.9,% Service Games Won,3.7208333333333323
+243,Jan-Lennard Struff,271.9,271.9,Avg. Aces/ Match,5.914583333333333
+244,Jan-Lennard Struff,271.9,271.9,Avg. Double Faults/Match,-1.1499999999999995
+245,Cameron Norrie,271.20000000000005,271.2,Serve Rating,0.0
+246,Cameron Norrie,271.20000000000005,271.2,% 1st Serve,-1.5687499999999996
+247,Cameron Norrie,271.20000000000005,271.2,% 1st Serve Points Won,0.9749999999999999
+248,Cameron Norrie,271.20000000000005,271.2,% 2nd Serve Points Won,0.6833333333333335
+249,Cameron Norrie,271.20000000000005,271.2,% Service Games Won,3.3124999999999982
+250,Cameron Norrie,271.20000000000005,271.2,Avg. Aces/ Match,-3.4583333333333317
+251,Cameron Norrie,271.20000000000005,271.2,Avg. Double Faults/Match,1.8062499999999995
+252,Frances Tiafoe,270.29999999999995,270.3,Serve Rating,0.0
+253,Frances Tiafoe,270.29999999999995,270.3,% 1st Serve,-14.789583333333335
+254,Frances Tiafoe,270.29999999999995,270.3,% 1st Serve Points Won,5.222916666666665
+255,Frances Tiafoe,270.29999999999995,270.3,% 2nd Serve Points Won,2.0124999999999997
+256,Frances Tiafoe,270.29999999999995,270.3,% Service Games Won,3.8479166666666664
+257,Frances Tiafoe,270.29999999999995,270.3,Avg. Aces/ Match,3.204166666666666
+258,Frances Tiafoe,270.29999999999995,270.3,Avg. Double Faults/Match,1.2520833333333317
+259,Tallon Griekspoor,270.0,270.0,Serve Rating,0.0
+260,Tallon Griekspoor,270.0,270.0,% 1st Serve,-6.868750000000001
+261,Tallon Griekspoor,270.0,270.0,% 1st Serve Points Won,2.7979166666666666
+262,Tallon Griekspoor,270.0,270.0,% 2nd Serve Points Won,0.7999999999999995
+263,Tallon Griekspoor,270.0,270.0,% Service Games Won,2.2854166666666664
+264,Tallon Griekspoor,270.0,270.0,Avg. Aces/ Match,0.8312499999999999
+265,Tallon Griekspoor,270.0,270.0,Avg. Double Faults/Match,-0.09583333333333334
+266,Miomir Kecmanovic,268.7,268.7,Serve Rating,0.0
+267,Miomir Kecmanovic,268.7,268.7,% 1st Serve,-5.5562499999999995
+268,Miomir Kecmanovic,268.7,268.7,% 1st Serve Points Won,-2.7270833333333337
+269,Miomir Kecmanovic,268.7,268.7,% 2nd Serve Points Won,8.697916666666668
+270,Miomir Kecmanovic,268.7,268.7,% Service Games Won,0.3437500000000002
+271,Miomir Kecmanovic,268.7,268.7,Avg. Aces/ Match,-4.964583333333329
+272,Miomir Kecmanovic,268.7,268.7,Avg. Double Faults/Match,2.956249999999998
+273,Alexander Bublik,268.7,268.7,Serve Rating,0.0
+274,Alexander Bublik,268.7,268.7,% 1st Serve,-11.266666666666662
+275,Alexander Bublik,268.7,268.7,% 1st Serve Points Won,13.287499999999994
+276,Alexander Bublik,268.7,268.7,% 2nd Serve Points Won,-11.599999999999996
+277,Alexander Bublik,268.7,268.7,% Service Games Won,2.5416666666666665
+278,Alexander Bublik,268.7,268.7,Avg. Aces/ Match,11.30208333333333
+279,Alexander Bublik,268.7,268.7,Avg. Double Faults/Match,-5.514583333333329
+280,Adrian Mannarino,268.2,268.2,Serve Rating,0.0
+281,Adrian Mannarino,268.2,268.2,% 1st Serve,-10.218749999999995
+282,Adrian Mannarino,268.2,268.2,% 1st Serve Points Won,0.0916666666666667
+283,Adrian Mannarino,268.2,268.2,% 2nd Serve Points Won,7.104166666666667
+284,Adrian Mannarino,268.2,268.2,% Service Games Won,0.40416666666666673
+285,Adrian Mannarino,268.2,268.2,Avg. Aces/ Match,-2.2354166666666666
+286,Adrian Mannarino,268.2,268.2,Avg. Double Faults/Match,1.6041666666666652
+287,Lorenzo Musetti,267.6,267.6,Serve Rating,0.0
+288,Lorenzo Musetti,267.6,267.6,% 1st Serve,-2.4791666666666647
+289,Lorenzo Musetti,267.6,267.6,% 1st Serve Points Won,-2.5104166666666656
+290,Lorenzo Musetti,267.6,267.6,% 2nd Serve Points Won,5.739583333333335
+291,Lorenzo Musetti,267.6,267.6,% Service Games Won,-1.5145833333333332
+292,Lorenzo Musetti,267.6,267.6,Avg. Aces/ Match,-5.435416666666665
+293,Lorenzo Musetti,267.6,267.6,Avg. Double Faults/Match,1.9499999999999993
+294,Sebastian Korda,267.1,267.1,Serve Rating,0.0
+295,Sebastian Korda,267.1,267.1,% 1st Serve,-5.697916666666666
+296,Sebastian Korda,267.1,267.1,% 1st Serve Points Won,-0.58125
+297,Sebastian Korda,267.1,267.1,% 2nd Serve Points Won,-0.14166666666666666
+298,Sebastian Korda,267.1,267.1,% Service Games Won,1.01875
+299,Sebastian Korda,267.1,267.1,Avg. Aces/ Match,-1.235416666666666
+300,Sebastian Korda,267.1,267.1,Avg. Double Faults/Match,1.3874999999999988
+301,Andy Murray,266.8,266.8,Serve Rating,0.0
+302,Andy Murray,266.8,266.8,% 1st Serve,-10.793750000000001
+303,Andy Murray,266.8,266.8,% 1st Serve Points Won,6.1291666666666655
+304,Andy Murray,266.8,266.8,% 2nd Serve Points Won,-2.0229166666666667
+305,Andy Murray,266.8,266.8,% Service Games Won,-0.33958333333333335
+306,Andy Murray,266.8,266.8,Avg. Aces/ Match,0.05416666666666668
+307,Andy Murray,266.8,266.8,Avg. Double Faults/Match,0.7229166666666658
+308,Oscar Otte,266.4,266.4,Serve Rating,0.0
+309,Oscar Otte,266.4,266.4,% 1st Serve,-16.091666666666672
+310,Oscar Otte,266.4,266.4,% 1st Serve Points Won,9.581249999999997
+311,Oscar Otte,266.4,266.4,% 2nd Serve Points Won,-3.112499999999999
+312,Oscar Otte,266.4,266.4,% Service Games Won,1.264583333333333
+313,Oscar Otte,266.4,266.4,Avg. Aces/ Match,3.0291666666666663
+314,Oscar Otte,266.4,266.4,Avg. Double Faults/Match,-1.9208333333333334
+315,Laslo Djere,266.4,266.4,Serve Rating,0.0
+316,Laslo Djere,266.4,266.4,% 1st Serve,-8.72291666666667
+317,Laslo Djere,266.4,266.4,% 1st Serve Points Won,3.297916666666665
+318,Laslo Djere,266.4,266.4,% 2nd Serve Points Won,-2.5145833333333325
+319,Laslo Djere,266.4,266.4,% Service Games Won,2.5729166666666665
+320,Laslo Djere,266.4,266.4,Avg. Aces/ Match,-0.6583333333333328
+321,Laslo Djere,266.4,266.4,Avg. Double Faults/Match,-1.2249999999999988
+322,Daniel Evans,265.6,265.6,Serve Rating,0.0
+323,Daniel Evans,265.6,265.6,% 1st Serve,-7.5479166666666675
+324,Daniel Evans,265.6,265.6,% 1st Serve Points Won,1.3166666666666662
+325,Daniel Evans,265.6,265.6,% 2nd Serve Points Won,1.7291666666666654
+326,Daniel Evans,265.6,265.6,% Service Games Won,-1.9020833333333322
+327,Daniel Evans,265.6,265.6,Avg. Aces/ Match,-4.408333333333331
+328,Daniel Evans,265.6,265.6,Avg. Double Faults/Match,1.5624999999999993
+329,Tommy Paul,265.5,265.5,Serve Rating,0.0
+330,Tommy Paul,265.5,265.5,% 1st Serve,-7.858333333333337
+331,Tommy Paul,265.5,265.5,% 1st Serve Points Won,-0.07499999999999998
+332,Tommy Paul,265.5,265.5,% 2nd Serve Points Won,1.5583333333333331
+333,Tommy Paul,265.5,265.5,% Service Games Won,0.03333333333333337
+334,Tommy Paul,265.5,265.5,Avg. Aces/ Match,-5.112499999999997
+335,Tommy Paul,265.5,265.5,Avg. Double Faults/Match,1.2041666666666653
+336,Emil Ruusuvuori,265.3,265.3,Serve Rating,0.0
+337,Emil Ruusuvuori,265.3,265.3,% 1st Serve,0.8124999999999991
+338,Emil Ruusuvuori,265.3,265.3,% 1st Serve Points Won,-2.9500000000000006
+339,Emil Ruusuvuori,265.3,265.3,% 2nd Serve Points Won,0.43541666666666656
+340,Emil Ruusuvuori,265.3,265.3,% Service Games Won,-3.852083333333332
+341,Emil Ruusuvuori,265.3,265.3,Avg. Aces/ Match,-5.69791666666667
+342,Emil Ruusuvuori,265.3,265.3,Avg. Double Faults/Match,0.002083333333333333
+343,Dominic Thiem,265.1,265.1,Serve Rating,0.0
+344,Dominic Thiem,265.1,265.1,% 1st Serve,-5.704166666666664
+345,Dominic Thiem,265.1,265.1,% 1st Serve Points Won,-4.249999999999997
+346,Dominic Thiem,265.1,265.1,% 2nd Serve Points Won,4.733333333333331
+347,Dominic Thiem,265.1,265.1,% Service Games Won,-3.9937499999999995
+348,Dominic Thiem,265.1,265.1,Avg. Aces/ Match,-4.664583333333331
+349,Dominic Thiem,265.1,265.1,Avg. Double Faults/Match,1.629166666666666
+350,Mackenzie McDonald,264.7,264.7,Serve Rating,0.0
+351,Mackenzie McDonald,264.7,264.7,% 1st Serve,-2.5749999999999975
+352,Mackenzie McDonald,264.7,264.7,% 1st Serve Points Won,-4.299999999999997
+353,Mackenzie McDonald,264.7,264.7,% 2nd Serve Points Won,-0.3208333333333333
+354,Mackenzie McDonald,264.7,264.7,% Service Games Won,-5.006249999999997
+355,Mackenzie McDonald,264.7,264.7,Avg. Aces/ Match,-3.014583333333332
+356,Mackenzie McDonald,264.7,264.7,Avg. Double Faults/Match,1.9666666666666661
+357,Ilya Ivashka,264.2,264.2,Serve Rating,0.0
+358,Ilya Ivashka,264.2,264.2,% 1st Serve,-5.141666666666662
+359,Ilya Ivashka,264.2,264.2,% 1st Serve Points Won,-2.3479166666666655
+360,Ilya Ivashka,264.2,264.2,% 2nd Serve Points Won,-1.6229166666666652
+361,Ilya Ivashka,264.2,264.2,% Service Games Won,-1.3937499999999998
+362,Ilya Ivashka,264.2,264.2,Avg. Aces/ Match,-4.656249999999996
+363,Ilya Ivashka,264.2,264.2,Avg. Double Faults/Match,0.9124999999999988
+364,Yoshihito Nishioka,263.9,263.9,Serve Rating,0.0
+365,Yoshihito Nishioka,263.9,263.9,% 1st Serve,1.4499999999999988
+366,Yoshihito Nishioka,263.9,263.9,% 1st Serve Points Won,-13.118749999999999
+367,Yoshihito Nishioka,263.9,263.9,% 2nd Serve Points Won,8.587499999999999
+368,Yoshihito Nishioka,263.9,263.9,% Service Games Won,-7.406250000000002
+369,Yoshihito Nishioka,263.9,263.9,Avg. Aces/ Match,-8.45625
+370,Yoshihito Nishioka,263.9,263.9,Avg. Double Faults/Match,3.693749999999997
+371,Filip Krajinovic,263.7,263.7,Serve Rating,0.0
+372,Filip Krajinovic,263.7,263.7,% 1st Serve,-4.70208333333333
+373,Filip Krajinovic,263.7,263.7,% 1st Serve Points Won,-5.2833333333333306
+374,Filip Krajinovic,263.7,263.7,% 2nd Serve Points Won,2.610416666666665
+375,Filip Krajinovic,263.7,263.7,% Service Games Won,-5.760416666666664
+376,Filip Krajinovic,263.7,263.7,Avg. Aces/ Match,-6.010416666666664
+377,Filip Krajinovic,263.7,263.7,Avg. Double Faults/Match,1.895833333333333
+378,Alex Molcan,263.70000000000005,263.7,Serve Rating,0.0
+379,Alex Molcan,263.70000000000005,263.7,% 1st Serve,-1.949999999999999
+380,Alex Molcan,263.70000000000005,263.7,% 1st Serve Points Won,-7.520833333333332
+381,Alex Molcan,263.70000000000005,263.7,% 2nd Serve Points Won,4.304166666666664
+382,Alex Molcan,263.70000000000005,263.7,% Service Games Won,-6.7250000000000005
+383,Alex Molcan,263.70000000000005,263.7,Avg. Aces/ Match,-6.195833333333333
+384,Alex Molcan,263.70000000000005,263.7,Avg. Double Faults/Match,1.8374999999999997
+385,Botic van de Zandschulp,263.00000000000006,263.0,Serve Rating,0.0
+386,Botic van de Zandschulp,263.00000000000006,263.0,% 1st Serve,-5.802083333333332
+387,Botic van de Zandschulp,263.00000000000006,263.0,% 1st Serve Points Won,0.21875000000000008
+388,Botic van de Zandschulp,263.00000000000006,263.0,% 2nd Serve Points Won,-5.279166666666665
+389,Botic van de Zandschulp,263.00000000000006,263.0,% Service Games Won,-5.012499999999996
+390,Botic van de Zandschulp,263.00000000000006,263.0,Avg. Aces/ Match,-0.8937499999999996
+391,Botic van de Zandschulp,263.00000000000006,263.0,Avg. Double Faults/Match,-1.4812499999999982
+392,Marcos Giron,262.7,262.7,Serve Rating,0.0
+393,Marcos Giron,262.7,262.7,% 1st Serve,-10.668749999999994
+394,Marcos Giron,262.7,262.7,% 1st Serve Points Won,-2.114583333333333
+395,Marcos Giron,262.7,262.7,% 2nd Serve Points Won,1.3062499999999988
+396,Marcos Giron,262.7,262.7,% Service Games Won,-6.920833333333336
+397,Marcos Giron,262.7,262.7,Avg. Aces/ Match,-3.8499999999999974
+398,Marcos Giron,262.7,262.7,Avg. Double Faults/Match,2.997916666666665
+399,Sebastian Baez,262.5,262.5,Serve Rating,0.0
+400,Sebastian Baez,262.5,262.5,% 1st Serve,10.210416666666664
+401,Sebastian Baez,262.5,262.5,% 1st Serve Points Won,-14.235416666666667
+402,Sebastian Baez,262.5,262.5,% 2nd Serve Points Won,2.924999999999999
+403,Sebastian Baez,262.5,262.5,% Service Games Won,-11.054166666666665
+404,Sebastian Baez,262.5,262.5,Avg. Aces/ Match,-9.937499999999996
+405,Sebastian Baez,262.5,262.5,Avg. Double Faults/Match,1.8416666666666663
+406,Marton Fucsovics,261.7,261.7,Serve Rating,0.0
+407,Marton Fucsovics,261.7,261.7,% 1st Serve,-10.149999999999999
+408,Marton Fucsovics,261.7,261.7,% 1st Serve Points Won,-2.510416666666665
+409,Marton Fucsovics,261.7,261.7,% 2nd Serve Points Won,1.2791666666666652
+410,Marton Fucsovics,261.7,261.7,% Service Games Won,-3.574999999999998
+411,Marton Fucsovics,261.7,261.7,Avg. Aces/ Match,-5.039583333333332
+412,Marton Fucsovics,261.7,261.7,Avg. Double Faults/Match,-1.254166666666665
+413,Ugo Humbert,261.2,261.2,Serve Rating,0.0
+414,Ugo Humbert,261.2,261.2,% 1st Serve,-5.422916666666665
+415,Ugo Humbert,261.2,261.2,% 1st Serve Points Won,-6.6250000000000036
+416,Ugo Humbert,261.2,261.2,% 2nd Serve Points Won,-0.3437499999999999
+417,Ugo Humbert,261.2,261.2,% Service Games Won,-7.793750000000002
+418,Ugo Humbert,261.2,261.2,Avg. Aces/ Match,-3.1770833333333326
+419,Ugo Humbert,261.2,261.2,Avg. Double Faults/Match,1.1124999999999987
+420,Richard Gasquet,260.90000000000003,260.9,Serve Rating,0.0
+421,Richard Gasquet,260.90000000000003,260.9,% 1st Serve,-14.72083333333333
+422,Richard Gasquet,260.90000000000003,260.9,% 1st Serve Points Won,-0.7770833333333335
+423,Richard Gasquet,260.90000000000003,260.9,% 2nd Serve Points Won,0.9708333333333327
+424,Richard Gasquet,260.90000000000003,260.9,% Service Games Won,-3.9270833333333313
+425,Richard Gasquet,260.90000000000003,260.9,Avg. Aces/ Match,-3.6874999999999987
+426,Richard Gasquet,260.90000000000003,260.9,Avg. Double Faults/Match,-1.1083333333333323
+427,Jenson Brooksby,260.8,260.8,Serve Rating,0.0
+428,Jenson Brooksby,260.8,260.8,% 1st Serve,-1.60625
+429,Jenson Brooksby,260.8,260.8,% 1st Serve Points Won,-10.154166666666667
+430,Jenson Brooksby,260.8,260.8,% 2nd Serve Points Won,2.7895833333333315
+431,Jenson Brooksby,260.8,260.8,% Service Games Won,-10.364583333333334
+432,Jenson Brooksby,260.8,260.8,Avg. Aces/ Match,-8.077083333333334
+433,Jenson Brooksby,260.8,260.8,Avg. Double Faults/Match,3.1624999999999983
+434,Alex de Minaur,260.7,260.7,Serve Rating,0.0
+435,Alex de Minaur,260.7,260.7,% 1st Serve,-13.160416666666665
+436,Alex de Minaur,260.7,260.7,% 1st Serve Points Won,-4.956249999999997
+437,Alex de Minaur,260.7,260.7,% 2nd Serve Points Won,2.6666666666666656
+438,Alex de Minaur,260.7,260.7,% Service Games Won,-4.897916666666666
+439,Alex de Minaur,260.7,260.7,Avg. Aces/ Match,-6.61875
+440,Alex de Minaur,260.7,260.7,Avg. Double Faults/Match,1.7166666666666657
+441,Jiri Lehecka,260.50000000000006,260.5,Serve Rating,0.0
+442,Jiri Lehecka,260.50000000000006,260.5,% 1st Serve,-3.197916666666665
+443,Jiri Lehecka,260.50000000000006,260.5,% 1st Serve Points Won,-8.687499999999996
+444,Jiri Lehecka,260.50000000000006,260.5,% 2nd Serve Points Won,-0.5729166666666664
+445,Jiri Lehecka,260.50000000000006,260.5,% Service Games Won,-10.34375
+446,Jiri Lehecka,260.50000000000006,260.5,Avg. Aces/ Match,-4.139583333333331
+447,Jiri Lehecka,260.50000000000006,260.5,Avg. Double Faults/Match,0.6916666666666661
+448,J.J. Wolf,259.9,259.9,Serve Rating,0.0
+449,J.J. Wolf,259.9,259.9,% 1st Serve,-12.431249999999995
+450,J.J. Wolf,259.9,259.9,% 1st Serve Points Won,-0.9187500000000003
+451,J.J. Wolf,259.9,259.9,% 2nd Serve Points Won,-4.312499999999998
+452,J.J. Wolf,259.9,259.9,% Service Games Won,-8.502083333333339
+453,J.J. Wolf,259.9,259.9,Avg. Aces/ Match,-1.0208333333333333
+454,J.J. Wolf,259.9,259.9,Avg. Double Faults/Match,-0.06458333333333333
+455,Alejandro Davidovich Fokina,259.8,259.8,Serve Rating,0.0
+456,Alejandro Davidovich Fokina,259.8,259.8,% 1st Serve,0.9395833333333328
+457,Alejandro Davidovich Fokina,259.8,259.8,% 1st Serve Points Won,-11.837499999999997
+458,Alejandro Davidovich Fokina,259.8,259.8,% 2nd Serve Points Won,2.231249999999999
+459,Alejandro Davidovich Fokina,259.8,259.8,% Service Games Won,-12.304166666666664
+460,Alejandro Davidovich Fokina,259.8,259.8,Avg. Aces/ Match,-7.656250000000001
+461,Alejandro Davidovich Fokina,259.8,259.8,Avg. Double Faults/Match,0.37708333333333327
+462,Dusan Lajovic,258.70000000000005,258.7,Serve Rating,0.0
+463,Dusan Lajovic,258.70000000000005,258.7,% 1st Serve,1.9812499999999988
+464,Dusan Lajovic,258.70000000000005,258.7,% 1st Serve Points Won,-11.572916666666664
+465,Dusan Lajovic,258.70000000000005,258.7,% 2nd Serve Points Won,-0.29999999999999993
+466,Dusan Lajovic,258.70000000000005,258.7,% Service Games Won,-15.10416666666667
+467,Dusan Lajovic,258.70000000000005,258.7,Avg. Aces/ Match,-6.770833333333336
+468,Dusan Lajovic,258.70000000000005,258.7,Avg. Double Faults/Match,2.516666666666665
+469,Albert Ramos-Vinolas,257.7,257.7,Serve Rating,0.0
+470,Albert Ramos-Vinolas,257.7,257.7,% 1st Serve,-1.8124999999999998
+471,Albert Ramos-Vinolas,257.7,257.7,% 1st Serve Points Won,-10.672916666666664
+472,Albert Ramos-Vinolas,257.7,257.7,% 2nd Serve Points Won,0.14375
+473,Albert Ramos-Vinolas,257.7,257.7,% Service Games Won,-11.781249999999996
+474,Albert Ramos-Vinolas,257.7,257.7,Avg. Aces/ Match,-8.372916666666669
+475,Albert Ramos-Vinolas,257.7,257.7,Avg. Double Faults/Match,2.245833333333332
+476,Taro Daniel,257.4,257.4,Serve Rating,0.0
+477,Taro Daniel,257.4,257.4,% 1st Serve,-8.545833333333336
+478,Taro Daniel,257.4,257.4,% 1st Serve Points Won,-2.1041666666666665
+479,Taro Daniel,257.4,257.4,% 2nd Serve Points Won,-7.51875
+480,Taro Daniel,257.4,257.4,% Service Games Won,-12.641666666666666
+481,Taro Daniel,257.4,257.4,Avg. Aces/ Match,-2.733333333333332
+482,Taro Daniel,257.4,257.4,Avg. Double Faults/Match,2.293749999999999
+483,Mikael Ymer,256.90000000000003,256.9,Serve Rating,0.0
+484,Mikael Ymer,256.90000000000003,256.9,% 1st Serve,2.9645833333333313
+485,Mikael Ymer,256.90000000000003,256.9,% 1st Serve Points Won,-12.779166666666665
+486,Mikael Ymer,256.90000000000003,256.9,% 2nd Serve Points Won,0.3145833333333333
+487,Mikael Ymer,256.90000000000003,256.9,% Service Games Won,-12.722916666666661
+488,Mikael Ymer,256.90000000000003,256.9,Avg. Aces/ Match,-10.116666666666664
+489,Mikael Ymer,256.90000000000003,256.9,Avg. Double Faults/Match,-0.035416666666666693
+490,Soonwoo Kwon,256.5,256.5,Serve Rating,0.0
+491,Soonwoo Kwon,256.5,256.5,% 1st Serve,-10.533333333333328
+492,Soonwoo Kwon,256.5,256.5,% 1st Serve Points Won,-5.406249999999999
+493,Soonwoo Kwon,256.5,256.5,% 2nd Serve Points Won,-1.5645833333333325
+494,Soonwoo Kwon,256.5,256.5,% Service Games Won,-9.985416666666666
+495,Soonwoo Kwon,256.5,256.5,Avg. Aces/ Match,-5.5479166666666675
+496,Soonwoo Kwon,256.5,256.5,Avg. Double Faults/Match,-0.3374999999999999
+497,Joao Sousa,255.80000000000004,255.8,Serve Rating,0.0
+498,Joao Sousa,255.80000000000004,255.8,% 1st Serve,-8.749999999999998
+499,Joao Sousa,255.80000000000004,255.8,% 1st Serve Points Won,-7.360416666666668
+500,Joao Sousa,255.80000000000004,255.8,% 2nd Serve Points Won,-0.5062499999999999
+501,Joao Sousa,255.80000000000004,255.8,% Service Games Won,-11.156249999999998
+502,Joao Sousa,255.80000000000004,255.8,Avg. Aces/ Match,-7.510416666666665
+503,Joao Sousa,255.80000000000004,255.8,Avg. Double Faults/Match,0.9083333333333328
+504,Jaume Munar,253.90000000000003,253.9,Serve Rating,0.0
+505,Jaume Munar,253.90000000000003,253.9,% 1st Serve,-3.7041666666666657
+506,Jaume Munar,253.90000000000003,253.9,% 1st Serve Points Won,-7.941666666666668
+507,Jaume Munar,253.90000000000003,253.9,% 2nd Serve Points Won,-3.181249999999999
+508,Jaume Munar,253.90000000000003,253.9,% Service Games Won,-12.756250000000001
+509,Jaume Munar,253.90000000000003,253.9,Avg. Aces/ Match,-6.831249999999999
+510,Jaume Munar,253.90000000000003,253.9,Avg. Double Faults/Match,-0.9604166666666664
+511,Francisco Cerundolo,253.8,253.8,Serve Rating,0.0
+512,Francisco Cerundolo,253.8,253.8,% 1st Serve,-6.95625
+513,Francisco Cerundolo,253.8,253.8,% 1st Serve Points Won,-9.73125
+514,Francisco Cerundolo,253.8,253.8,% 2nd Serve Points Won,0.6208333333333332
+515,Francisco Cerundolo,253.8,253.8,% Service Games Won,-11.585416666666662
+516,Francisco Cerundolo,253.8,253.8,Avg. Aces/ Match,-8.789583333333333
+517,Francisco Cerundolo,253.8,253.8,Avg. Double Faults/Match,0.06666666666666674
+518,Pedro Martinez,253.79999999999998,253.8,Serve Rating,0.0
+519,Pedro Martinez,253.79999999999998,253.8,% 1st Serve,-0.6124999999999998
+520,Pedro Martinez,253.79999999999998,253.8,% 1st Serve Points Won,-14.777083333333332
+521,Pedro Martinez,253.79999999999998,253.8,% 2nd Serve Points Won,2.635416666666666
+522,Pedro Martinez,253.79999999999998,253.8,% Service Games Won,-13.781250000000002
+523,Pedro Martinez,253.79999999999998,253.8,Avg. Aces/ Match,-9.747916666666661
+524,Pedro Martinez,253.79999999999998,253.8,Avg. Double Faults/Match,-1.091666666666666
+525,Alejandro Tabilo,253.7,253.7,Serve Rating,0.0
+526,Alejandro Tabilo,253.7,253.7,% 1st Serve,-3.306249999999999
+527,Alejandro Tabilo,253.7,253.7,% 1st Serve Points Won,-7.552083333333334
+528,Alejandro Tabilo,253.7,253.7,% 2nd Serve Points Won,-6.472916666666665
+529,Alejandro Tabilo,253.7,253.7,% Service Games Won,-16.84166666666667
+530,Alejandro Tabilo,253.7,253.7,Avg. Aces/ Match,-3.6979166666666634
+531,Alejandro Tabilo,253.7,253.7,Avg. Double Faults/Match,-0.5041666666666663
+532,David Goffin,253.19999999999996,253.2,Serve Rating,0.0
+533,David Goffin,253.19999999999996,253.2,% 1st Serve,-14.608333333333338
+534,David Goffin,253.19999999999996,253.2,% 1st Serve Points Won,-4.3458333333333306
+535,David Goffin,253.19999999999996,253.2,% 2nd Serve Points Won,-2.0833333333333313
+536,David Goffin,253.19999999999996,253.2,% Service Games Won,-11.306249999999999
+537,David Goffin,253.19999999999996,253.2,Avg. Aces/ Match,-6.066666666666668
+538,David Goffin,253.19999999999996,253.2,Avg. Double Faults/Match,-0.9645833333333325
+539,Aslan Karatsev,251.7,251.7,Serve Rating,0.0
+540,Aslan Karatsev,251.7,251.7,% 1st Serve,-10.51666666666667
+541,Aslan Karatsev,251.7,251.7,% 1st Serve Points Won,-6.897916666666668
+542,Aslan Karatsev,251.7,251.7,% 2nd Serve Points Won,-2.3958333333333317
+543,Aslan Karatsev,251.7,251.7,% Service Games Won,-11.518749999999997
+544,Aslan Karatsev,251.7,251.7,Avg. Aces/ Match,-5.787500000000002
+545,Aslan Karatsev,251.7,251.7,Avg. Double Faults/Match,-3.258333333333332
+546,Federico Delbonis,250.9,250.9,Serve Rating,0.0
+547,Federico Delbonis,250.9,250.9,% 1st Serve,-0.35000000000000003
+548,Federico Delbonis,250.9,250.9,% 1st Serve Points Won,-11.518749999999999
+549,Federico Delbonis,250.9,250.9,% 2nd Serve Points Won,-4.154166666666667
+550,Federico Delbonis,250.9,250.9,% Service Games Won,-17.145833333333332
+551,Federico Delbonis,250.9,250.9,Avg. Aces/ Match,-7.9645833333333345
+552,Federico Delbonis,250.9,250.9,Avg. Double Faults/Match,-0.24166666666666667
+553,Tomas Martin Etcheverry,250.29999999999998,250.3,Serve Rating,0.0
+554,Tomas Martin Etcheverry,250.29999999999998,250.3,% 1st Serve,2.597916666666666
+555,Tomas Martin Etcheverry,250.29999999999998,250.3,% 1st Serve Points Won,-15.86875000000001
+556,Tomas Martin Etcheverry,250.29999999999998,250.3,% 2nd Serve Points Won,-2.252083333333332
+557,Tomas Martin Etcheverry,250.29999999999998,250.3,% Service Games Won,-20.99583333333333
+558,Tomas Martin Etcheverry,250.29999999999998,250.3,Avg. Aces/ Match,-6.541666666666669
+559,Tomas Martin Etcheverry,250.29999999999998,250.3,Avg. Double Faults/Match,0.5604166666666665
+560,Federico Coria,248.3,248.3,Serve Rating,0.0
+561,Federico Coria,248.3,248.3,% 1st Serve,1.683333333333333
+562,Federico Coria,248.3,248.3,% 1st Serve Points Won,-14.108333333333333
+563,Federico Coria,248.3,248.3,% 2nd Serve Points Won,-1.7208333333333325
+564,Federico Coria,248.3,248.3,% Service Games Won,-21.656249999999993
+565,Federico Coria,248.3,248.3,Avg. Aces/ Match,-8.264583333333336
+566,Federico Coria,248.3,248.3,Avg. Double Faults/Match,0.5666666666666662
+567,Diego Schwartzman,245.99999999999994,246.0,Serve Rating,0.0
+568,Diego Schwartzman,245.99999999999994,246.0,% 1st Serve,2.1208333333333322
+569,Diego Schwartzman,245.99999999999994,246.0,% 1st Serve Points Won,-14.454166666666666
+570,Diego Schwartzman,245.99999999999994,246.0,% 2nd Serve Points Won,-2.3270833333333325
+571,Diego Schwartzman,245.99999999999994,246.0,% Service Games Won,-18.58125
+572,Diego Schwartzman,245.99999999999994,246.0,Avg. Aces/ Match,-10.24375
+573,Diego Schwartzman,245.99999999999994,246.0,Avg. Double Faults/Match,-1.0145833333333332
+574,Fabio Fognini,245.0,245.0,Serve Rating,0.0
+575,Fabio Fognini,245.0,245.0,% 1st Serve,-9.549999999999999
+576,Fabio Fognini,245.0,245.0,% 1st Serve Points Won,-9.90416666666667
+577,Fabio Fognini,245.0,245.0,% 2nd Serve Points Won,-1.5583333333333327
+578,Fabio Fognini,245.0,245.0,% Service Games Won,-15.345833333333333
+579,Fabio Fognini,245.0,245.0,Avg. Aces/ Match,-7.089583333333334
+580,Fabio Fognini,245.0,245.0,Avg. Double Faults/Match,-2.052083333333333
+581,Cristian Garin,244.7,244.7,Serve Rating,0.0
+582,Cristian Garin,244.7,244.7,% 1st Serve,-4.424999999999999
+583,Cristian Garin,244.7,244.7,% 1st Serve Points Won,-10.520833333333334
+584,Cristian Garin,244.7,244.7,% 2nd Serve Points Won,-4.804166666666665
+585,Cristian Garin,244.7,244.7,% Service Games Won,-18.477083333333333
+586,Cristian Garin,244.7,244.7,Avg. Aces/ Match,-7.939583333333331
+587,Cristian Garin,244.7,244.7,Avg. Double Faults/Match,-0.45833333333333337
+588,Bernabe Zapata Miralles,243.70000000000002,243.7,Serve Rating,0.0
+589,Bernabe Zapata Miralles,243.70000000000002,243.7,% 1st Serve,-0.9145833333333327
+590,Bernabe Zapata Miralles,243.70000000000002,243.7,% 1st Serve Points Won,-14.831250000000002
+591,Bernabe Zapata Miralles,243.70000000000002,243.7,% 2nd Serve Points Won,-2.408333333333333
+592,Bernabe Zapata Miralles,243.70000000000002,243.7,% Service Games Won,-21.804166666666667
+593,Bernabe Zapata Miralles,243.70000000000002,243.7,Avg. Aces/ Match,-8.774999999999999
+594,Bernabe Zapata Miralles,243.70000000000002,243.7,Avg. Double Faults/Match,1.1083333333333327
+595,Nikoloz Basilashvili,241.3,241.3,Serve Rating,0.0
+596,Nikoloz Basilashvili,241.3,241.3,% 1st Serve,-10.83125
+597,Nikoloz Basilashvili,241.3,241.3,% 1st Serve Points Won,-6.279166666666667
+598,Nikoloz Basilashvili,241.3,241.3,% 2nd Serve Points Won,-5.6083333333333325
+599,Nikoloz Basilashvili,241.3,241.3,% Service Games Won,-18.135416666666675
+600,Nikoloz Basilashvili,241.3,241.3,Avg. Aces/ Match,-6.870833333333334
+601,Nikoloz Basilashvili,241.3,241.3,Avg. Double Faults/Match,-0.8999999999999998
