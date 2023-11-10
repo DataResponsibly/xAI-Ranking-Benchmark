@@ -4,8 +4,9 @@ import pandas as pd
 
 def merge_by_year(folder_path, save_merged, heights_weights_df):
     """
-    Gets path to folder with csv files, merges them by year,
-    and writes to destination folder called save_merged
+    Gets ``folder_path`` with csv files, merges them by year,
+    also adds ``heights_weights_df`` dataframe to each merged dataset,
+    and writes to folder with path ``save_merged``
     """
     csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
 
