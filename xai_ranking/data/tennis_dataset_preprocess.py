@@ -5,7 +5,7 @@ def process(df, sheet_name):
     """
     This function replaces redundant characters in column names, 
     splits players' rank and names which were in one column in some datasets,
-    and for all column names except 'standing_player2' adds dataframe name to them 
+    and for all column names except ``standing_player2`` adds dataframe name to them 
     """
     df.columns = df.columns.str.replace(r'[^a-zA-Z0-9%_ ]', '', regex=True)
     df.columns = df.columns.str.replace(' ', '_')
@@ -46,8 +46,8 @@ def process(df, sheet_name):
 
 def read_xls(excel_file='../../data/external/ATP_data/3.1_ATP_info.xlsx', path_save_csv='../../data/interim/'):
     """
-    Reads original excel file with data about tennis players, cleans the data,
-    and saves each worksheet tab to csv file in folder with path path_save_csv
+    Reads ``excel file`` with data about tennis players, cleans the data,
+    and saves each worksheet tab to csv file with path ``path_save_csv``
     """
     xls = pd.ExcelFile(excel_file)
 
