@@ -37,7 +37,6 @@ def process(df, sheet_name):
         if 'standing_player2' in col:
             adj_columns.append('standing_player2')
         else:
-            # adj_columns.append(col + '_' + df_name if df_name not in col.replace("_", "") else col)
             adj_columns.append(df_name + '__' + col)
 
     df.columns = adj_columns
@@ -56,8 +55,7 @@ def read_xls(excel_file='../../data/external/ATP_data/3.1_ATP_info.xlsx', path_s
         df_raw = xls.parse(sheet_name)
         df = process(df_raw, sheet_name)
         csv_file = path_save_csv + f'{sheet_name.replace(" ", "_").lower()}.csv'
-        df.to_csv(csv_file)
-
+        df.to_csv(csv_file, index=False)
 
 
 if __name__=="__main__":
