@@ -1,0 +1,147 @@
+rank;name;country_name;country_id;num_points_per_service
+1;Manuel Guinard;France;FRA;7
+2;Hugo Gaston;France;FRA;6,904
+3;Benoit Paire;France;FRA;6,891
+4;Marco Cecchinato;Italy;ITA;6,861
+5;Stefan Kozlov;United States;USA;6,806
+6;Pablo Cuevas;Uruguay;URU;6,748
+7;Pablo Andujar;Spain;ESP;6,741
+8;Diego Sebastian Schwartzman;Argentina;ARG;6,729
+9;Aslan Karatsev;Russian Federation;RUS;6,724
+10;Henri Laaksonen;Switzerland;SUI;6,721
+11;Chun Hsin Tseng;Taiwan, Province of China;TPE;6,701
+12;Fabio Fognini;Italy;ITA;6,695
+13;Pedro Martinez Portero;Spain;ESP;6,694
+14;Tomas Martin Etcheverry;Argentina;ARG;6,692
+15;Peter Gojowczyk;Germany;GER;6,692
+16;Constant Lestienne;France;FRA;6,676
+17;Roberto Carballes Baena;Spain;ESP;6,668
+18;Laslo Djere;Serbia;SRB;6,665
+19;Alexei Popyrin;Australia;AUS;6,649
+20;Yoshihito Nishioka;Japan;JPN;6,647
+21;Gilles Simon;France;FRA;6,631
+22;Fernando Verdasco;Spain;ESP;6,627
+23;John Millman;Australia;AUS;6,615
+24;David Goffin;Belgium;BEL;6,615
+25;Frances Tiafoe;United States;USA;6,605
+26;Ilya Ivashka;Belarus;BLR;6,602
+27;Ugo Humbert;France;FRA;6,602
+28;Corentin Moutet;France;FRA;6,597
+29;Christian Garin;Chile;CHI;6,592
+30;Feliciano Lopez;Spain;ESP;6,591
+31;Ryan Peniston;United Kingdom;GBR;6,588
+32;Jason Kubler;Australia;AUS;6,582
+33;Facundo Bagnis;Argentina;ARG;6,579
+34;Radu Albot;Moldova, Republic of;MDA;6,576
+35;Dominik Koepfer;Germany;GER;6,574
+36;Francisco Cerundolo;Argentina;ARG;6,573
+37;Lucas Pouille;France;FRA;6,565
+38;Mackenzie Mcdonald;United States;USA;6,564
+39;Marton Fucsovics;Hungary;HUN;6,554
+40;Carlos Taberner;Spain;ESP;6,552
+41;Richard Gasquet;France;FRA;6,536
+42;Albert Ramos;Spain;ESP;6,535
+43;Jiri Lehecka;Czech Republic;CZE;6,533
+44;Alex De Minaur;Australia;AUS;6,527
+45;Sebastian Korda;United States;USA;6,524
+46;Jaume Munar;Spain;ESP;6,521
+47;Daniel Altmaier;Germany;GER;6,517
+48;Stefano Travaglia;Italy;ITA;6,514
+49;Soon Woo Kwon;Korea, Republic of;KOR;6,509
+50;Mikael Ymer;Sweden;SWE;6,506
+51;Sebastian Baez;Argentina;ARG;6,503
+52;Tomas Machac;Czech Republic;CZE;6,5
+53;Jack Draper;United Kingdom;GBR;6,497
+54;Joao Sousa;Portugal;POR;6,495
+55;Liam Broady;United Kingdom;GBR;6,489
+56;Jenson Brooksby;United States;USA;6,484
+57;James Duckworth;Australia;AUS;6,482
+58;Roman Safiullin;Russian Federation;RUS;6,482
+59;Christopher Oconnell;Australia;AUS;6,48
+60;Oscar Otte;Germany;GER;6,478
+61;Alejandro Davidovich Fokina;Spain;ESP;6,473
+62;Filip Krajinovic;Serbia;SRB;6,464
+63;Hugo Grenier;France;FRA;6,458
+64;Tommy Paul;United States;USA;6,455
+65;Kamil Majchrzak;Poland;POL;6,454
+66;Aljaz Bedene;Slovenia;SLO;6,452
+67;Alejandro Tabilo;Chile;CHI;6,451
+68;Daniel Elahi Galan Riveros;Colombia;COL;6,45
+69;Federico Delbonis;Argentina;ARG;6,448
+70;Bernabe Zapata Miralles;Spain;ESP;6,446
+71;Jan Lennard Struff;Germany;GER;6,444
+72;Jack Sock;United States;USA;6,444
+73;Pedro Cachin;Argentina;ARG;6,443
+74;Botic Van De Zandschulp;Netherlands;NED;6,434
+75;Tallon Griekspoor;Netherlands;NED;6,434
+76;Dusan Lajovic;Serbia;SRB;6,432
+77;Denis Kudla;United States;USA;6,43
+78;Jo Wilfried Tsonga;France;FRA;6,43
+79;Nikoloz Basilashvili;Georgia;GEO;6,429
+80;Hugo Dellien;Bolivia, Plurinational State of;BOL;6,429
+81;Norbert Gombos;Slovakia;SVK;6,414
+82;Dominic Thiem;Austria;AUT;6,409
+83;Sam Querrey;United States;USA;6,408
+84;Thanasi Kokkinakis;Australia;AUS;6,401
+85;Miomir Kecmanovic;Serbia;SRB;6,4
+86;Lloyd George Muirhead Harris;South Africa;RSA;6,398
+87;Lorenzo Sonego;Italy;ITA;6,395
+88;Alexander Bublik;Kazakhstan;KAZ;6,393
+89;Alex Molcan;Slovakia;SVK;6,383
+90;Arthur Rinderknech;France;FRA;6,376
+91;Christopher Eubanks;United States;USA;6,372
+92;Stan Wawrinka;Switzerland;SUI;6,372
+93;Daniil Medvedev;Russian Federation;RUS;6,358
+94;Benjamin Bonzi;France;FRA;6,352
+95;Aleksandar Vukic;Australia;AUS;6,349
+96;Taro Daniel;Japan;JPN;6,344
+97;Egor Gerasimov;Belarus;BLR;6,34
+98;Dominic Stephan Stricker;Switzerland;SUI;6,34
+99;Karen Khachanov;Russian Federation;RUS;6,34
+100;Juan Pablo Varillas Patino Samudio;Peru;PER;6,339
+101;Andy Murray;United Kingdom;GBR;6,331
+102;Cameron Norrie;United Kingdom;GBR;6,327
+103;Jeffrey John Wolf;United States;USA;6,324
+104;Borna Coric;Croatia;CRO;6,318
+105;Daniel Evans;United Kingdom;GBR;6,318
+106;Nuno Borges;Portugal;POR;6,318
+107;Holger Vitus Nodskov Rune;Denmark;DEN;6,318
+108;Yannick Hanfmann;Germany;GER;6,318
+109;Steve Johnson;United States;USA;6,317
+110;Tim Van Rijthoven;Netherlands;NED;6,316
+111;Elias Ymer;Sweden;SWE;6,31
+112;Jannik Sinner;Italy;ITA;6,308
+113;Ricardas Berankis;Lithuania;LTU;6,304
+114;Adrian Mannarino;France;FRA;6,29
+115;Carlos Alcaraz Garfia;Spain;ESP;6,283
+116;Quentin Halys;France;FRA;6,268
+117;Felix Auger Aliassime;Canada;CAN;6,266
+118;Roberto Bautista Agut;Spain;ESP;6,261
+119;Matteo Berrettini;Italy;ITA;6,256
+120;Marcos Giron;United States;USA;6,255
+121;Denis Shapovalov;Canada;CAN;6,255
+122;Federico Coria;Argentina;ARG;6,251
+123;Emil Ruusuvuori;Finland;FIN;6,247
+124;Lorenzo Musetti;Italy;ITA;6,243
+125;Maxime Cressy;United States;USA;6,227
+126;Brandon Nakashima;United States;USA;6,219
+127;Taylor Harry Fritz;United States;USA;6,208
+128;Hubert Hurkacz;Poland;POL;6,205
+129;Jiri Vesely;Czech Republic;CZE;6,203
+130;Pablo Carreno Busta;Spain;ESP;6,199
+131;Reilly Opelka;United States;USA;6,192
+132;Marc Andrea Huesler;Switzerland;SUI;6,183
+133;Andrey Rublev;Russian Federation;RUS;6,181
+134;John Isner;United States;USA;6,163
+135;Jordan Thompson;Australia;AUS;6,157
+136;Marin Cilic;Croatia;CRO;6,155
+137;Stefanos Tsitsipas;Greece;GRE;6,155
+138;Rafael Nadal;Spain;ESP;6,148
+139;Casper Ruud;Norway;NOR;6,144
+140;Gael Monfils;France;FRA;6,139
+141;Grigor Dimitrov;Bulgaria;BUL;6,137
+142;Nicolas Jarry;Chile;CHI;6,126
+143;Alexander Zverev;Germany;GER;6,125
+144;Thiago Monteiro;Brazil;BRA;6,125
+145;Nick Kyrgios;Australia;AUS;6,057
+146;Novak Djokovic;Serbia;SRB;6,012
