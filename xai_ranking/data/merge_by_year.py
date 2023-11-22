@@ -1,12 +1,30 @@
+"""
+Merges by year csv files got from the ATP_info.xlsx, 
+heights_weights.csv, and final_rankings_{2020-2023}.csv
+"""
+
 import os
+import shutil
 import pandas as pd
+
+
+def move_final_rankings(source, destination):
+    """
+    For easier merging of datasets, we should move final_rankings_{2020-2023}.csv
+    to the folder with all the rest yearly datasets (previously obtained from excel file)
+    """
+    file_names = [f'final_rankings_{year}.csv' for year in range(2020, 2024)]
+    for file_name in file_names:
+        source_path = os.path.join(source, file_name)
+        destination_path = os.path.join(destination, file_name)
+        shutil.move(source_path, destination_path)
 
 
 def merge_by_year(folder_path, save_merged, heights_weights_df):
     """
-    Gets ``folder_path`` with csv files, merges them by year,
-    also adds ``heights_weights_df`` dataframe to each merged dataset,
-    and writes to folder with path ``save_merged``
+    Gets `folder_path` with csv files, merges them by year,
+    also adds `heights_weights_df` dataframe to each merged dataset,
+    and writes to folder with path `save_merged`
     """
     csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
 
@@ -32,6 +50,8 @@ def merge_by_year(folder_path, save_merged, heights_weights_df):
 
 
 if __name__=="__main__":
+    move_final_rankings('../../data/external', '../../data/interim')
+
     folder_path = '../../data/interim'
     heights_weights_df_path = '../../data/external/ATP_data/heights_weights.csv'
     heights_weights_df = pd.read_csv(heights_weights_df_path)

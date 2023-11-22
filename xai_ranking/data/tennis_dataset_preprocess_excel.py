@@ -1,11 +1,27 @@
+"Preprocesses ATP_info.xlsx - works with each tab and saves to csv"
+
 import pandas as pd
+import urllib.request
+import os
+
+
+def download_data(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    urllib.request.urlretrieve('https://zenodo.org/record/10108667/files/3.1_ATP_info.xlsx', os.path.join(path, '3.1_ATP_info.xlsx'))
+    urllib.request.urlretrieve('https://zenodo.org/record/10108667/files/heights_weights.csv', os.path.join(path, 'heights_weights.csv'))
+    for year in range(2020, 2024):
+        urllib.request.urlretrieve(f'https://zenodo.org/record/10108667/files/final_rankings_{year}.csv', os.path.join(path, f'final_rankings_{year}.csv'))
+
+    print("Files were successfully downloaded!")
 
 
 def process(df, sheet_name):
     """
     This function replaces redundant characters in column names, 
     splits players' rank and names which were in one column in some datasets,
-    and for all column names except ``standing_player2`` adds dataframe name to them 
+    and for all column names except `standing_player2` adds dataframe name to them 
     """
     df.columns = df.columns.str.replace(r'[^a-zA-Z0-9%_ ]', '', regex=True)
     df.columns = df.columns.str.replace(' ', '_')
@@ -46,8 +62,8 @@ def process(df, sheet_name):
 
 def read_xls(excel_file='../../data/external/ATP_data/3.1_ATP_info.xlsx', path_save_csv='../../data/interim/'):
     """
-    Reads ``excel file`` with data about tennis players, cleans the data,
-    and saves each worksheet tab to csv file with path ``path_save_csv``
+    Reads `excel file` with data about tennis players, cleans the data,
+    and saves each worksheet tab to csv file with path `path_save_csv`
     """
     xls = pd.ExcelFile(excel_file)
 
@@ -58,7 +74,11 @@ def read_xls(excel_file='../../data/external/ATP_data/3.1_ATP_info.xlsx', path_s
         df.to_csv(csv_file, index=False)
 
 
+
 if __name__=="__main__":
+    download_data(path='../../data/external/')
+
     path_xls_file = '../../data/external/ATP_data/3.1_ATP_info.xlsx'
     path_save_csv = '../../data/interim/'
+
     read_xls(path_xls_file, path_save_csv)
