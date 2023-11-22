@@ -9,10 +9,11 @@ def download_data(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-    urllib.request.urlretrieve('https://zenodo.org/record/10108667/files/3.1_ATP_info.xlsx', os.path.join(path, '3.1_ATP_info.xlsx'))
-    urllib.request.urlretrieve('https://zenodo.org/record/10108667/files/heights_weights.csv', os.path.join(path, 'heights_weights.csv'))
-    for year in range(2020, 2024):
-        urllib.request.urlretrieve(f'https://zenodo.org/record/10108667/files/final_rankings_{year}.csv', os.path.join(path, f'final_rankings_{year}.csv'))
+    file_names = ['3.1_ATP_info.xlsx', 'heights_weights.csv']
+    file_names += [f'final_rankings_{year}.csv' for year in range(2020, 2024)]
+
+    for file in file_names:
+        urllib.request.urlretrieve(f'https://zenodo.org/record/10108667/files/{file}', os.path.join(path, file))
 
     print("Files were successfully downloaded!")
 
