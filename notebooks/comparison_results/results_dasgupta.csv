@@ -1,0 +1,1297 @@
+mean,std,shapley_type,feature,strata,batch,weights,data
+0.06929228189188037,0.05260052524400566,shapley value,X,0-100%,,equal weights,Standard normal 2 vars
+0.13093267082226073,0.07539112337221728,shapley value,Y,0-100%,,equal weights,Standard normal 2 vars
+0.00246780570444536,0.0008897552764083281,standardized shapley value,X,0-100%,,equal weights,Standard normal 2 vars
+0.0025321942955546396,0.0015469361677892394,standardized shapley value,Y,0-100%,,equal weights,Standard normal 2 vars
+0.12146336530900054,0.20668771162579716,rank-relevance shapley value,X,0-100%,,equal weights,Standard normal 2 vars
+0.04688043698318563,0.08758890646811858,rank-relevance shapley value,Y,0-100%,,equal weights,Standard normal 2 vars
+0.09700919464863253,0.07364073534160792,shapley value,X,0-100%,,different weights,Standard normal 2 vars
+0.07855960249335645,0.04523467402333036,shapley value,Y,0-100%,,different weights,Standard normal 2 vars
+0.0034728167685360418,0.0012521070999382954,standardized shapley value,X,0-100%,,different weights,Standard normal 2 vars
+0.0015271832314639583,0.0009329674976917133,standardized shapley value,Y,0-100%,,different weights,Standard normal 2 vars
+0.12278319930608256,0.1995213478543108,rank-relevance shapley value,X,0-100%,,different weights,Standard normal 2 vars
+0.04556060298610362,0.10611583465806727,rank-relevance shapley value,Y,0-100%,,different weights,Standard normal 2 vars
+0.07643469944025102,0.057935641872430534,shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars
+0.1316506916708495,0.07134929481168945,shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars
+0.002413146682187092,0.0009275613412022803,standardized shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars
+0.0025868533178129076,0.0014498287148886136,standardized shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars
+0.11217802588038042,0.19262871716117339,rank-relevance shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars
+0.05616577641180575,0.09671190723314642,rank-relevance shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars
+0.10700857921635143,0.08110989862140273,shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars
+0.0789904150025097,0.042809576887013666,shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars
+0.00342601507930427,0.0013168860249549996,standardized shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars
+0.0015739849206957302,0.0008821561389324169,standardized shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars
+0.11392301575132287,0.18851687703897532,rank-relevance shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars
+0.0544207865408633,0.11521485993246788,rank-relevance shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars
+0.06929228189188037,0.05257856718617386,shapley value,X,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.13093267082226073,0.07529658901105687,shapley value,Y,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0024678057044453605,0.0008893838485998625,standardized shapley value,X,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0025321942955546396,0.001544996435154459,standardized shapley value,Y,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.12146336530900054,0.20660142996408468,rank-relevance shapley value,X,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.04688043698318563,0.08747907707511668,rank-relevance shapley value,Y,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-100%,,equal weights,Standard normal 2 vars with correlated third
+0.09700919464863253,0.0736099940606434,shapley value,X,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.07855960249335645,0.04517795340663412,shapley value,Y,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.0034728167685360413,0.0012515844085776197,standardized shapley value,X,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.0015271832314639583,0.0009317976320307089,standardized shapley value,Y,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.12278319930608256,0.19943805778687249,rank-relevance shapley value,X,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.04556060298610363,0.10598277399800952,rank-relevance shapley value,Y,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-100%,,different weights,Standard normal 2 vars with correlated third
+0.04573290604864105,0.03470185434287475,shapley value,X,0-100%,,equal weights,Standard normal 3 correlated vars
+0.08641556274269209,0.04969574874729754,shapley value,Y,0-100%,,equal weights,Standard normal 3 correlated vars
+0.24474899747121612,0.18793802112163163,shapley value,Z,0-100%,,equal weights,Standard normal 3 correlated vars
+0.0026356765542508115,0.0009498835962901925,standardized shapley value,X,0-100%,,equal weights,Standard normal 3 correlated vars
+0.002704445136656739,0.0016500937951486332,standardized shapley value,Y,0-100%,,equal weights,Standard normal 3 correlated vars
+0.004051926749738527,0.0031208683020352264,standardized shapley value,Z,0-100%,,equal weights,Standard normal 3 correlated vars
+0.6637653055896962,4.829021257988118,rank-relevance shapley value,X,0-100%,,equal weights,Standard normal 3 correlated vars
+0.791616910084483,7.335625799359445,rank-relevance shapley value,Y,0-100%,,equal weights,Standard normal 3 correlated vars
+1.537792331690033,12.078333964087488,rank-relevance shapley value,Z,0-100%,,equal weights,Standard normal 3 correlated vars
+0.05543382551350431,0.04206285374893909,shapley value,X,0-100%,,different weights,Standard normal 3 correlated vars
+0.10474613665780862,0.060237271208845505,shapley value,Y,0-100%,,different weights,Standard normal 3 correlated vars
+0.14833272574013098,0.11390183098280704,shapley value,Z,0-100%,,different weights,Standard normal 3 correlated vars
+0.002548980208393928,0.0009186387014433881,standardized shapley value,X,0-100%,,different weights,Standard normal 3 correlated vars
+0.002615486758763059,0.001595816610746101,standardized shapley value,Y,0-100%,,different weights,Standard normal 3 correlated vars
+0.001959322564502086,0.0015091061765644018,standardized shapley value,Z,0-100%,,different weights,Standard normal 3 correlated vars
+0.33671111550552896,1.0747587075220395,rank-relevance shapley value,X,0-100%,,different weights,Standard normal 3 correlated vars
+0.44514012774435185,1.9550451247775245,rank-relevance shapley value,Y,0-100%,,different weights,Standard normal 3 correlated vars
+0.749336809473999,2.83063273307386,rank-relevance shapley value,Z,0-100%,,different weights,Standard normal 3 correlated vars
+0.07643469944025102,0.05791145667335018,shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.1316506916708495,0.07125982857610934,shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.002413146682187092,0.0009271741312746574,standardized shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0025868533178129076,0.0014480107471329493,standardized shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.11217802588038045,0.19254830441829923,rank-relevance shapley value,X,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.05616577641180575,0.09659063833625321,rank-relevance shapley value,Y,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.10700857921635143,0.08107603934269025,shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0789904150025097,0.042755897145665606,shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.00342601507930427,0.001316336291670784,standardized shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0015739849206957302,0.0008810499865989921,standardized shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.11392301575132287,0.18843818078130317,rank-relevance shapley value,X,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0544207865408633,0.11507038983184177,rank-relevance shapley value,Y,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.05044690163056568,0.038221561404411124,shapley value,X,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.08688945650276068,0.04703148686023217,shapley value,Y,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.051106184540529946,0.03835949105760081,shapley value,Z,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0016276853936977992,0.0006253858507773879,standardized shapley value,X,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.001744851812002828,0.000976694023792047,standardized shapley value,Y,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0016274627942993725,0.0006320865535064303,standardized shapley value,Z,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.05679268047048295,0.09499638522236158,rank-relevance shapley value,X,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0550214819896091,0.11192654167384883,rank-relevance shapley value,Y,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.05652963983209412,0.09466830194138916,rank-relevance shapley value,Z,0-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.06114775955220082,0.046329165338680145,shapley value,X,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.10532055333667958,0.05700786286088747,shapley value,Y,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.030973445176078754,0.02324817639854595,shapley value,Z,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.0019440766325762677,0.000746949025621027,standardized shapley value,X,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.002084017985390148,0.0011665448594567526,standardized shapley value,Y,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.0009719053820335839,0.000377476109079611,standardized shapley value,Z,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.07564144627256855,0.12849072019959837,rank-relevance shapley value,X,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.05496413468611708,0.10273082741152191,rank-relevance shapley value,Y,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.03773822133350055,0.06428607803317424,rank-relevance shapley value,Z,0-100%,,different weights,Arbitrary normal 3 correlated vars
+0.06878462439718916,0.05548864562007659,shapley value,X,0-20%,,equal weights,Standard normal 2 vars
+0.19083475703777603,0.0606342475471975,shapley value,Y,0-20%,,equal weights,Standard normal 2 vars
+0.001942150182865426,0.0007362969540779065,standardized shapley value,X,0-20%,,equal weights,Standard normal 2 vars
+0.0005819647424713331,0.0006196497081090196,standardized shapley value,Y,0-20%,,equal weights,Standard normal 2 vars
+0.47793101655971293,0.20524667372352157,rank-relevance shapley value,X,0-20%,,equal weights,Standard normal 2 vars
+0.1439685223679272,0.14490002026020118,rank-relevance shapley value,Y,0-20%,,equal weights,Standard normal 2 vars
+0.06549459419486148,0.045777561208956485,shapley value,X,20-40%,,equal weights,Standard normal 2 vars
+0.10388754017902924,0.06846241237805473,shapley value,Y,20-40%,,equal weights,Standard normal 2 vars
+0.0023134270021526737,0.000805222363008933,standardized shapley value,X,20-40%,,equal weights,Standard normal 2 vars
+0.0015791323539159948,0.0008449542179043945,standardized shapley value,Y,20-40%,,equal weights,Standard normal 2 vars
+0.11014446632992073,0.06534951276589347,rank-relevance shapley value,X,20-40%,,equal weights,Standard normal 2 vars
+0.07079800196739343,0.05032445326494534,rank-relevance shapley value,Y,20-40%,,equal weights,Standard normal 2 vars
+0.06617839702701511,0.05332221158421012,shapley value,X,40-60%,,equal weights,Standard normal 2 vars
+0.07327244868600927,0.056999737019184635,shapley value,Y,40-60%,,equal weights,Standard normal 2 vars
+0.0024735392937554465,0.0008718324167171936,standardized shapley value,X,40-60%,,equal weights,Standard normal 2 vars
+0.0025539163668627505,0.0009559901027175168,standardized shapley value,Y,40-60%,,equal weights,Standard normal 2 vars
+0.01792406406729258,0.011933072505223434,rank-relevance shapley value,X,40-60%,,equal weights,Standard normal 2 vars
+0.017582859853811472,0.012805916748663907,rank-relevance shapley value,Y,40-60%,,equal weights,Standard normal 2 vars
+0.0546954651547825,0.03500979801229854,shapley value,X,60-80%,,equal weights,Standard normal 2 vars
+0.1564437946079392,0.0607966184838075,shapley value,Y,60-80%,,equal weights,Standard normal 2 vars
+0.0022639300362007485,0.0006370418296824472,standardized shapley value,X,60-80%,,equal weights,Standard normal 2 vars
+0.0041309665337822005,0.0006213090525809279,standardized shapley value,Y,60-80%,,equal weights,Standard normal 2 vars
+0.0003737420929386037,0.0002116956925225641,rank-relevance shapley value,X,60-80%,,equal weights,Standard normal 2 vars
+0.0007093255728685029,0.00043578957514885417,rank-relevance shapley value,Y,60-80%,,equal weights,Standard normal 2 vars
+0.09964714711676514,0.05993553374064329,shapley value,X,80-100%,,equal weights,Standard normal 2 vars
+0.1774473616911998,0.04375303720209288,shapley value,Y,80-100%,,equal weights,Standard normal 2 vars
+0.003486146462722881,0.0006125092252334623,standardized shapley value,X,80-100%,,equal weights,Standard normal 2 vars
+0.0043456118000941134,0.00044713273154839384,standardized shapley value,Y,80-100%,,equal weights,Standard normal 2 vars
+6.06433726257133e-07,9.304015021183326e-07,rank-relevance shapley value,X,80-100%,,equal weights,Standard normal 2 vars
+8.568628126328362e-07,1.3613683975681713e-06,rank-relevance shapley value,Y,80-100%,,equal weights,Standard normal 2 vars
+0.13522280243548024,0.07395717999553167,shapley value,X,0-20%,,different weights,Standard normal 2 vars
+0.08184185084700044,0.049185471972191135,shapley value,Y,0-20%,,different weights,Standard normal 2 vars
+0.002102553466912451,0.0007935314204525261,standardized shapley value,X,0-20%,,different weights,Standard normal 2 vars
+0.0007843221839947715,0.0006435872551937834,standardized shapley value,Y,0-20%,,different weights,Standard normal 2 vars
+0.4488602668547045,0.21781138515237494,rank-relevance shapley value,X,0-20%,,different weights,Standard normal 2 vars
+0.17303927207293573,0.18319514580873503,rank-relevance shapley value,Y,0-20%,,different weights,Standard normal 2 vars
+0.06646092783595117,0.05885543929791578,shapley value,X,20-40%,,different weights,Standard normal 2 vars
+0.08264233571037534,0.04984254516983046,shapley value,Y,20-40%,,different weights,Standard normal 2 vars
+0.003089903288112547,0.0008300846460098379,standardized shapley value,X,20-40%,,different weights,Standard normal 2 vars
+0.001059891280179671,0.000881675834098605,standardized shapley value,Y,20-40%,,different weights,Standard normal 2 vars
+0.13872838529503434,0.0749795370851143,rank-relevance shapley value,X,20-40%,,different weights,Standard normal 2 vars
+0.04221408300227982,0.04199192988122712,rank-relevance shapley value,Y,20-40%,,different weights,Standard normal 2 vars
+0.07325360250171864,0.04400782386234975,shapley value,X,40-60%,,different weights,Standard normal 2 vars
+0.07549053686094154,0.045475471114767727,shapley value,Y,40-60%,,different weights,Standard normal 2 vars
+0.0032908174603291083,0.0008626859423679874,standardized shapley value,X,40-60%,,different weights,Standard normal 2 vars
+0.0016570794184822273,0.0009042591371506061,standardized shapley value,Y,40-60%,,different weights,Standard normal 2 vars
+0.02404705389668764,0.014793735557695888,rank-relevance shapley value,X,40-60%,,different weights,Standard normal 2 vars
+0.011459870024416414,0.010184813068376406,rank-relevance shapley value,Y,40-60%,,different weights,Standard normal 2 vars
+0.07549913052130228,0.05618221415563194,shapley value,X,60-80%,,different weights,Standard normal 2 vars
+0.06086481042224329,0.046056184652662015,shapley value,Y,60-80%,,different weights,Standard normal 2 vars
+0.004122524327700487,0.0007190546015403936,standardized shapley value,X,60-80%,,different weights,Standard normal 2 vars
+0.001935162959152555,0.0006783099741345826,standardized shapley value,Y,60-80%,,different weights,Standard normal 2 vars
+0.0007236117622609475,0.00042447803156565373,rank-relevance shapley value,X,60-80%,,different weights,Standard normal 2 vars
+0.000359455903546159,0.000248455963369775,rank-relevance shapley value,Y,60-80%,,different weights,Standard normal 2 vars
+0.18672779712420887,0.07577063404087622,shapley value,X,80-100%,,different weights,Standard normal 2 vars
+0.08358237550461536,0.039205535435050246,shapley value,Y,80-100%,,different weights,Standard normal 2 vars
+0.005390955881214329,0.0007783448366263341,standardized shapley value,X,80-100%,,different weights,Standard normal 2 vars
+0.002346237688668981,0.0004816765909232959,standardized shapley value,Y,80-100%,,different weights,Standard normal 2 vars
+9.492747422059957e-07,1.458485060925783e-06,rank-relevance shapley value,X,80-100%,,different weights,Standard normal 2 vars
+5.140217966839738e-07,8.365343965085878e-07,rank-relevance shapley value,Y,80-100%,,different weights,Standard normal 2 vars
+0.07099989763300885,0.05714812702027074,shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars
+0.17871066018278953,0.06762298918284856,shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars
+0.0018100986725969929,0.0006429642035313146,standardized shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars
+0.0008598940458074387,0.0006534705207322176,standardized shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars
+0.4373658591948538,0.20327299827683465,rank-relevance shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars
+0.18453367973278637,0.13656532367673369,rank-relevance shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars
+0.07500156083413945,0.06031244477468131,shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars
+0.11964872221818154,0.06636955832848133,shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars
+0.0023653058904083623,0.0009323695285966655,standardized shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars
+0.0016471951779317377,0.0009364083920692418,standardized shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars
+0.10585362958284664,0.06529141196925127,rank-relevance shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars
+0.07508883871446755,0.06309683187373831,rank-relevance shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars
+0.09024786111345569,0.059288261066719465,shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars
+0.096765346173729,0.06733757452024594,shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars
+0.002233111669470314,0.0010322876689482314,standardized shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars
+0.0028980459355339985,0.001104947256930121,standardized shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars
+0.016271848131713243,0.014572298875672464,rank-relevance shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars
+0.01923507578939081,0.013268677186898161,rank-relevance shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars
+0.07884105029482384,0.0655850440634497,shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars
+0.10974652366324242,0.06633320435579154,shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars
+0.002824691697246243,0.0009073582212125962,standardized shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars
+0.003437376949473027,0.0009128761814591236,standardized shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars
+0.0004913125280548054,0.00035581002064267845,rank-relevance shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars
+0.000591755137752301,0.0003632380511235176,rank-relevance shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars
+0.09039696632662851,0.054759450407874374,shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars
+0.17494547825204423,0.05027325171145057,shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars
+0.003265161325396236,0.0005640216074903992,standardized shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars
+0.004277427990044433,0.000485812419293583,standardized shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars
+6.669595471299272e-07,1.1231164973863706e-06,rank-relevance shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars
+7.963369917600419e-07,1.2261907198444109e-06,rank-relevance shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars
+0.1476726793261844,0.09171916104282783,shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars
+0.09027546245017426,0.04954785737754658,shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars
+0.00198670709256426,0.0009114521758290476,standardized shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars
+0.0008769444429903283,0.0007349388492022736,standardized shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars
+0.4213163548725534,0.21274852619394374,rank-relevance shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars
+0.20058318405508677,0.18850516821030627,rank-relevance shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars
+0.07896028878960877,0.06543304719993212,shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars
+0.0745246065028431,0.03979379542315686,shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars
+0.002839913778205095,0.0008182995114617668,standardized shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars
+0.001384910139217823,0.0008139031999287059,standardized shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars
+0.12176836530157704,0.06571448103630889,rank-relevance shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars
+0.05917410299573711,0.04816010149705383,rank-relevance shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars
+0.07665148898985634,0.04463831452570479,shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars
+0.07807688669806226,0.03828861169016011,shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars
+0.003390806945030457,0.0008726245438184391,standardized shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars
+0.0015902286381396743,0.0008607784851211582,standardized shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars
+0.024275466270770672,0.01581531928086226,rank-relevance shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars
+0.011231457650333376,0.008923927604769172,rank-relevance shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars
+0.0871476003402442,0.0642677587564986,shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars
+0.06628225916726638,0.04642035939909833,shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars
+0.004179685677880203,0.0007497352588967398,standardized shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars
+0.00191251180369598,0.0007282941068194554,standardized shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars
+0.000720283938348433,0.00036883680742578936,rank-relevance shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars
+0.0003627837274586736,0.0003010070864882389,rank-relevance shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars
+0.1854171202126395,0.08205271800019075,shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars
+0.0780805285408517,0.047585509984167516,shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars
+0.005243032040031606,0.0008040852975666081,standardized shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars
+0.0022030019355126344,0.0006459492459004498,standardized shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars
+1.0325928982364248e-06,1.6849911827705738e-06,rank-relevance shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars
+4.307036406535445e-07,6.4463541528698e-07,rank-relevance shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars
+0.06878462439718916,0.05537195012682985,shapley value,X,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.19083475703777603,0.06024926430539398,shapley value,Y,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.0019421501828654265,0.0007347484834805073,standardized shapley value,X,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.0005819647424713331,0.0006157153844708029,standardized shapley value,Y,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.4779310165597129,0.20481502934727547,rank-relevance shapley value,X,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.1439685223679272,0.14398001082999023,rank-relevance shapley value,Y,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-20%,,equal weights,Standard normal 2 vars with correlated third
+0.06549459419486148,0.04568128862876975,shapley value,X,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.10388754017902924,0.06802772599989068,shapley value,Y,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.0023134270021526737,0.0008035289387096988,standardized shapley value,X,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.0015791323539159948,0.0008395893749790956,standardized shapley value,Y,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.11014446632992071,0.06521207935874447,rank-relevance shapley value,X,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.07079800196739343,0.05000492969627488,rank-relevance shapley value,Y,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,20-40%,,equal weights,Standard normal 2 vars with correlated third
+0.06617839702701511,0.053210072213852606,shapley value,X,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.07327244868600927,0.05663783026801216,shapley value,Y,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.002473539293755447,0.0008699989080279765,standardized shapley value,X,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.0025539163668627505,0.0009499202629196403,standardized shapley value,Y,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.01792406406729258,0.011907976636214831,rank-relevance shapley value,X,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.01758285985381147,0.01272460851868498,rank-relevance shapley value,Y,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,40-60%,,equal weights,Standard normal 2 vars with correlated third
+0.054695465154782484,0.03486113577805511,shapley value,X,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.15644379460793917,0.06001211312011004,shapley value,Y,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.002263930036200749,0.000634336756614792,standardized shapley value,X,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0041309665337822005,0.000613291825695302,standardized shapley value,Y,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0003737420929386037,0.00021079676832371386,rank-relevance shapley value,X,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0007093255728685029,0.0004301662482653242,rank-relevance shapley value,Y,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,60-80%,,equal weights,Standard normal 2 vars with correlated third
+0.09964714711676513,0.059681029262973175,shapley value,X,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.17744736169119982,0.04318845823011866,shapley value,Y,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.003486146462722882,0.0006099083250544344,standardized shapley value,X,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.004345611800094113,0.0004413630352242827,standardized shapley value,Y,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,80-100%,,equal weights,Standard normal 2 vars with correlated third
+6.06433726257133e-07,9.264507347931465e-07,rank-relevance shapley value,X,80-100%,,equal weights,Standard normal 2 vars with correlated third
+8.568628126328362e-07,1.3438016177620724e-06,rank-relevance shapley value,Y,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,80-100%,,equal weights,Standard normal 2 vars with correlated third
+0.13522280243548027,0.07380164421875657,shapley value,X,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.08184185084700044,0.04887318010389095,shapley value,Y,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.002102553466912451,0.000791862582810488,standardized shapley value,X,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.0007843221839947715,0.0006395009455930074,standardized shapley value,Y,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.4488602668547044,0.21735331653777687,rank-relevance shapley value,X,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.17303927207293573,0.1820319902659666,rank-relevance shapley value,Y,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-20%,,different weights,Standard normal 2 vars with correlated third
+0.06646092783595117,0.058731663263334774,shapley value,X,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.08264233571037534,0.04952608136603239,shapley value,Y,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.0030899032881125475,0.0008283389350428429,standardized shapley value,X,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.001059891280179671,0.0008760778356973402,standardized shapley value,Y,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.13872838529503434,0.07482185123847337,rank-relevance shapley value,X,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.04221408300227982,0.04172531175781959,rank-relevance shapley value,Y,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,20-40%,,different weights,Standard normal 2 vars with correlated third
+0.07325360250171865,0.04391527313138589,shapley value,X,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.07549053686094154,0.04518673504562334,shapley value,Y,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.0032908174603291087,0.0008608716691876516,standardized shapley value,X,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.0016570794184822273,0.0008985177512485263,standardized shapley value,Y,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.024047053896687636,0.014762623566250155,rank-relevance shapley value,X,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.011459870024416412,0.010120146934782939,rank-relevance shapley value,Y,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,40-60%,,different weights,Standard normal 2 vars with correlated third
+0.07549913052130229,0.055943647412739425,shapley value,X,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.06086481042224329,0.04546188640396785,shapley value,Y,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.004122524327700487,0.0007160012773375386,standardized shapley value,X,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.001935162959152555,0.0006695572206718254,standardized shapley value,Y,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.0007236117622609475,0.00042267556893683093,rank-relevance shapley value,X,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.00035945590354615896,0.0002452499456541989,rank-relevance shapley value,Y,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,60-80%,,different weights,Standard normal 2 vars with correlated third
+0.18672779712420887,0.07544888891847933,shapley value,X,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.08358237550461536,0.0386996363636468,shapley value,Y,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.005390955881214329,0.0007750397480798633,standardized shapley value,X,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.002346237688668981,0.0004754611487067609,standardized shapley value,Y,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,80-100%,,different weights,Standard normal 2 vars with correlated third
+9.492747422059956e-07,1.4522918904398603e-06,rank-relevance shapley value,X,80-100%,,different weights,Standard normal 2 vars with correlated third
+5.140217966839738e-07,8.257399520584711e-07,rank-relevance shapley value,Y,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,80-100%,,different weights,Standard normal 2 vars with correlated third
+0.06459633276445717,0.03469202618776863,shapley value,X,0-20%,,equal weights,Standard normal 3 correlated vars
+0.09446582525828004,0.05338615170983289,shapley value,Y,0-20%,,equal weights,Standard normal 3 correlated vars
+0.44048559765954287,0.1667892070620591,shapley value,Z,0-20%,,equal weights,Standard normal 3 correlated vars
+0.0016015635944662588,0.0006336569414559396,standardized shapley value,X,0-20%,,equal weights,Standard normal 3 correlated vars
+0.0023066216716081172,0.0017580057939444672,standardized shapley value,Y,0-20%,,equal weights,Standard normal 3 correlated vars
+0.007624578691184517,0.0027582486542339258,standardized shapley value,Z,0-20%,,equal weights,Standard normal 3 correlated vars
+0.6506876648466878,1.0968211124998133,rank-relevance shapley value,X,0-20%,,equal weights,Standard normal 3 correlated vars
+0.7168217742941466,1.0986299246456337,rank-relevance shapley value,Y,0-20%,,equal weights,Standard normal 3 correlated vars
+1.9894089780684747,1.5206440693885066,rank-relevance shapley value,Z,0-20%,,equal weights,Standard normal 3 correlated vars
+0.03506696202519123,0.025794158854549457,shapley value,X,20-40%,,equal weights,Standard normal 3 correlated vars
+0.0839970143108392,0.053323863140347455,shapley value,Y,20-40%,,equal weights,Standard normal 3 correlated vars
+0.1288164501600919,0.09196360162488987,shapley value,Z,20-40%,,equal weights,Standard normal 3 correlated vars
+0.0023910151517083553,0.0006787659174364544,standardized shapley value,X,20-40%,,equal weights,Standard normal 3 correlated vars
+0.002101921018783935,0.0015375265045655723,standardized shapley value,Y,20-40%,,equal weights,Standard normal 3 correlated vars
+0.0024004686803888106,0.0015993431219819953,standardized shapley value,Z,20-40%,,equal weights,Standard normal 3 correlated vars
+2.644560882619835,10.531820667969646,rank-relevance shapley value,X,20-40%,,equal weights,Standard normal 3 correlated vars
+3.220075711015179,16.208838922724556,rank-relevance shapley value,Y,20-40%,,equal weights,Standard normal 3 correlated vars
+5.687670308083321,26.776290877276708,rank-relevance shapley value,Z,20-40%,,equal weights,Standard normal 3 correlated vars
+0.029756325340078184,0.020350700364389126,shapley value,X,40-60%,,equal weights,Standard normal 3 correlated vars
+0.08352733426143907,0.04764066980216382,shapley value,Y,40-60%,,equal weights,Standard normal 3 correlated vars
+0.08653098620110981,0.052962847882058066,shapley value,Z,40-60%,,equal weights,Standard normal 3 correlated vars
+0.002710634019251624,0.00059311491528234,standardized shapley value,X,40-60%,,equal weights,Standard normal 3 correlated vars
+0.0027010377944709494,0.0015977768393578102,standardized shapley value,Y,40-60%,,equal weights,Standard normal 3 correlated vars
+0.0014711192469757512,0.000896008302262588,standardized shapley value,Z,40-60%,,equal weights,Standard normal 3 correlated vars
+0.022275840955192645,0.017902096585388747,rank-relevance shapley value,X,40-60%,,equal weights,Standard normal 3 correlated vars
+0.0198956972489855,0.016653746238580524,rank-relevance shapley value,Y,40-60%,,equal weights,Standard normal 3 correlated vars
+0.01096171504513917,0.010472355515385319,rank-relevance shapley value,Z,40-60%,,equal weights,Standard normal 3 correlated vars
+0.03370185141813558,0.023007702029422636,shapley value,X,60-80%,,equal weights,Standard normal 3 correlated vars
+0.09098855966284157,0.04650208059302605,shapley value,Y,60-80%,,equal weights,Standard normal 3 correlated vars
+0.22360772553571184,0.08445599097549981,shapley value,Z,60-80%,,equal weights,Standard normal 3 correlated vars
+0.0026663734414868715,0.0006780137711362142,standardized shapley value,X,60-80%,,equal weights,Standard normal 3 correlated vars
+0.0031488685647610795,0.00164651671494813,standardized shapley value,Y,60-80%,,equal weights,Standard normal 3 correlated vars
+0.0033577537226118595,0.0013966768447042765,standardized shapley value,Z,60-80%,,equal weights,Standard normal 3 correlated vars
+0.0003189546509752284,0.00021189552247649268,rank-relevance shapley value,X,60-80%,,equal weights,Standard normal 3 correlated vars
+0.00036487227515234196,0.0002526144896305318,rank-relevance shapley value,Y,60-80%,,equal weights,Standard normal 3 correlated vars
+0.00039924073967953613,0.0003056321856921134,rank-relevance shapley value,Z,60-80%,,equal weights,Standard normal 3 correlated vars
+0.07507451104474762,0.05163587779007982,shapley value,X,80-100%,,equal weights,Standard normal 3 correlated vars
+0.08966582561015668,0.04355050341377843,shapley value,Y,80-100%,,equal weights,Standard normal 3 correlated vars
+0.5034899661597836,0.14560224128222013,shapley value,Z,80-100%,,equal weights,Standard normal 3 correlated vars
+0.0038772087415187605,0.0008539197045986413,standardized shapley value,X,80-100%,,equal weights,Standard normal 3 correlated vars
+0.0029409376086907096,0.0016481848807390568,standardized shapley value,Y,80-100%,,equal weights,Standard normal 3 correlated vars
+0.007986259530293291,0.0024078727463504074,standardized shapley value,Z,80-100%,,equal weights,Standard normal 3 correlated vars
+4.2186929663828707e-07,6.134877310582371e-07,rank-relevance shapley value,X,80-100%,,equal weights,Standard normal 3 correlated vars
+2.923848943345313e-07,5.820887741835968e-07,rank-relevance shapley value,Y,80-100%,,equal weights,Standard normal 3 correlated vars
+7.490423479171508e-07,1.208454784624019e-06,rank-relevance shapley value,Z,80-100%,,equal weights,Standard normal 3 correlated vars
+0.07446762793241515,0.042807987795624954,shapley value,X,0-20%,,different weights,Standard normal 3 correlated vars
+0.11860861236530544,0.06312572203878714,shapley value,Y,0-20%,,different weights,Standard normal 3 correlated vars
+0.24368379401981244,0.12241433431425791,shapley value,Z,0-20%,,different weights,Standard normal 3 correlated vars
+0.0016037560324778312,0.0006257989286148133,standardized shapley value,X,0-20%,,different weights,Standard normal 3 correlated vars
+0.0017550424223044918,0.001556980301770415,standardized shapley value,Y,0-20%,,different weights,Standard normal 3 correlated vars
+0.0033797589480358,0.0016151990289237305,standardized shapley value,Z,0-20%,,different weights,Standard normal 3 correlated vars
+1.5247466293448044,2.003456903483376,rank-relevance shapley value,X,0-20%,,different weights,Standard normal 3 correlated vars
+2.0765096491350907,3.987508900580743,rank-relevance shapley value,Y,0-20%,,different weights,Standard normal 3 correlated vars
+3.643373562016291,5.488521457362118,rank-relevance shapley value,Z,0-20%,,different weights,Standard normal 3 correlated vars
+0.04472510176575268,0.034181893386911355,shapley value,X,20-40%,,different weights,Standard normal 3 correlated vars
+0.1042626759514631,0.06848616210863606,shapley value,Y,20-40%,,different weights,Standard normal 3 correlated vars
+0.08981095029122484,0.08275214109090114,shapley value,Z,20-40%,,different weights,Standard normal 3 correlated vars
+0.0022893709801778375,0.000697585779883602,standardized shapley value,X,20-40%,,different weights,Standard normal 3 correlated vars
+0.0020202032713739666,0.0015408499808367239,standardized shapley value,Y,20-40%,,different weights,Standard normal 3 correlated vars
+0.0012909931820769172,0.001128954604863433,standardized shapley value,Z,20-40%,,different weights,Standard normal 3 correlated vars
+0.1380675228500653,0.08936611706484465,rank-relevance shapley value,X,20-40%,,different weights,Standard normal 3 correlated vars
+0.1309691267123288,0.15269028039380347,rank-relevance shapley value,Y,20-40%,,different weights,Standard normal 3 correlated vars
+0.09572944080074838,0.12582746302444633,rank-relevance shapley value,Z,20-40%,,different weights,Standard normal 3 correlated vars
+0.03628011608138954,0.024378257517897614,shapley value,X,40-60%,,different weights,Standard normal 3 correlated vars
+0.0911591786034153,0.054789605820777194,shapley value,Y,40-60%,,different weights,Standard normal 3 correlated vars
+0.07447860878672283,0.043716403715344646,shapley value,Z,40-60%,,different weights,Standard normal 3 correlated vars
+0.0025713488661945763,0.0005779607191068564,standardized shapley value,X,40-60%,,different weights,Standard normal 3 correlated vars
+0.002610490757003766,0.0014098361923983534,standardized shapley value,Y,40-60%,,different weights,Standard normal 3 correlated vars
+0.0009856669824247614,0.0005857429448492675,standardized shapley value,Z,40-60%,,different weights,Standard normal 3 correlated vars
+0.01928507170854215,0.013322714806278233,rank-relevance shapley value,X,40-60%,,different weights,Standard normal 3 correlated vars
+0.016632470316183732,0.012471013337696069,rank-relevance shapley value,Y,40-60%,,different weights,Standard normal 3 correlated vars
+0.006915118110825571,0.00580654177037173,rank-relevance shapley value,Z,40-60%,,different weights,Standard normal 3 correlated vars
+0.049918931191407855,0.03638161018144467,shapley value,X,60-80%,,different weights,Standard normal 3 correlated vars
+0.11347108303223626,0.047719539872725536,shapley value,Y,60-80%,,different weights,Standard normal 3 correlated vars
+0.0978158053213238,0.06613688709023646,shapley value,Z,60-80%,,different weights,Standard normal 3 correlated vars
+0.0027896552064793096,0.0007827591395622086,standardized shapley value,X,60-80%,,different weights,Standard normal 3 correlated vars
+0.0036371699289433623,0.0012747222369314188,standardized shapley value,Y,60-80%,,different weights,Standard normal 3 correlated vars
+0.001176418398832063,0.0008152361973440771,standardized shapley value,Z,60-80%,,different weights,Standard normal 3 correlated vars
+0.0004116015714358813,0.00027138904959202295,rank-relevance shapley value,X,60-80%,,different weights,Standard normal 3 correlated vars
+0.0005228412958195822,0.0003868508464983574,rank-relevance shapley value,Y,60-80%,,different weights,Standard normal 3 correlated vars
+0.00017189245721265374,0.00019836604335449583,rank-relevance shapley value,Z,60-80%,,different weights,Standard normal 3 correlated vars
+0.0919504510458594,0.05614031526991346,shapley value,X,80-100%,,different weights,Standard normal 3 correlated vars
+0.11474308599272351,0.04694949925787001,shapley value,Y,80-100%,,different weights,Standard normal 3 correlated vars
+0.2450277032302281,0.10193348261027166,shapley value,Z,80-100%,,different weights,Standard normal 3 correlated vars
+0.00376222275936104,0.0007407448091385393,standardized shapley value,X,80-100%,,different weights,Standard normal 3 correlated vars
+0.003945180697726857,0.000959812114030383,standardized shapley value,Y,80-100%,,different weights,Standard normal 3 correlated vars
+0.003068557257774653,0.0013449639133294574,standardized shapley value,Z,80-100%,,different weights,Standard normal 3 correlated vars
+4.999415503682852e-07,7.452728619198593e-07,rank-relevance shapley value,X,80-100%,,different weights,Standard normal 3 correlated vars
+6.307240643623108e-07,1.0940720624843198e-06,rank-relevance shapley value,Y,80-100%,,different weights,Standard normal 3 correlated vars
+3.326309241593731e-07,4.7477614942342894e-07,rank-relevance shapley value,Z,80-100%,,different weights,Standard normal 3 correlated vars
+0.07099989763300885,0.05702794155176212,shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.17871066018278953,0.06719363252965034,shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.001810098672596993,0.0006416120165382348,standardized shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0008598940458074387,0.0006493214596046972,standardized shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.4373658591948538,0.20284550464218956,rank-relevance shapley value,X,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.18453367973278634,0.1356982334900188,rank-relevance shapley value,Y,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-20%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.07500156083413945,0.06018560458218342,shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.11964872221818154,0.0659481600468835,shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0023653058904083628,0.0009304087072284026,standardized shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.001647195177931738,0.0009304628818499516,standardized shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.10585362958284662,0.06515410075108431,rank-relevance shapley value,X,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.07508883871446755,0.06269621301781245,rank-relevance shapley value,Y,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,20-40%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.09024786111345569,0.05916357478556036,shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.096765346173729,0.06691003004195731,shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.002233111669470314,0.0010301167145600988,standardized shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0028980459355339985,0.0010979316478609436,standardized shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.016271848131713243,0.014541652577028255,rank-relevance shapley value,X,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.019235075789390807,0.013184430765700632,rank-relevance shapley value,Y,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,40-60%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.07884105029482381,0.06530655004928827,shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.1097465236632424,0.06547725618126901,shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0028246916972462428,0.0009035053026559903,standardized shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.003437376949473027,0.0009010966404483505,standardized shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0004913125280548054,0.0003542991432415475,rank-relevance shapley value,X,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.000591755137752301,0.00035855091215901565,rank-relevance shapley value,Y,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,60-80%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.09039696632662851,0.0545269251519241,shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.17494547825204426,0.049624537414476144,shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0032651613253962364,0.0005616266004611774,standardized shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.004277427990044432,0.00047954360931382794,standardized shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+6.669595471299273e-07,1.1183474036669936e-06,rank-relevance shapley value,X,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+7.963369917600419e-07,1.210368241216094e-06,rank-relevance shapley value,Y,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,80-100%,,equal weights,Arbitrary normal 2 vars with correlated third
+0.14767267932618436,0.09152627090073727,shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.09027546245017427,0.049233264626267224,shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0019867070925642595,0.0009095353447361168,standardized shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0008769444429903283,0.0007302725236166711,standardized shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.4213163548725534,0.2123011050337355,rank-relevance shapley value,X,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.20058318405508677,0.1873082978987248,rank-relevance shapley value,Y,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,0-20%,,different weights,Arbitrary normal 2 vars with correlated third
+0.07896028878960877,0.06529543811554549,shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0745246065028431,0.03954113385011188,shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.002839913778205095,0.0008165785852426009,standardized shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.001384910139217823,0.0008087355083171474,standardized shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.12176836530157704,0.06557628008200031,rank-relevance shapley value,X,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.05917410299573711,0.04785431998330634,rank-relevance shapley value,Y,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,20-40%,,different weights,Arbitrary normal 2 vars with correlated third
+0.07665148898985635,0.044544437840248335,shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.07807688669806226,0.03804550693585174,shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0033908069450304576,0.0008707893692449357,standardized shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0015902286381396743,0.0008553131696421673,standardized shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.024275466270770672,0.015782058845980294,rank-relevance shapley value,X,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.011231457650333374,0.00886726717410695,rank-relevance shapley value,Y,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,40-60%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0871476003402442,0.06399485833578772,shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.06628225916726638,0.04582136192454215,shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.004179685677880203,0.0007465516553055534,standardized shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.00191251180369598,0.0007188963697841087,standardized shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0007202839383484328,0.0003672706143319626,rank-relevance shapley value,X,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.00036278372745867363,0.0002971229613551303,rank-relevance shapley value,Y,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,60-80%,,different weights,Arbitrary normal 2 vars with correlated third
+0.18541712021263954,0.08170429724154,shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.07808052854085169,0.04697147767862406,shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,shapley value,Z,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.005243032040031606,0.0008006709072060423,standardized shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.002203001935512635,0.0006376140677158243,standardized shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,standardized shapley value,Z,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+1.0325928982364248e-06,1.6778361985052218e-06,rank-relevance shapley value,X,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+4.307036406535444e-07,6.363171904656988e-07,rank-relevance shapley value,Y,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Z,80-100%,,different weights,Arbitrary normal 2 vars with correlated third
+0.06818383882321231,0.044173618764975164,shapley value,X,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.10251231082711643,0.05335474731992617,shapley value,Y,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.06871036769930013,0.045822440658249544,shapley value,Z,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.0009626014377742925,0.0004488919411114412,standardized shapley value,X,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.0009288645047470935,0.0008008149689294593,standardized shapley value,Y,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.0009571712703988166,0.0004650222723153918,standardized shapley value,Z,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.2097983809245526,0.10967440849540996,rank-relevance shapley value,X,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.2040287620591818,0.17713121668073337,rank-relevance shapley value,Y,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.2080723959439057,0.11072380900227011,rank-relevance shapley value,Z,0-20%,,equal weights,Arbitrary normal 3 correlated vars
+0.03431844579604732,0.028897040019186103,shapley value,X,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.07861023147387278,0.04236401311586302,shapley value,Y,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.03464545566633794,0.02827794934405589,shapley value,Z,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.001425905777883007,0.00039524779035732244,standardized shapley value,X,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.001377003660467607,0.000805204686608237,standardized shapley value,Y,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.0014268069120644544,0.0003959375207047202,standardized shapley value,Z,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.06205520471997409,0.03483994100953837,rank-relevance shapley value,X,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.05648579054247549,0.039169691568380925,rank-relevance shapley value,Y,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.06240147303486456,0.03573158613146525,rank-relevance shapley value,Z,20-40%,,equal weights,Arbitrary normal 3 correlated vars
+0.04472861268389714,0.025097936798779093,shapley value,X,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.09006962130154988,0.04320445294576374,shapley value,Y,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.0453328059503698,0.025694989407290033,shapley value,Z,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.0015891243129362669,0.0005066602729715266,standardized shapley value,X,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.0018086585523221228,0.0009895374275632437,standardized shapley value,Y,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.0015966039164378137,0.0005186443672722947,standardized shapley value,Z,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.011095464840624054,0.007131228886468532,rank-relevance shapley value,X,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.013245387374180823,0.01113468176632738,rank-relevance shapley value,Y,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.011166071706299172,0.007291969041883891,rank-relevance shapley value,Z,40-60%,,equal weights,Arbitrary normal 3 correlated vars
+0.03705595936731559,0.030022337029609086,shapley value,X,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.06920187640571639,0.047015200876046125,shapley value,Y,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.038130995590000785,0.030763988201230552,shapley value,Z,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.0019447282246317919,0.0003491218531446702,standardized shapley value,X,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.0022072270677104605,0.0006894670693288878,standardized shapley value,Y,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.001946924040798831,0.00036626927021092033,standardized shapley value,Z,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.0003467916525948769,0.00021638033591358992,rank-relevance shapley value,X,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.0003882539563948639,0.00022201288538093917,rank-relevance shapley value,Y,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.0003480220568173658,0.00022282084087245,rank-relevance shapley value,Z,60-80%,,equal weights,Arbitrary normal 3 correlated vars
+0.08478842502724032,0.0389538096473255,shapley value,X,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.08854678556021135,0.05024827285505645,shapley value,Y,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0847702219959589,0.03916934928664486,shapley value,Z,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0024650430855892276,0.0003847019463586346,standardized shapley value,X,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0025020696056298705,0.0006652003410672399,standardized shapley value,Y,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.0024646407158005106,0.0003868305833138981,standardized shapley value,Z,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+4.793578516673955e-07,7.285823181161548e-07,rank-relevance shapley value,X,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+5.034413705572222e-07,8.169115709437554e-07,rank-relevance shapley value,Y,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+4.804973166653515e-07,7.463474706044515e-07,rank-relevance shapley value,Z,80-100%,,equal weights,Arbitrary normal 3 correlated vars
+0.07256317703341204,0.051999364286139674,shapley value,X,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.1307088730303501,0.06382202857686801,shapley value,Y,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.03651755701963815,0.026811120275821707,shapley value,Z,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.0012677529877750564,0.0005455430008197484,standardized shapley value,X,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.0009114599124256557,0.0007948698349243956,standardized shapley value,Y,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.0006326259578841006,0.0002820140470796278,standardized shapley value,Z,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.28766033258678014,0.1443818473391414,rank-relevance shapley value,X,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.19092238791320384,0.15175814909060734,rank-relevance shapley value,Y,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.14331681842765617,0.07315239837484688,rank-relevance shapley value,Z,0-20%,,different weights,Arbitrary normal 3 correlated vars
+0.04263549909007803,0.04108987840005166,shapley value,X,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.08886056710753346,0.04709441330384075,shapley value,Y,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.02167160758137068,0.020638984830473814,shapley value,Z,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.0017681932832644075,0.0005497997342541354,standardized shapley value,X,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.0015286925172238593,0.0008092977303086074,standardized shapley value,Y,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.0008850437148955063,0.00027967189439306975,standardized shapley value,Z,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.07561803412391743,0.03963136023189724,rank-relevance shapley value,X,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.06744164097567909,0.0606266700276337,rank-relevance shapley value,Y,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.03788279319771763,0.020426993789889603,rank-relevance shapley value,Z,20-40%,,different weights,Arbitrary normal 3 correlated vars
+0.06586839301120867,0.03509633145663223,shapley value,X,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.1073598583215735,0.05545621744292176,shapley value,Y,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.03342197730718182,0.017859327140382006,shapley value,Z,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.0018052996719721904,0.0007152198683774045,standardized shapley value,X,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.0023150173115444586,0.0011586725028348214,standardized shapley value,Y,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.0009054912137144843,0.0003662973933006708,standardized shapley value,Z,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.013666231026751444,0.011615569417168566,rank-relevance shapley value,X,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.014978776620464134,0.011950886471157744,rank-relevance shapley value,Y,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.00686191627388847,0.005916120309118852,rank-relevance shapley value,Z,40-60%,,different weights,Arbitrary normal 3 correlated vars
+0.04551338788132354,0.03900944644116045,shapley value,X,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.09406363972898253,0.054528866841032114,shapley value,Y,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.023880646032012662,0.019029451795944344,shapley value,Z,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.0022324392622868716,0.0005089530711643367,standardized shapley value,X,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.002808416200436942,0.0007763637630445076,standardized shapley value,Y,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.0011072230329711706,0.00026807659586129684,standardized shapley value,Z,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.0003969993121260038,0.00025313113530728705,rank-relevance shapley value,X,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.000489033726261727,0.0002823837441107481,rank-relevance shapley value,Y,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.00019703462741937572,0.00012925059451139709,rank-relevance shapley value,Z,60-80%,,different weights,Arbitrary normal 3 correlated vars
+0.08517643986665142,0.046576133718871,shapley value,X,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.1253924132969906,0.05233477622843052,shapley value,Y,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.0426991475246337,0.0228521788682883,shapley value,Z,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.002772954974906511,0.0004532467965260038,standardized shapley value,X,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.0032684303556000174,0.0005896738945914168,standardized shapley value,Y,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.001387424023978959,0.00022238163708926203,standardized shapley value,Z,80-100%,,different weights,Arbitrary normal 3 correlated vars
+5.67200697112274e-07,9.284648340312528e-07,rank-relevance shapley value,X,80-100%,,different weights,Arbitrary normal 3 correlated vars
+6.11949584205794e-07,9.204569462397089e-07,rank-relevance shapley value,Y,80-100%,,different weights,Arbitrary normal 3 correlated vars
+2.841462575719014e-07,4.7191652297401053e-07,rank-relevance shapley value,Z,80-100%,,different weights,Arbitrary normal 3 correlated vars
+0.06000008459509588,0.04840058670718947,shapley value,X,0-20%,0,equal weights,Standard normal 2 vars
+0.16539587041528336,0.06262103080732348,shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars
+0.008762507118249689,0.002739244234449567,standardized shapley value,X,0-20%,0,equal weights,Standard normal 2 vars
+0.002911626495809892,0.002818892321503242,standardized shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars
+0.5038067288281242,0.2195725565305832,rank-relevance shapley value,X,0-20%,0,equal weights,Standard normal 2 vars
+0.1487865024826626,0.12388715567686209,rank-relevance shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars
+0.07271225025404406,0.05813377141500907,shapley value,X,0-20%,1,equal weights,Standard normal 2 vars
+0.19958813518991766,0.060621207624402075,shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars
+0.0024864220301461554,0.0010150341734603192,standardized shapley value,X,0-20%,1,equal weights,Standard normal 2 vars
+0.0007090635359632069,0.0008014682184640143,standardized shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars
+0.49032581025865707,0.2109875879526382,rank-relevance shapley value,X,0-20%,1,equal weights,Standard normal 2 vars
+0.1486797737752304,0.1588698240077965,rank-relevance shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars
+0.06506034232461594,0.049034356603291626,shapley value,X,20-40%,0,equal weights,Standard normal 2 vars
+0.11602606097674924,0.07334250348346208,shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars
+0.011255573555079897,0.003683226766282106,standardized shapley value,X,20-40%,0,equal weights,Standard normal 2 vars
+0.0060362335752162,0.004144474899860942,standardized shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars
+0.11349152629365845,0.06909897949313044,rank-relevance shapley value,X,20-40%,0,equal weights,Standard normal 2 vars
+0.050843162605762375,0.03327471271128613,rank-relevance shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars
+0.06512600997045884,0.043518469414876484,shapley value,X,20-40%,1,equal weights,Standard normal 2 vars
+0.09578940425195574,0.06582127226018529,shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars
+0.0028363995716478674,0.0009890636711054359,standardized shapley value,X,20-40%,1,equal weights,Standard normal 2 vars
+0.0021713025984492315,0.0010266449104954463,standardized shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars
+0.10904584078056473,0.06495087829072727,rank-relevance shapley value,X,20-40%,1,equal weights,Standard normal 2 vars
+0.08051756457474352,0.054697096928083395,rank-relevance shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars
+0.06396178830016455,0.03163655388219072,shapley value,X,40-60%,0,equal weights,Standard normal 2 vars
+0.07118151548329665,0.041822217897885275,shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars
+0.009177624843577554,0.002710069310045586,standardized shapley value,X,40-60%,0,equal weights,Standard normal 2 vars
+0.009011143492228145,0.0031544972648425706,standardized shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars
+0.01997352878142253,0.013323483680484525,rank-relevance shapley value,X,40-60%,0,equal weights,Standard normal 2 vars
+0.018632396843659686,0.013302888034631723,rank-relevance shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars
+0.06697301226075612,0.059787327653268565,shapley value,X,40-60%,1,equal weights,Standard normal 2 vars
+0.07524959152165434,0.06162065126290068,shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars
+0.0033856248564328863,0.0012693796990077956,standardized shapley value,X,40-60%,1,equal weights,Standard normal 2 vars
+0.0035620765458700505,0.001378652167924174,standardized shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars
+0.0171823752464166,0.011467668898782965,rank-relevance shapley value,X,40-60%,1,equal weights,Standard normal 2 vars
+0.01721976636108435,0.012950801777196921,rank-relevance shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars
+0.021221441175789106,0.007156306408880188,shapley value,X,60-80%,0,equal weights,Standard normal 2 vars
+0.1494281596392163,0.030006835808632323,shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars
+0.010420090385681572,0.0009094480864613639,standardized shapley value,X,60-80%,0,equal weights,Standard normal 2 vars
+0.01764484603034503,0.0013470430961109317,standardized shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars
+0.000221872926551288,0.0001117920138650352,rank-relevance shapley value,X,60-80%,0,equal weights,Standard normal 2 vars
+0.0003615836102019164,0.00017510802659595042,rank-relevance shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars
+0.06621101687109988,0.03341795502014493,shapley value,X,60-80%,1,equal weights,Standard normal 2 vars
+0.15792456862396054,0.06678501625870081,shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars
+0.00289619867476096,0.000912862644988166,standardized shapley value,X,60-80%,1,equal weights,Standard normal 2 vars
+0.005385505945635545,0.0008836757555577575,standardized shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars
+0.0003694065464815393,0.00022288230334080645,rank-relevance shapley value,X,60-80%,1,equal weights,Standard normal 2 vars
+0.0007265527783754418,0.0004750201216345029,rank-relevance shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars
+0.1037317240971998,0.06341032847251875,shapley value,X,80-100%,0,equal weights,Standard normal 2 vars
+0.1985203026306783,0.0545755649054602,shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars
+0.013126261674895884,0.002350065434941103,standardized shapley value,X,80-100%,0,equal weights,Standard normal 2 vars
+0.01625739156699333,0.002022638137449348,standardized shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars
+3.249951150409158e-07,5.80436995586027e-07,rank-relevance shapley value,X,80-100%,0,equal weights,Standard normal 2 vars
+5.985060124419363e-07,1.1743166056748802e-06,rank-relevance shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars
+0.0997852742631805,0.05963584349691183,shapley value,X,80-100%,1,equal weights,Standard normal 2 vars
+0.17119134646290668,0.042058993289327315,shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars
+0.004767393312377045,0.0008414811116821206,standardized shapley value,X,80-100%,1,equal weights,Standard normal 2 vars
+0.005952726498967701,0.0005934660491750523,standardized shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars
+5.106540273006849e-07,7.746737042279758e-07,rank-relevance shapley value,X,80-100%,1,equal weights,Standard normal 2 vars
+6.988227603333678e-07,1.1239829243845475e-06,rank-relevance shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars
+0.09480403856184672,0.05135396245522652,shapley value,X,0-20%,0,different weights,Standard normal 2 vars
+0.09474437255880075,0.03892791441471052,shapley value,Y,0-20%,0,different weights,Standard normal 2 vars
+0.011908363641763165,0.0021743218291145018,standardized shapley value,X,0-20%,0,different weights,Standard normal 2 vars
+0.001805305304377321,0.0016482041507040867,standardized shapley value,Y,0-20%,0,different weights,Standard normal 2 vars
+0.637647789016542,0.18779089671052673,rank-relevance shapley value,X,0-20%,0,different weights,Standard normal 2 vars
+0.0969291768175623,0.07681771733193514,rank-relevance shapley value,Y,0-20%,0,different weights,Standard normal 2 vars
+0.13532243081677123,0.0698637447035772,shapley value,X,0-20%,1,different weights,Standard normal 2 vars
+0.08040903712751207,0.05145787168354749,shapley value,Y,0-20%,1,different weights,Standard normal 2 vars
+0.0026277055127807863,0.0010074139970761634,standardized shapley value,X,0-20%,1,different weights,Standard normal 2 vars
+0.0011008923059405678,0.0008719681604358796,standardized shapley value,Y,0-20%,1,different weights,Standard normal 2 vars
+0.4542269868686054,0.2286102382522641,rank-relevance shapley value,X,0-20%,1,different weights,Standard normal 2 vars
+0.188825313416567,0.19014012360484545,rank-relevance shapley value,Y,0-20%,1,different weights,Standard normal 2 vars
+0.07581361963756326,0.06569689240330807,shapley value,X,20-40%,0,different weights,Standard normal 2 vars
+0.08245921520078726,0.04906027246013109,shapley value,Y,20-40%,0,different weights,Standard normal 2 vars
+0.012082435685664058,0.003954486070392513,standardized shapley value,X,20-40%,0,different weights,Standard normal 2 vars
+0.006573232999148893,0.00443804877030757,standardized shapley value,Y,20-40%,0,different weights,Standard normal 2 vars
+0.12060305970374723,0.0793762317346442,rank-relevance shapley value,X,20-40%,0,different weights,Standard normal 2 vars
+0.0533669326302467,0.03826968390394915,rank-relevance shapley value,Y,20-40%,0,different weights,Standard normal 2 vars
+0.05836528255370572,0.05300828377028368,shapley value,X,20-40%,1,different weights,Standard normal 2 vars
+0.08149054123573947,0.049592201958498075,shapley value,Y,20-40%,1,different weights,Standard normal 2 vars
+0.00419114300678783,0.0009796722269080377,standardized shapley value,X,20-40%,1,different weights,Standard normal 2 vars
+0.0011338251404720578,0.0009993796362008686,standardized shapley value,Y,20-40%,1,different weights,Standard normal 2 vars
+0.15102186755501698,0.07339482828417183,rank-relevance shapley value,X,20-40%,1,different weights,Standard normal 2 vars
+0.03940673629869894,0.044977485437129344,rank-relevance shapley value,Y,20-40%,1,different weights,Standard normal 2 vars
+0.08697309491842102,0.06559010187433521,shapley value,X,40-60%,0,different weights,Standard normal 2 vars
+0.07759299184254774,0.04134876802555252,shapley value,Y,40-60%,0,different weights,Standard normal 2 vars
+0.010403613381189353,0.0028505946138179857,standardized shapley value,X,40-60%,0,different weights,Standard normal 2 vars
+0.006703057292547446,0.003001854506738102,standardized shapley value,Y,40-60%,0,different weights,Standard normal 2 vars
+0.030694876777899126,0.017131869442613395,rank-relevance shapley value,X,40-60%,0,different weights,Standard normal 2 vars
+0.01940243457338847,0.014848917588445028,rank-relevance shapley value,Y,40-60%,0,different weights,Standard normal 2 vars
+0.07073819468540926,0.043410630666398206,shapley value,X,40-60%,1,different weights,Standard normal 2 vars
+0.0747753790433012,0.04736302625856059,shapley value,Y,40-60%,1,different weights,Standard normal 2 vars
+0.0047534568410557195,0.0011982505202959876,standardized shapley value,X,40-60%,1,different weights,Standard normal 2 vars
+0.0021995349862311254,0.0012844446815583272,standardized shapley value,Y,40-60%,1,different weights,Standard normal 2 vars
+0.02263133284117098,0.014328032371629273,rank-relevance shapley value,X,40-60%,1,different weights,Standard normal 2 vars
+0.009318679119608484,0.007928967940102064,rank-relevance shapley value,Y,40-60%,1,different weights,Standard normal 2 vars
+0.06219577103246215,0.06228103298305924,shapley value,X,60-80%,0,different weights,Standard normal 2 vars
+0.08079391472940767,0.06624483805054181,shapley value,Y,60-80%,0,different weights,Standard normal 2 vars
+0.01772670339971301,0.0028116995942962866,standardized shapley value,X,60-80%,0,different weights,Standard normal 2 vars
+0.00956195063381746,0.0029906469971619685,standardized shapley value,Y,60-80%,0,different weights,Standard normal 2 vars
+0.000194697080631356,4.595445479496791e-05,rank-relevance shapley value,X,60-80%,0,different weights,Standard normal 2 vars
+0.00011813749302664425,8.615592702732604e-05,rank-relevance shapley value,Y,60-80%,0,different weights,Standard normal 2 vars
+0.07622067295387171,0.05542114721324047,shapley value,X,60-80%,1,different weights,Standard normal 2 vars
+0.05945743033079317,0.04305120831619225,shapley value,Y,60-80%,1,different weights,Standard normal 2 vars
+0.005349678425430758,0.0009513431207000293,standardized shapley value,X,60-80%,1,different weights,Standard normal 2 vars
+0.0024705925207254434,0.000896368770406583,standardized shapley value,Y,60-80%,1,different weights,Standard normal 2 vars
+0.0007681619894178231,0.0004243296907326421,rank-relevance shapley value,X,60-80%,1,different weights,Standard normal 2 vars
+0.0003779571599541973,0.0002536831638332691,rank-relevance shapley value,Y,60-80%,1,different weights,Standard normal 2 vars
+0.19264556915328104,0.06806411378522696,shapley value,X,80-100%,0,different weights,Standard normal 2 vars
+0.06879530021895104,0.04286314973745162,shapley value,Y,80-100%,0,different weights,Standard normal 2 vars
+0.025609413146532478,0.003109594223206969,standardized shapley value,X,80-100%,0,different weights,Standard normal 2 vars
+0.00948850414947335,0.0028750421679103137,standardized shapley value,Y,80-100%,0,different weights,Standard normal 2 vars
+6.094958851356074e-07,1.2933598048190803e-06,rank-relevance shapley value,X,80-100%,0,different weights,Standard normal 2 vars
+2.3279024525124244e-07,5.209262995421369e-07,rank-relevance shapley value,Y,80-100%,0,different weights,Standard normal 2 vars
+0.17933667048983665,0.07479314558935324,shapley value,X,80-100%,1,different weights,Standard normal 2 vars
+0.08982859106388798,0.037515922701340035,shapley value,Y,80-100%,1,different weights,Standard normal 2 vars
+0.0067516592703219126,0.000991162950579968,standardized shapley value,X,80-100%,1,different weights,Standard normal 2 vars
+0.0031444477616265026,0.000497163106931598,standardized shapley value,Y,80-100%,1,different weights,Standard normal 2 vars
+1.0360429918082258e-06,1.4209005765059376e-06,rank-relevance shapley value,X,80-100%,1,different weights,Standard normal 2 vars
+6.177229498254606e-07,9.287193816099748e-07,rank-relevance shapley value,Y,80-100%,1,different weights,Standard normal 2 vars
+0.079715218097876,0.06009457072013562,shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.1986803001270937,0.07512971861287528,shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.006435957959643647,0.002694409569518861,standardized shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.003309191806388197,0.0029496184674331107,standardized shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.49991742212348034,0.2618777835045477,rank-relevance shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.21707060931485062,0.19534598442282416,rank-relevance shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars
+0.06807786369219557,0.055998084942122835,shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.17244025348206152,0.06643367752437196,shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.002488122469303518,0.0008319756180861814,standardized shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.001158126626333907,0.0008532775107128512,standardized shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.4226179670176394,0.18540772579182885,rank-relevance shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.17654352957474864,0.11945096003523001,rank-relevance shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars
+0.09951034365669778,0.0730049256345179,shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.1269409729772749,0.06572713083584984,shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.009764849500128793,0.004936696088010559,standardized shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.006575498191343754,0.004723485554149562,standardized shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.09454879153384388,0.06381926368805126,rank-relevance shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.08058027862100144,0.09108436977703276,rank-relevance shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars
+0.06897344250982512,0.05563479649343299,shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.11949642059933893,0.06693613092666112,shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.003125478274710495,0.0011390690640239135,standardized shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.0021949825241631736,0.0011846046943068246,standardized shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.1082512296773532,0.06634319487306366,rank-relevance shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.07339255860787172,0.056219632191258674,rank-relevance shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars
+0.10583317610892026,0.051829102291807934,shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.1071157040363194,0.07430242950510482,shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.009371263374253192,0.0048657453911171026,standardized shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.011986325726044971,0.005465220150701124,standardized shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.019596466398558103,0.019670395262986414,rank-relevance shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.02099563240908369,0.014042221782284574,rank-relevance shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars
+0.0849740832442027,0.06116596713925908,shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.09337481634284708,0.06588736911410287,shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.0029324165248259164,0.0013104403378417717,standardized shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.003823583560457775,0.0013875117254216144,standardized shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.015411756597231381,0.012536348051901645,rank-relevance shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.01896267099787939,0.013414580715450269,rank-relevance shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars
+0.08839663175528158,0.059421092227339774,shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.12158577231462983,0.06931719858473716,shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.010000304130741645,0.003988714029073288,standardized shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.014011045762801414,0.003933273337208481,standardized shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.0004644547607399939,0.00039003365032193744,rank-relevance shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.0006670662885632304,0.00037540796044088125,rank-relevance shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars
+0.07310500304850286,0.06955663756179283,shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.10344267934670176,0.061020914104731025,shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.003981987364978217,0.0011147863509332846,standardized shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.004498608410338875,0.0011810263648868058,standardized shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.0005008122545340343,0.00034228835586193383,rank-relevance shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.0005437738294783486,0.00036030675866028814,rank-relevance shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars
+0.06656229649131307,0.02782567164272352,shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars
+0.19148745955709684,0.057476038724583074,shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars
+0.01285071130037752,0.001098198392191548,standardized shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars
+0.017333762621275044,0.002268412210397889,standardized shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars
+2.489126323420977e-07,3.682854624238932e-07,rank-relevance shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars
+2.7229068695808184e-07,4.188085888825273e-07,rank-relevance shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars
+0.09792745037820312,0.06132320766540374,shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars
+0.16943148448369338,0.04980497083302292,shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars
+0.004376237865482788,0.000836369722547927,standardized shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars
+0.00567902217565481,0.0006373381655484454,standardized shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars
+6.714445780974345e-07,1.209207258867198e-06,rank-relevance shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars
+8.199606013613282e-07,1.3282023172580997e-06,rank-relevance shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars
+0.1729726844060031,0.0972421480369176,shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars
+0.08462453598664386,0.053884401648139756,shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars
+0.0058903100488389235,0.003714296974950663,standardized shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars
+0.004682218758077141,0.003548664728927018,standardized shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars
+0.38482671279234015,0.25475832586299385,rank-relevance shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars
+0.3249880676634463,0.2762812188862565,rank-relevance shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars
+0.13655354781595055,0.08516061029688021,shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars
+0.09187175527756077,0.04783769066223532,shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars
+0.002914914841018908,0.001122538751617087,standardized shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars
+0.001014103670270755,0.0008499667643825558,standardized shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars
+0.44158816871258594,0.19866904114641287,rank-relevance shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars
+0.15890666313580326,0.13478584788329498,rank-relevance shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars
+0.11857282715940153,0.08819399295977025,shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars
+0.08613151268791187,0.043236004536274616,shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars
+0.009694133999301203,0.003309072783177282,standardized shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars
+0.005323653004755918,0.0034436675151106786,standardized shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars
+0.16339929481489054,0.08701275989055839,rank-relevance shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars
+0.08708161634538154,0.07000228601972347,rank-relevance shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars
+0.06845554478345571,0.05668451144226343,shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars
+0.06968543683473531,0.038468761713031235,shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars
+0.004010552984916953,0.0010789743801199706,standardized shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars
+0.001867757135286914,0.0010616922162826011,standardized shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars
+0.12134111281341019,0.06664663033405212,rank-relevance shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars
+0.05685209218327431,0.04741073735741562,rank-relevance shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars
+0.10255205298479278,0.05928417480877375,shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars
+0.10468779473645809,0.03693709984740828,shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars
+0.012261824212648247,0.004062244990266821,standardized shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars
+0.0049061128456208535,0.0038507466982914333,standardized shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars
+0.023916039563365108,0.01330392343646035,rank-relevance shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars
+0.011747755287003062,0.012604676221557403,rank-relevance shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars
+0.0668734907895354,0.03549629166083229,shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars
+0.07024823961333823,0.03451897797194884,shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars
+0.0046987293563328595,0.0010525983011694232,standardized shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars
+0.0023188985224258064,0.0010876982397380814,standardized shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars
+0.024047090413496033,0.01649058929727898,rank-relevance shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars
+0.010898542215356983,0.007618120295919164,rank-relevance shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars
+0.07742635325820707,0.07016718627289895,shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars
+0.08158000880777065,0.04289522662950823,shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars
+0.014617004936153102,0.002631688072210459,standardized shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars
+0.00839594027117567,0.0027816733336448957,standardized shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars
+0.0006246676227896857,0.00024552541139969547,rank-relevance shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars
+0.00036441155825550994,0.00023282675965218333,rank-relevance shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars
+0.08604383469361906,0.06517698808794106,shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars
+0.05916746894235176,0.047309384099908015,shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars
+0.005867187108797986,0.0009917809793558486,standardized shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars
+0.0024258236681458565,0.0009760848467604436,standardized shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars
+0.0006794578086333367,0.00038428947165493126,rank-relevance shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars
+0.00031081144258819757,0.0002952030692307188,rank-relevance shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars
+0.18057556990300014,0.051768735468289716,shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars
+0.07440807709287763,0.04682659255515605,shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars
+0.02134074841308434,0.0021148204814229097,standardized shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars
+0.009038821817901997,0.002582261974716112,standardized shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars
+1.088397502687318e-06,1.5722628217157023e-06,rank-relevance shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars
+3.643511235109222e-07,5.396683255577835e-07,rank-relevance shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars
+0.18830192188290298,0.09236832771082328,shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars
+0.07943540290117838,0.050282727754010284,shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars
+0.0069674312827205445,0.001190838758227085,standardized shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars
+0.002917826465565721,0.0008936825517755571,standardized shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars
+6.910824983211448e-07,9.748310150980158e-07,rank-relevance shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars
+3.5386797209070953e-07,5.286092848412916e-07,rank-relevance shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars
+0.06207485680654585,0.05763487547928708,shapley value,X,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.17782750208669906,0.06259051153079936,shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.009265119820300694,0.003772332274500428,standardized shapley value,X,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.0025007731210580854,0.003289471981169059,standardized shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.5300445920452028,0.25600211266626033,rank-relevance shapley value,X,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.139345509436671,0.19448245061203315,rank-relevance shapley value,Y,0-20%,0,equal weights,Standard normal 2 vars with correlated third
+0.07098816965403196,0.05424686283477765,shapley value,X,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.19422744786100757,0.05757255407755273,shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.002460087526390233,0.0009053301500872889,standardized shapley value,X,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.0007681990202610017,0.0007429988762323368,standardized shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.45787351918972014,0.18087568176757998,rank-relevance shapley value,X,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.1465161712851976,0.11971724721726601,rank-relevance shapley value,Y,0-20%,1,equal weights,Standard normal 2 vars with correlated third
+0.07708006344490305,0.0536460019127963,shapley value,X,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.11625424445725052,0.06571301533096728,shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.010678165091219155,0.003990367794933193,standardized shapley value,X,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.005686720773890219,0.004096660620828055,standardized shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.11045693692833408,0.07074118998703392,rank-relevance shapley value,X,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.0562821633989336,0.06108729109540153,rank-relevance shapley value,Y,20-40%,0,equal weights,Standard normal 2 vars with correlated third
+0.056871061507269866,0.03755067484965748,shapley value,X,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.09221859189963828,0.06078524050562398,shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.002816380662835499,0.0008205201697424081,standardized shapley value,X,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.0022626470588322533,0.0009239123647967299,standardized shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.11061708143210623,0.06301313342355809,rank-relevance shapley value,X,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.0808126813476034,0.040006301586364625,rank-relevance shapley value,Y,20-40%,1,equal weights,Standard normal 2 vars with correlated third
+0.06689303247976724,0.027606833536968828,shapley value,X,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.044162559513128696,0.03776010522838689,shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.009525156137689195,0.0030779928057932562,standardized shapley value,X,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.012495781014864505,0.0021518490768789923,standardized shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.015114896783760132,0.007706426973862395,rank-relevance shapley value,X,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.023218915983786757,0.016046434931948468,rank-relevance shapley value,Y,40-60%,0,equal weights,Standard normal 2 vars with correlated third
+0.0659385395709168,0.05653590076391464,shapley value,X,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.07882614581063702,0.05794623975337921,shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.0032714024255944855,0.001149688587175726,standardized shapley value,X,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.003239645144925033,0.0012988964649790927,standardized shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.018069692822188215,0.0122500601796971,rank-relevance shapley value,X,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.016308460770276253,0.01186638806574471,rank-relevance shapley value,Y,40-60%,1,equal weights,Standard normal 2 vars with correlated third
+0.04254681506843193,0.03533188949430096,shapley value,X,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.16404857792491917,0.061250234080793955,shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.011796584096138703,0.002777344111255124,standardized shapley value,X,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.019456855447423784,0.003014094686481559,standardized shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.00018569313263905877,0.0001407270947067588,rank-relevance shapley value,X,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.0002828667634839468,0.0001484791055096894,rank-relevance shapley value,Y,60-80%,0,equal weights,Standard normal 2 vars with correlated third
+0.05878175929316555,0.0341179722693402,shapley value,X,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.15488630992891786,0.06035843848226542,shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.002779109153492162,0.0008159880296875496,standardized shapley value,X,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.005251705511841334,0.0007785052693565925,standardized shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.00039751429553128886,0.00021062996088473245,rank-relevance shapley value,X,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.0007900805978236742,0.000456827311289925,rank-relevance shapley value,Y,60-80%,1,equal weights,Standard normal 2 vars with correlated third
+0.012595956438774508,0.0,shapley value,X,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.22935136142718,0.0,shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.011174556032083989,0.0,standardized shapley value,X,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.020842832365761135,0.0,standardized shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,X,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.0,0.0,rank-relevance shapley value,Y,80-100%,0,equal weights,Standard normal 2 vars with correlated third
+0.1036284056825732,0.05746165934323304,shapley value,X,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+0.17277412846703355,0.043064111243795354,shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+0.004591134092834798,0.0007628352115330028,standardized shapley value,X,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+0.0056142096658552505,0.0005716998218571296,standardized shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+5.766313780536686e-07,9.413878595997875e-07,rank-relevance shapley value,X,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+7.868405954799272e-07,1.3426470873965235e-06,rank-relevance shapley value,Y,80-100%,1,equal weights,Standard normal 2 vars with correlated third
+0.11982987407753178,0.05582241179066607,shapley value,X,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.07897937539058937,0.05045923263318309,shapley value,Y,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.008393088871693759,0.0022424568096922103,standardized shapley value,X,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.0037167951681747603,0.0026634639910594607,standardized shapley value,Y,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.4620345053101983,0.2201982215053125,rank-relevance shapley value,X,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.17288808899724714,0.11316474611852681,rank-relevance shapley value,Y,0-20%,0,different weights,Standard normal 2 vars with correlated third
+0.14056109112508192,0.08114811666033321,shapley value,X,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.08274623232523408,0.04911414497189353,shapley value,Y,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.0027997762708763686,0.001170663065706887,standardized shapley value,X,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.0009581395944026766,0.000824113425976482,standardized shapley value,Y,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.46650939803204683,0.22552329542719565,rank-relevance shapley value,X,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.18178137734854408,0.20776941069443822,rank-relevance shapley value,Y,0-20%,1,different weights,Standard normal 2 vars with correlated third
+0.08574103150082538,0.07764558747302966,shapley value,X,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.10177786602117893,0.0467014235918547,shapley value,Y,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.011735153546540898,0.004212542827993061,standardized shapley value,X,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.004273280432842386,0.0043002545490780945,standardized shapley value,Y,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.16067505380970495,0.09734722807227504,rank-relevance shapley value,X,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.05248407517017044,0.05681626493166857,rank-relevance shapley value,Y,20-40%,0,different weights,Standard normal 2 vars with correlated third
+0.059616849452698656,0.050725047309557646,shapley value,X,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.07634432354035223,0.049190448703948675,shapley value,Y,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.004191417747043855,0.0009833949948128903,standardized shapley value,X,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.0014093254828880686,0.0010728997839719195,standardized shapley value,Y,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.13489622019917188,0.06933622748690713,rank-relevance shapley value,X,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.039881577782700864,0.03748103818077204,rank-relevance shapley value,Y,20-40%,1,different weights,Standard normal 2 vars with correlated third
+0.07813102222725218,0.03938006123328069,shapley value,X,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.08316532199799374,0.0409014082932451,shapley value,Y,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.01497737868824684,0.003399744158772275,standardized shapley value,X,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.005812700335827737,0.003986401462689541,standardized shapley value,Y,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.02176587441178061,0.016181809420375236,rank-relevance shapley value,X,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.005707449005501295,0.002615283604244802,rank-relevance shapley value,Y,40-60%,0,different weights,Standard normal 2 vars with correlated third
+0.07617709197673017,0.04830400875525598,shapley value,X,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.07214101743478961,0.04682388426908253,shapley value,Y,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.00417423091067741,0.0011147877135356753,standardized shapley value,X,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.0023114421025655493,0.0011369829760581648,standardized shapley value,Y,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.02498967340415324,0.014324544393036556,rank-relevance shapley value,X,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.013686694284777336,0.011132424484625808,rank-relevance shapley value,Y,40-60%,1,different weights,Standard normal 2 vars with correlated third
+0.1426438745753796,0.02685960957480962,shapley value,X,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.040298111753654456,0.03464705141182962,shapley value,Y,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.017578167981579497,0.0009887765142242257,standardized shapley value,X,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.004371280787966688,0.0012754537860172627,standardized shapley value,Y,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.0007559348390957745,0.0006516003602986848,rank-relevance shapley value,X,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.0001705211713083251,0.00014372892947146407,rank-relevance shapley value,Y,60-80%,0,different weights,Standard normal 2 vars with correlated third
+0.058825931906847234,0.04929964350104921,shapley value,X,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.07121696886753376,0.04607128489765004,shapley value,Y,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.005446774598625505,0.000909850422260481,standardized shapley value,X,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.002932229942207112,0.0008440587789322649,standardized shapley value,Y,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.0007065783116421975,0.00034316629239170726,rank-relevance shapley value,X,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.0004046127419060645,0.00024541901136875417,rank-relevance shapley value,Y,60-80%,1,different weights,Standard normal 2 vars with correlated third
+0.20090505286953064,0.11024421457948252,shapley value,X,80-100%,0,different weights,Standard normal 2 vars with correlated third
+0.0862214719005305,0.030328757652052306,shapley value,Y,80-100%,0,different weights,Standard normal 2 vars with correlated third
+0.02116191105857742,0.004446202719137294,standardized shapley value,X,80-100%,0,different weights,Standard normal 2 vars with correlated third
+0.008957699017761965,0.0025111707469464405,standardized shapley value,Y,80-100%,0,different weights,Standard normal 2 vars with correlated third
+2.7240064052129634e-07,2.964328761852196e-07,rank-relevance shapley value,X,80-100%,0,different weights,Standard normal 2 vars with correlated third
+1.648230923534371e-07,1.9852272183624442e-07,rank-relevance shapley value,Y,80-100%,0,different weights,Standard normal 2 vars with correlated third
+0.18174500512757225,0.06136818525265647,shapley value,X,80-100%,1,different weights,Standard normal 2 vars with correlated third
+0.08336154848054451,0.040739114707536446,shapley value,Y,80-100%,1,different weights,Standard normal 2 vars with correlated third
+0.007233725810320815,0.000845836204436166,standardized shapley value,X,80-100%,1,different weights,Standard normal 2 vars with correlated third
+0.0031769881255809106,0.0005615062269552868,standardized shapley value,Y,80-100%,1,different weights,Standard normal 2 vars with correlated third
+1.029578054176879e-06,1.659639897002415e-06,rank-relevance shapley value,X,80-100%,1,different weights,Standard normal 2 vars with correlated third
+5.421041803783967e-07,9.356253911614354e-07,rank-relevance shapley value,Y,80-100%,1,different weights,Standard normal 2 vars with correlated third
+0.06586049069714972,0.020405129292366236,shapley value,X,0-20%,0,equal weights,Standard normal 3 correlated vars
+0.08825314347704277,0.051479314207134835,shapley value,Y,0-20%,0,equal weights,Standard normal 3 correlated vars
+0.0046143596304387335,0.001085033427844457,standardized shapley value,X,0-20%,0,equal weights,Standard normal 3 correlated vars
+0.009890845222592929,0.005448078982720625,standardized shapley value,Y,0-20%,0,equal weights,Standard normal 3 correlated vars
+0.5485617386494044,0.45452511400288453,rank-relevance shapley value,X,0-20%,0,equal weights,Standard normal 3 correlated vars
+1.6037820795058886,2.2316942761843923,rank-relevance shapley value,Y,0-20%,0,equal weights,Standard normal 3 correlated vars
+0.06443911362824474,0.038319253884449934,shapley value,X,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.09546563037509236,0.054457601638028603,shapley value,Y,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.002394633735772933,0.0010020637057570956,standardized shapley value,X,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.003023568309533017,0.0025042390259405077,standardized shapley value,Y,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.70600481528552,1.2251700059082395,rank-relevance shapley value,X,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.5341113133818925,0.6572074480349024,rank-relevance shapley value,Y,0-20%,1,equal weights,Standard normal 3 correlated vars
+0.04199821766112287,0.026920876103156622,shapley value,X,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.10033930052070676,0.0536486465059932,shapley value,Y,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.008718893377595157,0.0030613076641769882,standardized shapley value,X,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.007737818159050336,0.006639797685349679,standardized shapley value,Y,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.17174138918008633,0.1231168395423493,rank-relevance shapley value,X,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.12366105813993881,0.15044061776994821,rank-relevance shapley value,Y,20-40%,0,equal weights,Standard normal 3 correlated vars
+0.032743734771260684,0.02451937709710979,shapley value,X,20-40%,1,equal weights,Standard normal 3 correlated vars
+0.07839011486368498,0.053504375682198145,shapley value,Y,20-40%,1,equal weights,Standard normal 3 correlated vars
+0.003286351858547325,0.0008568183314442929,standardized shapley value,X,20-40%,1,equal weights,Standard normal 3 correlated vars
+0.002880497443366805,0.0020056816182343344,standardized shapley value,Y,20-40%,1,equal weights,Standard normal 3 correlated vars
+3.5554575715861203,12.37285774764126,rank-relevance shapley value,X,20-40%,1,equal weights,Standard normal 3 correlated vars
+4.359262270342933,19.11568217084161,rank-relevance shapley value,Y,20-40%,1,equal weights,Standard normal 3 correlated vars
+0.019657001974481534,0.013176983160217195,shapley value,X,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.06745123966031903,0.04299320880218579,shapley value,Y,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.012860382544398665,0.0019207248078891828,standardized shapley value,X,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.015134251697808597,0.0062360554169511835,standardized shapley value,Y,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.013665685076101724,0.010202361971076131,rank-relevance shapley value,X,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.014912910763678894,0.009667055953864185,rank-relevance shapley value,Y,40-60%,0,equal weights,Standard normal 3 correlated vars
+0.03370243399726444,0.0217695020773812,shapley value,X,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.09057819630680057,0.0484179137199227,shapley value,Y,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.003451420361956016,0.0008290374159945381,standardized shapley value,X,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.0031839641526068756,0.0021375161113862903,standardized shapley value,Y,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.024832794868751968,0.019560741074965103,rank-relevance shapley value,X,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.020751139938382908,0.018577874083725434,rank-relevance shapley value,Y,40-60%,1,equal weights,Standard normal 3 correlated vars
+0.03747045289877078,0.02159264152120218,shapley value,X,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.10096900783185166,0.05712853202430175,shapley value,Y,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.007371573745700313,0.0021586894207845336,standardized shapley value,X,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.009910144881647575,0.006157649930376697,standardized shapley value,Y,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.0003645745735566478,0.0003390057953105152,rank-relevance shapley value,X,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.00031745469619543377,0.00017499115078702828,rank-relevance shapley value,Y,60-80%,0,equal weights,Standard normal 3 correlated vars
+0.032159771420005874,0.023257352938293268,shapley value,X,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.0887150127427793,0.04141833654527395,shapley value,Y,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.004074653223642698,0.0009579774280074567,standardized shapley value,X,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.0046219983913738496,0.002297091311352388,standardized shapley value,Y,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.00031650219095856875,0.0001775698646302946,rank-relevance shapley value,X,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.00039103819310326853,0.00027445269269042906,rank-relevance shapley value,Y,60-80%,1,equal weights,Standard normal 3 correlated vars
+0.08409364785263591,0.06050827530289185,shapley value,X,80-100%,0,equal weights,Standard normal 3 correlated vars
+0.07504540893565557,0.05475479137581728,shapley value,Y,80-100%,0,equal weights,Standard normal 3 correlated vars
+0.01810076971798694,0.004624504646083786,standardized shapley value,X,80-100%,0,equal weights,Standard normal 3 correlated vars
+0.014648668907947488,0.007041356496569197,standardized shapley value,Y,80-100%,0,equal weights,Standard normal 3 correlated vars
+6.559549415116308e-07,8.49620063214352e-07,rank-relevance shapley value,X,80-100%,0,equal weights,Standard normal 3 correlated vars
+6.354576549660264e-07,9.376552593280685e-07,rank-relevance shapley value,Y,80-100%,0,equal weights,Standard normal 3 correlated vars
+0.07163779905846533,0.04698851950679938,shapley value,X,80-100%,1,equal weights,Standard normal 3 correlated vars
+0.09706544996986304,0.034541952278937096,shapley value,Y,80-100%,1,equal weights,Standard normal 3 correlated vars
+0.004920725738369864,0.0009916333936326742,standardized shapley value,X,80-100%,1,equal weights,Standard normal 3 correlated vars
+0.003595841927300944,0.0022049987729560495,standardized shapley value,Y,80-100%,1,equal weights,Standard normal 3 correlated vars
+2.2619671746219123e-07,3.4222967083403426e-07,rank-relevance shapley value,X,80-100%,1,equal weights,Standard normal 3 correlated vars
+8.632456115622978e-08,1.26679004519041e-07,rank-relevance shapley value,Y,80-100%,1,equal weights,Standard normal 3 correlated vars
+0.08087124633204784,0.050855744671517294,shapley value,X,0-20%,0,different weights,Standard normal 3 correlated vars
+0.10010935133977482,0.0652535527738743,shapley value,Y,0-20%,0,different weights,Standard normal 3 correlated vars
+0.006382015816117687,0.0034592298448528447,standardized shapley value,X,0-20%,0,different weights,Standard normal 3 correlated vars
+0.007303744529432569,0.005137422113430362,standardized shapley value,Y,0-20%,0,different weights,Standard normal 3 correlated vars
+1.5695767600027473,1.7533820252093466,rank-relevance shapley value,X,0-20%,0,different weights,Standard normal 3 correlated vars
+2.1703403316816012,3.0456858549397663,rank-relevance shapley value,Y,0-20%,0,different weights,Standard normal 3 correlated vars
+0.0722419185116583,0.036751002470267226,shapley value,X,0-20%,1,different weights,Standard normal 3 correlated vars
+0.1265823830028832,0.0608301749743576,shapley value,Y,0-20%,1,different weights,Standard normal 3 correlated vars
+0.0021524598969597814,0.0007086600476126034,standardized shapley value,X,0-20%,1,different weights,Standard normal 3 correlated vars
+0.0023208643582331885,0.0021782476871843497,standardized shapley value,Y,0-20%,1,different weights,Standard normal 3 correlated vars
+1.5331071544243642,2.121066038770656,rank-relevance shapley value,X,0-20%,1,different weights,Standard normal 3 correlated vars
+2.076021677784689,4.34264122898798,rank-relevance shapley value,Y,0-20%,1,different weights,Standard normal 3 correlated vars
+0.053825242087043555,0.03205983504977257,shapley value,X,20-40%,0,different weights,Standard normal 3 correlated vars
+0.12319045842878762,0.06216154386290118,shapley value,Y,20-40%,0,different weights,Standard normal 3 correlated vars
+0.009594860530665888,0.003487643307911825,standardized shapley value,X,20-40%,0,different weights,Standard normal 3 correlated vars
+0.006832458423862981,0.006960666453995411,standardized shapley value,Y,20-40%,0,different weights,Standard normal 3 correlated vars
+0.17487372740750745,0.10515212867472747,rank-relevance shapley value,X,20-40%,0,different weights,Standard normal 3 correlated vars
+0.13210640596401052,0.19727590116429342,rank-relevance shapley value,Y,20-40%,0,different weights,Standard normal 3 correlated vars
+0.04172558354151108,0.03478010489704198,shapley value,X,20-40%,1,different weights,Standard normal 3 correlated vars
+0.09676407533853221,0.06972676565809136,shapley value,Y,20-40%,1,different weights,Standard normal 3 correlated vars
+0.0030078164111883797,0.0008585946801989218,standardized shapley value,X,20-40%,1,different weights,Standard normal 3 correlated vars
+0.0028211243851644576,0.0019560793000890724,standardized shapley value,Y,20-40%,1,different weights,Standard normal 3 correlated vars
+0.13003912522263253,0.08620609251146527,rank-relevance shapley value,X,20-40%,1,different weights,Standard normal 3 correlated vars
+0.13383374318664026,0.1435944943184862,rank-relevance shapley value,Y,20-40%,1,different weights,Standard normal 3 correlated vars
+0.03251470264441363,0.020218448848588092,shapley value,X,40-60%,0,different weights,Standard normal 3 correlated vars
+0.09588545620360206,0.057301201974682414,shapley value,Y,40-60%,0,different weights,Standard normal 3 correlated vars
+0.010431607671606313,0.002068896464374775,standardized shapley value,X,40-60%,0,different weights,Standard normal 3 correlated vars
+0.01082612108347452,0.006076408072238226,standardized shapley value,Y,40-60%,0,different weights,Standard normal 3 correlated vars
+0.02135995347347138,0.01789795516685758,rank-relevance shapley value,X,40-60%,0,different weights,Standard normal 3 correlated vars
+0.016589177105937755,0.013632789797319444,rank-relevance shapley value,Y,40-60%,0,different weights,Standard normal 3 correlated vars
+0.03894639620640548,0.027288296843583037,shapley value,X,40-60%,1,different weights,Standard normal 3 correlated vars
+0.08788462231601446,0.05286108422141864,shapley value,Y,40-60%,1,different weights,Standard normal 3 correlated vars
+0.003420688577124988,0.0008327831434190885,standardized shapley value,X,40-60%,1,different weights,Standard normal 3 correlated vars
+0.003416203093488476,0.0018069831073913415,standardized shapley value,Y,40-60%,1,different weights,Standard normal 3 correlated vars
+0.019114316124400975,0.011315287385924076,rank-relevance shapley value,X,40-60%,1,different weights,Standard normal 3 correlated vars
+0.01757183642843816,0.012370971269594272,rank-relevance shapley value,Y,40-60%,1,different weights,Standard normal 3 correlated vars
+0.06622474403351339,0.03176292308182055,shapley value,X,60-80%,0,different weights,Standard normal 3 correlated vars
+0.08687495302236699,0.039457578715007824,shapley value,Y,60-80%,0,different weights,Standard normal 3 correlated vars
+0.009079852998047328,0.0036025943517331233,standardized shapley value,X,60-80%,0,different weights,Standard normal 3 correlated vars
+0.014198024733263884,0.0030839877329068895,standardized shapley value,Y,60-80%,0,different weights,Standard normal 3 correlated vars
+0.00038037251285567494,0.00017741463981867176,rank-relevance shapley value,X,60-80%,0,different weights,Standard normal 3 correlated vars
+0.000672302556122296,0.0004615007479120915,rank-relevance shapley value,Y,60-80%,0,different weights,Standard normal 3 correlated vars
+0.04556525140314949,0.03773115309875844,shapley value,X,60-80%,1,different weights,Standard normal 3 correlated vars
+0.12413558453538406,0.046685645095281336,shapley value,Y,60-80%,1,different weights,Standard normal 3 correlated vars
+0.00401868824007352,0.0008665456845320444,standardized shapley value,X,60-80%,1,different weights,Standard normal 3 correlated vars
+0.004878995992432421,0.0019535076796519486,standardized shapley value,Y,60-80%,1,different weights,Standard normal 3 correlated vars
+0.0003881895054725817,0.0002699198949390409,rank-relevance shapley value,X,60-80%,1,different weights,Standard normal 3 correlated vars
+0.0004315407620442628,0.00034373001903109207,rank-relevance shapley value,Y,60-80%,1,different weights,Standard normal 3 correlated vars
+0.09882345372661212,0.06682812419863852,shapley value,X,80-100%,0,different weights,Standard normal 3 correlated vars
+0.0928284385456225,0.032722009389018945,shapley value,Y,80-100%,0,different weights,Standard normal 3 correlated vars
+0.01467812069978933,0.0033788854507776417,standardized shapley value,X,80-100%,0,different weights,Standard normal 3 correlated vars
+0.014069544027106756,0.003600741865271329,standardized shapley value,Y,80-100%,0,different weights,Standard normal 3 correlated vars
+5.2472429719723124e-08,6.219939379547542e-08,rank-relevance shapley value,X,80-100%,0,different weights,Standard normal 3 correlated vars
+5.0001945810670186e-08,6.398596034715164e-08,rank-relevance shapley value,Y,80-100%,0,different weights,Standard normal 3 correlated vars
+0.08810113049272894,0.0479127392697625,shapley value,X,80-100%,1,different weights,Standard normal 3 correlated vars
+0.12337441715364375,0.05030696129537517,shapley value,Y,80-100%,1,different weights,Standard normal 3 correlated vars
+0.00503074315550114,0.0008694995651154568,standardized shapley value,X,80-100%,1,different weights,Standard normal 3 correlated vars
+0.005488133348100361,0.001326502649507561,standardized shapley value,Y,80-100%,1,different weights,Standard normal 3 correlated vars
+5.514252091037578e-07,8.537242602042641e-07,rank-relevance shapley value,X,80-100%,1,different weights,Standard normal 3 correlated vars
+7.473745439602086e-07,1.2722478196161722e-06,rank-relevance shapley value,Y,80-100%,1,different weights,Standard normal 3 correlated vars
+0.08519482970262773,0.06506267656236348,shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.16544715740442936,0.041907031800759116,shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.007321049630019987,0.0032949798021022947,standardized shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.0029186129840584963,0.00172427357616853,standardized shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.4727169617752714,0.15225301509850803,rank-relevance shapley value,X,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.23870383345829965,0.1949047108783013,rank-relevance shapley value,Y,0-20%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.06626825360980257,0.05365052568020305,shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.1831318277755763,0.07302519512836209,shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0024052124603245596,0.000774968346850929,standardized shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0011998292059895851,0.0009222835686185919,standardized shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.42753515270121056,0.21793502011440077,rank-relevance shapley value,X,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.16779023667114812,0.10907101831130067,rank-relevance shapley value,Y,0-20%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.04353762617083334,0.041154279883120384,shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.10807159724227838,0.05064907074930699,shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.009725800952100723,0.0022729649463217737,standardized shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.005997172288821355,0.0024975981756322576,standardized shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.1283564976380358,0.07505982100048396,rank-relevance shapley value,X,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.07111032477821574,0.03181410171680508,rank-relevance shapley value,Y,20-40%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.09002969369261038,0.06158139780598095,shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.12324567769665114,0.07305519166655933,shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.003098434643621122,0.0014196802073781689,standardized shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.002286336217263229,0.0014024463088706846,standardized shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.09894712065981598,0.06275654717489042,rank-relevance shapley value,X,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.07878445892184954,0.07237975261712033,rank-relevance shapley value,Y,20-40%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.08720946708370032,0.06667535847388285,shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.10874361328458153,0.0641869180631189,shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.00808292579419487,0.003999786654058515,standardized shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.011818452222254822,0.004205957215536006,standardized shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.01215218951570738,0.01156267814864587,rank-relevance shapley value,X,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.01663704420247616,0.011388991055007952,rank-relevance shapley value,Y,40-60%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.08927743274225229,0.05787924757369916,shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0906196653687254,0.0679910751860333,shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0031073715138874706,0.0013843318871783817,standardized shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.003776505353807955,0.001472986754680536,standardized shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.018338892308180553,0.015567878171058928,rank-relevance shapley value,X,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.020407330008991288,0.013992099526305295,rank-relevance shapley value,Y,40-60%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.10460759310812125,0.08195684728431157,shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.08956829847072839,0.09796925685228362,shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.013338573450229499,0.004886186928606681,standardized shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.014504092014229766,0.004177399963594918,standardized shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.00031693336531860315,0.00015119235285840238,rank-relevance shapley value,X,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.000519034150251568,0.0004729716504223691,rank-relevance shapley value,Y,60-80%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.07515590475968002,0.06364090217383925,shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.1093861539299186,0.06200622870166511,shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.003623962639408871,0.0011479051294180668,standardized shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.004466265278786418,0.0011745183021725765,standardized shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0005077143950997494,0.00036711796418181715,rank-relevance shapley value,X,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0005957258554285592,0.0003490136398695659,rank-relevance shapley value,Y,60-80%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.0803580492085712,0.022783056159626475,shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.17346379276219187,0.04620203352506113,shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.012124390583007865,0.0008690649660011766,standardized shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.017165545637684083,0.0017623872940188013,standardized shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+2.384405163490226e-07,3.611685249990353e-07,rank-relevance shapley value,X,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+2.7525691624790497e-07,4.051478961103467e-07,rank-relevance shapley value,Y,80-100%,0,equal weights,Arbitrary normal 2 vars with correlated third
+0.09884563389339668,0.06181179219284502,shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.17400784952155218,0.05181615402765765,shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.004512636188442154,0.0008806158879550484,standardized shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.005677371386105483,0.0006706095298681991,standardized shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+7.027818689237283e-07,1.2518666482019311e-06,rank-relevance shapley value,X,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+8.451217822594867e-07,1.3487776900260313e-06,rank-relevance shapley value,Y,80-100%,1,equal weights,Arbitrary normal 2 vars with correlated third
+0.19907180470485072,0.0869034177702706,shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.10046215192448049,0.042590398461327124,shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.007514739335902763,0.0036884916149853273,standardized shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.002123400901208264,0.0021062792462474794,standardized shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.6033069101375949,0.1887367041065787,rank-relevance shapley value,X,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.19014876780590972,0.13089168697298484,rank-relevance shapley value,Y,0-20%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.1355316786361463,0.09086826538531856,shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0881681909273253,0.049584721929582666,shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.00265251845646688,0.0011916939228827268,standardized shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0012468470187334943,0.0009745637929107978,standardized shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.3914298408987653,0.20209881246160424,rank-relevance shapley value,X,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.20749725597493188,0.20276148596234925,rank-relevance shapley value,Y,0-20%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0845140813411338,0.06286759158860751,shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.09716954337749546,0.03119686184251451,shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.012218532080966802,0.003984578557524783,standardized shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.004749697753927903,0.0037493988908486003,standardized shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.12082973836948455,0.0631519205076001,rank-relevance shapley value,X,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.05502609839449563,0.06472814052873847,rank-relevance shapley value,Y,20-40%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.07851309856784949,0.06573925665934424,shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.06598714561826455,0.03920028922931255,shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.00367589419378279,0.0009631473342670003,standardized shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0019467370988752288,0.0009994053918333454,standardized shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.12435096481317771,0.06820087094976726,rank-relevance shapley value,X,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.06187110140601995,0.04252858047168923,rank-relevance shapley value,Y,20-40%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.08684534027691476,0.05622721626797501,shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.08172464024660923,0.055840194745758735,shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.014069879713157644,0.004250511773840133,standardized shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.0061191072980689865,0.004116997371742859,standardized shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.029223394419562867,0.011587830333159469,rank-relevance shapley value,X,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.014750996493358301,0.014563435610058068,rank-relevance shapley value,Y,40-60%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.07510695769046641,0.044249670528312975,shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.07815840090172589,0.035810661019904946,shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.004470603537051142,0.0011305210813051323,standardized shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.002113624158522713,0.0011150698301553735,standardized shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.023347373588612594,0.015975557665076447,rank-relevance shapley value,X,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.010669560632880834,0.008071113105704318,rank-relevance shapley value,Y,40-60%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.07860530339304647,0.048677015317204274,shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.05109885214227537,0.05083071528658145,shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.01737792795620947,0.003042539967822612,standardized shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.008398039609563573,0.0025546018057822227,standardized shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.0006285683577048894,0.00033066980246023565,rank-relevance shapley value,X,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.0003812188283248727,0.0003179595426564851,rank-relevance shapley value,Y,60-80%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.09020120937539458,0.068806754135367,shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.07152860997127508,0.04322834008168238,shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.005505029697793109,0.0009972841433440551,standardized shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.002472985617231046,0.0009968342231845635,standardized shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0007012984345128427,0.0003656820588731582,rank-relevance shapley value,X,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0003286587305963351,0.0002652095067619795,rank-relevance shapley value,Y,60-80%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.18667140233515575,0.09621783452029756,shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.08566498934844877,0.0586145909004496,shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.02149434981720669,0.003656757211159375,standardized shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.007526526401403107,0.003306411159438862,standardized shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+3.6650682247961094e-07,5.04314274909094e-07,rank-relevance shapley value,X,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+2.13795092998571e-07,3.507695276530436e-07,rank-relevance shapley value,Y,80-100%,0,different weights,Arbitrary normal 2 vars with correlated third
+0.18780632082307336,0.07691259094952792,shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.07356795860994547,0.04325388301264166,shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.006963837376423213,0.0010155829677413488,standardized shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.0030567604041405265,0.0007683326116145557,standardized shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+1.1247199902261217e-06,1.8212103376278305e-06,rank-relevance shapley value,X,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+4.4435805406927673e-07,6.539110813915543e-07,rank-relevance shapley value,Y,80-100%,1,different weights,Arbitrary normal 2 vars with correlated third
+0.06851365025862934,0.04598624906116037,shapley value,X,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.08795852128385309,0.04089369961422207,shapley value,Y,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.0033853514864541517,0.0018633893921838156,standardized shapley value,X,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.0041985345027376764,0.003231367922330774,standardized shapley value,Y,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.19007855708111454,0.09983212537837863,rank-relevance shapley value,X,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.25007661928491126,0.1778329773880554,rank-relevance shapley value,Y,0-20%,0,equal weights,Arbitrary normal 3 correlated vars
+0.06493719922694272,0.04195414895493994,shapley value,X,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.11114812949011249,0.05960678880940965,shapley value,Y,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0013814770577172885,0.0005649135797987241,standardized shapley value,X,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0011209052307541757,0.0010472166376638394,standardized shapley value,Y,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.2281344006335526,0.11753644989713904,rank-relevance shapley value,X,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.17733350631785352,0.17579648997145755,rank-relevance shapley value,Y,0-20%,1,equal weights,Arbitrary normal 3 correlated vars
+0.031279359217930944,0.01687534050675934,shapley value,X,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.05543192982831105,0.02358059940496921,shapley value,Y,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.005705683331594992,0.0013801122466388593,standardized shapley value,X,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.006201482081975038,0.0023729577814257086,standardized shapley value,Y,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.05950954465824955,0.021581861214091756,rank-relevance shapley value,X,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.07050969770962592,0.03862620720281452,rank-relevance shapley value,Y,20-40%,0,equal weights,Arbitrary normal 3 correlated vars
+0.034215039368506193,0.03335580588045289,shapley value,X,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.08802853916849292,0.04404427144493506,shapley value,Y,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0019049654559015574,0.0005470616355308909,standardized shapley value,X,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0017575429714361433,0.0011560620868992708,standardized shapley value,Y,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.06417482923325918,0.03975469109786601,rank-relevance shapley value,X,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.051957087226378096,0.03887035840700237,rank-relevance shapley value,Y,20-40%,1,equal weights,Arbitrary normal 3 correlated vars
+0.03868136627942327,0.026259876447466357,shapley value,X,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.09233869650930823,0.03754056410523753,shapley value,Y,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.0056776108085573596,0.0017372877986429934,standardized shapley value,X,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.008272787099343272,0.003617499990693158,standardized shapley value,Y,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.008963242793168628,0.00645511304207314,rank-relevance shapley value,X,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.013076530927480083,0.012509889532319074,rank-relevance shapley value,Y,40-60%,0,equal weights,Arbitrary normal 3 correlated vars
+0.04575933623641794,0.02483868218650279,shapley value,X,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.08997599137418894,0.04537290586872981,shapley value,Y,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0021704610626877177,0.0006905258809751242,standardized shapley value,X,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.002340337824883249,0.0013396401090399709,standardized shapley value,Y,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.011278035184099217,0.007212806192824658,rank-relevance shapley value,X,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.01281526949027904,0.010395506350312726,rank-relevance shapley value,Y,40-60%,1,equal weights,Arbitrary normal 3 correlated vars
+0.027412686015312222,0.01624035173635863,shapley value,X,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.06081414352741123,0.0576656942599226,shapley value,Y,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.0064116845159829655,0.0009783144618115312,standardized shapley value,X,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.009176274460216889,0.0020783724209450308,standardized shapley value,Y,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.00048591716643321263,0.0002046365573933807,rank-relevance shapley value,X,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.0006679518713235611,0.00022700839089251102,rank-relevance shapley value,Y,60-80%,0,equal weights,Arbitrary normal 3 correlated vars
+0.03934492179292422,0.03280848671690971,shapley value,X,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.06840423079003354,0.04615628197948241,shapley value,Y,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0027649829076355787,0.0004860847589116544,standardized shapley value,X,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.002899267044849162,0.0009693517187878215,standardized shapley value,Y,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0002900024469982589,0.00020379726893118394,rank-relevance shapley value,X,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0002886171253382708,0.0001573614138878433,rank-relevance shapley value,Y,60-80%,1,equal weights,Arbitrary normal 3 correlated vars
+0.08230223721312922,0.03344880900111614,shapley value,X,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+0.09563465471108669,0.06111666135590166,shapley value,Y,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+0.009504408660078347,0.0013038370860082602,standardized shapley value,X,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+0.010332940525693435,0.002446932833855695,standardized shapley value,Y,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+2.5695597181831264e-07,2.9284370549166495e-07,rank-relevance shapley value,X,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+2.373418042388436e-07,2.554242285064181e-07,rank-relevance shapley value,Y,80-100%,0,equal weights,Arbitrary normal 3 correlated vars
+0.08507656559848831,0.040401998390019775,shapley value,X,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+0.08608691605044047,0.049044708245737687,shapley value,Y,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0033205978176321983,0.0005343968758445923,standardized shapley value,X,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+0.0033123002852163,0.0009138576760251054,standardized shapley value,Y,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+5.361864301574717e-07,8.30539604090864e-07,rank-relevance shapley value,X,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+5.744358131530516e-07,9.415841066895395e-07,rank-relevance shapley value,Y,80-100%,1,equal weights,Arbitrary normal 3 correlated vars
+0.09500340277193203,0.05812610471797147,shapley value,X,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.13942873155121613,0.05963314069163228,shapley value,Y,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.004545090311536636,0.002390108909214891,standardized shapley value,X,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.00463847134082267,0.004514787193999483,standardized shapley value,Y,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.3506809416465729,0.2137391513388322,rank-relevance shapley value,X,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.26440955504829144,0.21867012296115573,rank-relevance shapley value,Y,0-20%,0,different weights,Arbitrary normal 3 correlated vars
+0.06743126101797747,0.048905023077882914,shapley value,X,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.12773678246279804,0.0656748240063949,shapley value,Y,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.0017237154599437927,0.0006977538385627838,standardized shapley value,X,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.0011330334241361466,0.0009350435013660775,standardized shapley value,Y,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.28367987248028886,0.13393671869402618,rank-relevance shapley value,X,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.18148411393288721,0.1415267539020219,rank-relevance shapley value,Y,0-20%,1,different weights,Arbitrary normal 3 correlated vars
+0.041401828887329885,0.040249392280887,shapley value,X,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.07548709128498703,0.044476571879737734,shapley value,Y,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.00640940003901866,0.001958765350247206,standardized shapley value,X,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.006499400662250753,0.0028443345220225927,standardized shapley value,Y,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.05664692973588611,0.026911497127911268,rank-relevance shapley value,X,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.05986656413001922,0.04881480954353156,rank-relevance shapley value,Y,20-40%,0,different weights,Arbitrary normal 3 correlated vars
+0.04281407731460182,0.04178752891631892,shapley value,X,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.09384538743403617,0.04649960458568739,shapley value,Y,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.0024417018470030824,0.0007652939250128855,standardized shapley value,X,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.001978739360159491,0.0011190198303541934,standardized shapley value,Y,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.08467168036325193,0.04256080936283429,rank-relevance shapley value,X,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.07185116668803654,0.06630877016064725,rank-relevance shapley value,Y,20-40%,1,different weights,Arbitrary normal 3 correlated vars
+0.04662231254502985,0.030703605968443057,shapley value,X,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.0881610276293702,0.06017145841544934,shapley value,Y,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.007635692852742536,0.0022388218557710675,standardized shapley value,X,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.011249702685442325,0.003992933158168843,standardized shapley value,Y,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.010649445362861892,0.011317819102252028,rank-relevance shapley value,X,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.011878442705423611,0.005424564256681118,rank-relevance shapley value,Y,40-60%,0,different weights,Arbitrary normal 3 correlated vars
+0.07069274212008488,0.03455838801300807,shapley value,X,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.1123201608696545,0.05460209095739952,shapley value,Y,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.0023580973716896664,0.0009811185867006126,standardized shapley value,X,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.0029175115559606163,0.001568121412803921,standardized shapley value,Y,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.014171675251618698,0.011472351571061606,rank-relevance shapley value,X,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.015468212490127883,0.012757450383538538,rank-relevance shapley value,Y,40-60%,1,different weights,Arbitrary normal 3 correlated vars
+0.07714000268353928,0.014801341711340088,shapley value,X,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.01947097393788243,0.014081482970402308,shapley value,Y,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.010937432169054191,0.0005957926812410448,standardized shapley value,X,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.008732234644647598,0.0009050053002395459,standardized shapley value,Y,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.0006475897250393771,3.27957808725813e-05,rank-relevance shapley value,X,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.0005239602250401184,0.00011126939564801708,rank-relevance shapley value,Y,60-80%,0,different weights,Arbitrary normal 3 correlated vars
+0.042384180825906045,0.03895120272133527,shapley value,X,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.10025948452448535,0.05019904455717737,shapley value,Y,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.002883885882513231,0.0006790087133994501,standardized shapley value,X,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.0038060295206938117,0.0010264675409553004,standardized shapley value,Y,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.0003555110388530638,0.00023168445372431272,rank-relevance shapley value,X,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.0004741612362542981,0.0002918177324308041,rank-relevance shapley value,Y,60-80%,1,different weights,Arbitrary normal 3 correlated vars
+0.07978496639441474,0.03800111107276459,shapley value,X,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+0.0969780742845638,0.027558221500461808,shapley value,Y,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+0.010838411147591697,0.0014607139560119005,standardized shapley value,X,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+0.012751997744605427,0.0023831474503623346,standardized shapley value,Y,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+2.267316631922835e-07,3.3776209808208434e-07,rank-relevance shapley value,X,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+2.514191830538639e-07,3.816542076658184e-07,rank-relevance shapley value,Y,80-100%,0,different weights,Arbitrary normal 3 correlated vars
+0.08835840194633778,0.05303506369130465,shapley value,X,80-100%,1,different weights,Arbitrary normal 3 correlated vars
+0.1364539655530678,0.06067110969793014,shapley value,Y,80-100%,1,different weights,Arbitrary normal 3 correlated vars
+0.0037447705694367422,0.000691049759205052,standardized shapley value,X,80-100%,1,different weights,Arbitrary normal 3 correlated vars
+0.004420280169581527,0.0007905478532371781,standardized shapley value,Y,80-100%,1,different weights,Arbitrary normal 3 correlated vars
+6.897356477561227e-07,1.1339898789557219e-06,rank-relevance shapley value,X,80-100%,1,different weights,Arbitrary normal 3 correlated vars
+7.354258235002975e-07,1.0918063874872776e-06,rank-relevance shapley value,Y,80-100%,1,different weights,Arbitrary normal 3 correlated vars
