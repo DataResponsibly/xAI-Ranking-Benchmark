@@ -8,33 +8,39 @@ from math import sqrt
 from nutrition_labels.FAIR.FairnessInRankings import FairnessInRankingsTester
 
 
-def standardizeData(data,colums_to_exclude=[]):
+def standardizeData(data, colums_to_exclude=[]):
     """
-        data is a dataframe stored all the data read from a csv source file
-        colums_to_exclude is a array like data structure stored the attributes which should be ignored in the normalization process.
-        return the standardized data
+    data is a dataframe stored all the data read from a csv source file
+    colums_to_exclude is a array like data structure stored the attributes which should be ignored in the normalization process.
+    return the standardized data
     """
     data = data.copy()
-    df = data.loc[:, data.columns.difference(colums_to_exclude)]# remove no weight attributes
-    df_stand = (df - df.mean())/np.std(df)
+    df = data.loc[
+        :, data.columns.difference(colums_to_exclude)
+    ]  # remove no weight attributes
+    df_stand = (df - df.mean()) / np.std(df)
     data.loc[:, data.columns.difference(colums_to_exclude)] = df_stand
-    
+
     return data
 
-def normalizeDataset(data,colums_to_exclude=[]):
+
+def normalizeDataset(data, colums_to_exclude=[]):
     """
-        data is a dataframe stored all the data read from a csv source file
-        colums_to_exclude is a array like data structure stored the attributes which should be ignored in the normalization process.
-        return the normalized data
+    data is a dataframe stored all the data read from a csv source file
+    colums_to_exclude is a array like data structure stored the attributes which should be ignored in the normalization process.
+    return the normalized data
     """
     data = data.copy()
-    df = data.loc[:,data.columns.difference(colums_to_exclude)] # remove no weight attributes
+    df = data.loc[
+        :, data.columns.difference(colums_to_exclude)
+    ]  # remove no weight attributes
     norm_df = (df - df.min()) / (df.max() - df.min())
-    data.loc[:,data.columns.difference(colums_to_exclude)] = norm_df
+    data.loc[:, data.columns.difference(colums_to_exclude)] = norm_df
 
     return data
 
-def computeFairRankingProbability(k,p,generated_ranking,default_alpha=0.05):
+
+def computeFairRankingProbability(k, p, generated_ranking, default_alpha=0.05):
     """
     Sub-function to compute p-value used in FA*IR oracle
 
@@ -54,6 +60,7 @@ def computeFairRankingProbability(k,p,generated_ranking,default_alpha=0.05):
 
     return p_value, isFair, posAtFail, gft.alpha_c, gft.candidates_needed
 
+
 def computePairN(att_name, att_value, data):
     """
     Sub-function to compute number of pairs that input value > * used in Pairwise oracle
@@ -61,27 +68,30 @@ def computePairN(att_name, att_value, data):
     Attributes:
         att_name: sensitive attribute name
         att_value: value of protected group of above attribute
-        data: dataframe that stored the data 
+        data: dataframe that stored the data
     Return:  number of pairs of att_value > * in input data, number of pairs of att_value > * estimated using proportion, and proportion of group with att_value
     """
     # input checked_atts includes names of checked sensitive attributes
     total_N = len(data)
     # get the unique value of this sensitive attribute
-    values_att = list (data[att_name].unique())
+    values_att = list(data[att_name].unique())
     # for each value, compute the current pairs and estimated fair pairs
 
-    position_lists_val = data[data[att_name]==att_value].index+1
+    position_lists_val = data[data[att_name] == att_value].index + 1
     size_vi = len(position_lists_val)
     count_vi_prefered_pairs = 0
     for i in range(len(position_lists_val)):
         cur_position = position_lists_val[i]
         left_vi = size_vi - (i + 1)
-        count_vi_prefered_pairs = count_vi_prefered_pairs + (total_N - cur_position - left_vi)
+        count_vi_prefered_pairs = count_vi_prefered_pairs + (
+            total_N - cur_position - left_vi
+        )
     # compute estimated fair pairs
-    total_pairs_vi = size_vi*(total_N-size_vi)
+    total_pairs_vi = size_vi * (total_N - size_vi)
     estimated_vi_pair = math.ceil((size_vi / total_N) * total_pairs_vi)
 
-    return int(count_vi_prefered_pairs),int(estimated_vi_pair),int(size_vi)
+    return int(count_vi_prefered_pairs), int(estimated_vi_pair), int(size_vi)
+
 
 def mergeUnfairRanking(_px, _sensitive_idx, _fprob):  # input is the ranking
     """
@@ -100,7 +110,7 @@ def mergeUnfairRanking(_px, _sensitive_idx, _fprob):  # input is the ranking
     qx.reverse()
     res_list = []
 
-    while (len(qx) > 0 and len(rx) > 0):
+    while len(qx) > 0 and len(rx) > 0:
         r_cur = random.random()
         #         r_cur=random.uniform(0,1.1)
         if r_cur < _fprob:
@@ -118,6 +128,7 @@ def mergeUnfairRanking(_px, _sensitive_idx, _fprob):  # input is the ranking
     if len(res_list) < len(_px):
         print("Error!")
     return res_list
+
 
 def Cdf(_input_array, x):
     """

@@ -1,15 +1,14 @@
-'''
+"""
 Created on Jan 11, 2017
 
 @author: meike.zehlike
 
 Download from : https://github.com/MilkaLichtblau/FA-IR_Ranking
-'''
+"""
 
 import pandas as pd
 import numpy as np
 import scipy.stats as stats
-
 
 
 class AlphaAdjustment:
@@ -29,7 +28,7 @@ class AlphaAdjustment:
         self.mtable = self.compute_mtable()
         self.aux_mtable = self.compute_aux_mtable()
 
-    def m(self, k:int):
+    def m(self, k: int):
         if k < 1:
             raise ValueError("Parameter k must be at least 1")
         elif k > self.n:
@@ -38,23 +37,21 @@ class AlphaAdjustment:
         return stats.binom.ppf(self.alpha, k, self.p)
 
     def compute_mtable(self):
-        """ Computes a table containing the minimum number of protected elements
-            required at each position
+        """Computes a table containing the minimum number of protected elements
+        required at each position
 
         """
-        mtable = pd.DataFrame(columns=[ "m"])
-#         mtable.loc[0] = 0  # test should not fail at the first position so we require no protected candidate at position 1
+        mtable = pd.DataFrame(columns=["m"])
+        #         mtable.loc[0] = 0  # test should not fail at the first position so we require no protected candidate at position 1
         for i in range(1, self.n + 1):
             if i % 2000 == 0:
                 print("Computing m: {:.0f} of {:.0f}".format(i, self.n))
-            mtable.loc[i] = [ self.m(i) ]
+            mtable.loc[i] = [self.m(i)]
         return mtable
 
     def compute_aux_mtable(self):
-        """ Computes an auxiliary table containing the inverse table m[i] and the block sizes
-
-        """
-        if not(isinstance(self.mtable, pd.DataFrame)):
+        """Computes an auxiliary table containing the inverse table m[i] and the block sizes"""
+        if not (isinstance(self.mtable, pd.DataFrame)):
             raise TypeError("Internal mtable must be a DataFrame")
 
         aux_mtable = pd.DataFrame(columns=["inv", "block"])
@@ -62,10 +59,14 @@ class AlphaAdjustment:
         last_position = 0
         for position in range(1, len(self.mtable)):
             if position % 2000 == 0:
-                print("Computing m inverse: {:.0f} of {:.0f}".format(position, len(self.mtable)))
+                print(
+                    "Computing m inverse: {:.0f} of {:.0f}".format(
+                        position, len(self.mtable)
+                    )
+                )
             if self.mtable.at[position, "m"] == last_m_seen + 1:
                 last_m_seen += 1
-                aux_mtable.loc[last_m_seen] = [ position, position - last_position ]
+                aux_mtable.loc[last_m_seen] = [position, position - last_position]
                 last_position = position
             elif self.mtable.at[position, "m"] != last_m_seen:
                 raise RuntimeError("Inconsistent mtable")
@@ -82,12 +83,16 @@ class AlphaAdjustment:
         success_obtained_prob[0] = 1.0
 
         self.success_prob_report = pd.DataFrame(columns=["prob"])
-#         old_fail_probability = 0.0
+        #         old_fail_probability = 0.0
 
         pmf_cache = pd.DataFrame(columns=["table"])
         while min_protected < max_protected:
             if min_protected % 2000 == 0:
-                print("Computing success probability: block {:.0f} of {:.0f}".format(min_protected, max_protected))
+                print(
+                    "Computing success probability: block {:.0f} of {:.0f}".format(
+                        min_protected, max_protected
+                    )
+                )
 
             # print("*** Must have at least {:.0f} at position {:.0f} ***".format(min_protected, position))
 
@@ -100,7 +105,7 @@ class AlphaAdjustment:
                 current_trial = np.empty(int(block_length) + 1)
                 for i in range(0, int(block_length) + 1):
                     current_trial[i] = stats.binom.pmf(i, block_length, self.p)
-                pmf_cache.loc[block_length] = [ current_trial ]
+                pmf_cache.loc[block_length] = [current_trial]
 
             # print("** Success table so far:")
             # print(success_obtained_prob)
@@ -120,13 +125,15 @@ class AlphaAdjustment:
             success_obtained_prob = new_success_obtained_prob
 
             success_probability = success_obtained_prob.sum()
-#             fail_probability = 1 - success_probability
+            #             fail_probability = 1 - success_probability
             # print("Fail probability          = {:.6f}".format(fail_probability))
             # print("Fail probability delta    = {:.6f}".format(fail_probability - old_fail_probability))
-            self.success_prob_report.loc[self.aux_mtable["inv"][min_protected]] = success_probability
+            self.success_prob_report.loc[self.aux_mtable["inv"][min_protected]] = (
+                success_probability
+            )
 
             success_obtained_prob = new_success_obtained_prob
-#             old_fail_probability = 1 - success_probability
+            #             old_fail_probability = 1 - success_probability
 
             min_protected += 1
 
@@ -141,6 +148,3 @@ class AlphaAdjustment:
 #
 # fc = AlphaAdjustment(n=n, p=p, alpha=alpha)
 # print("Success probability for n={:.0f}, p={:.2f}, alpha={:.6f}: {:.10f}".format(n, p, alpha, fc.compute_success_probability()))
-
-
-
