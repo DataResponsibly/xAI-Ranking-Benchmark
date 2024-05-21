@@ -1,6 +1,8 @@
 xAI-Ranking-Benchmark
 ==============================
 
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10108667.svg)](https://doi.org/10.5281/zenodo.10108667)
+
 Ranking Explainability Benchmark
 
 Project Organization
