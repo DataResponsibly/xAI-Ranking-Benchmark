@@ -1,59 +1,51 @@
-xAI-Ranking-Benchmark
-==============================
+xAI Ranking Benchmark
+=====================
 
-[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10108667.svg)](https://doi.org/10.5281/zenodo.10108667)
 
-Ranking Explainability Benchmark
+
+Datasets
+--------
+[![Tennis DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10108667.svg)](https://doi.org/10.5281/zenodo.10108667)
+[![CSRank DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11234896.svg)](https://doi.org/10.5281/zenodo.11234896)
+[![Times DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11235321.svg)](https://doi.org/10.5281/zenodo.11235321)
+
+- [Tennis](https://doi.org/10.5281/zenodo.10108667)
+- [CSRank](https://doi.org/10.5281/zenodo.11234896)
+- [Times](https://doi.org/10.5281/zenodo.11235321)
+
+
+Benchmarking methods
+--------------------
+
+- [Needs testing] ShaRP (including unary, banzhaff, and Shapley measures)
+
+      Pliatsika, Venetia, Joao Fonseca, Tilun Wang, and Julia Stoyanovich. ShaRP: Explaining Rankings with Shapley Values. arXiv preprint arXiv:2401.16744, 2024.
+
+- [Needs testing] SHAP
+
+      Lundberg, S. M., & Lee, S. I. (2017). A unified approach to interpreting model predictions. Advances in neural information processing systems, 30.
+
+- [WIP] LIME
+
+- [Needs testing] HILW
+
+      Jun Yuan and Aritra Dasgupta. A human-in-the-loop workflow for multi-factorial sensitivity analysis of algorithmic rankers. In Proceedings of the Workshop on Human-In-the-Loop Data Analytics, HILDA 2023, Seattle, WA, USA, 18 June 2023, pages 5:1–5:5. ACM, 2023.
+
+- [TODO] HRE
+
+      Hadis Anahideh and Nasrin Mohabbati-Kalejahi. Local explanations of global rankings: Insights for competitive rankings. IEEE Access, 10:30676–30693, 2022.
+
+- [TODO]
+
+      Abraham Gale and Amelie Marian. Explaining ranking functions. Proc. VLDB Endow., 14(4):640–652, 2020.
+
+- [Backlogged - Not implemented] Nutritional Label
+
+      Ke Yang, Julia Stoyanovich, Abolfazl Asudeh, Bill Howe, H. V. Jagadish, and Gerome Miklau. A nutritional label for rankings. In Proceedings of International Conference on the Management of Data, SIGMOD, pages 1773–1776. ACM, 2018.
+
+
 
 Project Organization
-------------
+--------------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so xai_ranking can be imported
-    ├── xai_ranking        <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes xai_ranking a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+    Will be updated later

@@ -59,6 +59,8 @@ def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weight
                 lambda row: _parse_missing_height_weights(row, df_info, attr),
                 axis=1
             )
+        df.drop(columns="__last_name", inplace=True)
+        df.reset_index(drop=True, inplace=True)
 
     return df
 
