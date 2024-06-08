@@ -4,12 +4,10 @@ from lime.lime_tabular import LimeTabularExplainer
 
 def _scorer(X, score_function):
     scores = score_function(X)
-    return np.array([1-scores, scores]).T
+    return np.array([1 - scores, scores]).T
 
 
-def lime_experiment(
-    X, score_function, mode="classification"
-):
+def lime_experiment(X, score_function, mode="classification"):
     """
     `mode` can be one of `[classification, regression]`.
     """
@@ -20,7 +18,7 @@ def lime_experiment(
         feature_names=X.columns,
         class_names=["score"],
         discretize_continuous=False,
-        mode=mode
+        mode=mode,
     )
     lime_values = explainer.explain_instance(
         X_, lambda X: _scorer(X, score_function)  # , num_features=5

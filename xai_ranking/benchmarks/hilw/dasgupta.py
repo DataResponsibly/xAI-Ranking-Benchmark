@@ -3,6 +3,7 @@ Module with all methods from Dasgupta paper
 """
 
 import pandas as pd
+
 # import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler
 from sharp.utils import scores_to_ordering
@@ -50,8 +51,6 @@ def hilw_contributions(df, score_function, upper_bound, lower_bound):
     return df_mean_contri
 
 
-
-
 def transform_df(df):
     new_columns = pd.DataFrame(df.iloc[:, 0].tolist())
     new_columns.columns = range(1, len(new_columns.columns) + 1)
@@ -59,7 +58,9 @@ def transform_df(df):
     return new_columns
 
 
-def shapley_values(d, weights, upper_bound, lower_bound, features, num_batches, group_feature="_N"):
+def shapley_values(
+    d, weights, upper_bound, lower_bound, features, num_batches, group_feature="_N"
+):
     """
     input: df_all, weight
     """
@@ -123,7 +124,9 @@ def shapley_values(d, weights, upper_bound, lower_bound, features, num_batches, 
 
 
 ### standardized shapley values
-def competing_powers(d, weights, upper_bound, lower_bound, features, num_batches, group_feature="_N"):
+def competing_powers(
+    d, weights, upper_bound, lower_bound, features, num_batches, group_feature="_N"
+):
     """
     input: df_all, weights
     """
@@ -185,7 +188,14 @@ def competing_powers(d, weights, upper_bound, lower_bound, features, num_batches
 
 ### Rank-relevance Shapley values
 def competing_powers2(
-    d, weights, upper_bound, lower_bound, features, num_batches, exponential=1, group_feature="_N"
+    d,
+    weights,
+    upper_bound,
+    lower_bound,
+    features,
+    num_batches,
+    exponential=1,
+    group_feature="_N",
 ):
     """
     input: df_all, weights
@@ -202,7 +212,9 @@ def competing_powers2(
 
         # calculate the attention of the item based on reverse of the rank over the rank_sum, with optional exponential magnifier par
         group["attention"] = (1 - group["rank"] / rank_max) ** exponential
-        group[["attention"]] = MinMaxScaler().fit_transform(group[["attention"]])  # scale the attention back to 0 to 1
+        group[["attention"]] = MinMaxScaler().fit_transform(
+            group[["attention"]]
+        )  # scale the attention back to 0 to 1
 
         ## the raw payout is the score_std
         group["score_std"] = sum([weights[attr] * group[attr] for attr in features])
@@ -260,18 +272,18 @@ def competing_powers2(
 # def box_plot_competing_power3(df1, df2, df3, df_names):
 #     dfs = [df1, df2, df3]
 #     fig = go.Figure()
-# 
+#
 #     marker_colors = ["#FF851B", "#1b23ff", "#00FF00", "#FF00FF", "#FFFF00", "#00FFFF"]
-# 
+#
 #     for idx, df in enumerate(dfs):
 #         df = df.T.copy()
 #         # df.columns = [f'Attribute {i+1}' for i in range(len(df.columns))]
 #         # df = pd.melt(df, id_vars=None, value_vars=[f'Attribute {i+1}' for i in range(len(df.columns))])
 #         df = pd.melt(df, id_vars=None, value_vars=df.columns)
 #         df = df.rename(columns={"variable": "average contribution"})
-# 
+#
 #         y = df["average contribution"].values
-# 
+#
 #         fig.add_trace(
 #             go.Box(
 #                 y=df["value"].values,
@@ -285,10 +297,10 @@ def competing_powers2(
 #                 line_width=1,
 #             )
 #         )
-# 
+#
 #     fig.update_layout(
 #         xaxis=dict(title="average contribution", zeroline=False),
 #         boxmode="group",
 #     )
-# 
+#
 #     return fig
