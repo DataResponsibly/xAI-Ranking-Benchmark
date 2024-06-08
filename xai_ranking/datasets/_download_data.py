@@ -7,8 +7,7 @@ TIMES_URL = "https://zenodo.org/records/11235321/files/times2-revised.csv"
 
 def fetch_csrank_data():
     return (
-        pd
-        .read_csv(CSRANKS_URL)
+        pd.read_csv(CSRANKS_URL)
         .drop(columns="Unnamed: 0")
         .rename(columns={"Count": "Rank"})
     )

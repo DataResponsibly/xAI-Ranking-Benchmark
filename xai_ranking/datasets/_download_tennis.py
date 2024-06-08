@@ -1,4 +1,3 @@
-
 # License: MIT
 # Authors: - Joao Fonseca <jpfonseca@novaims.unl.pt>
 #          - Kateryna Akhynko <kateryna.akhynko@ucu.edu.ua>
@@ -11,7 +10,9 @@ import pandas as pd
 BASE_URL = "https://zenodo.org/record/10245175/files/"
 
 
-def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weights=False):
+def fetch_atp_data(
+    file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weights=False
+):
     """
     Loads data into memory.
 
@@ -31,7 +32,8 @@ def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weight
     elif file.endswith(".csv"):
         df = pd.read_csv(urljoin(BASE_URL, file))
     else:
-        raise TypeError(f"unrecognized file extension `.{file.split(".")[-1]}`.")
+        ext = file.split(".")[-1]
+        raise TypeError(f"unrecognized file extension `.{ext}`.")
 
     df = preprocess(df, sheet_name)
 
@@ -41,12 +43,12 @@ def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weight
 
         df_info.set_index(
             df_info["player_name"].apply(lambda x: x.lower().strip().replace(" ", "")),
-            inplace=True
+            inplace=True,
         )
         df_info.drop(columns="player_name", inplace=True)
         df.set_index(
             df["player_name"].apply(lambda x: x.lower().strip().replace(" ", "")),
-            inplace=True
+            inplace=True,
         )
 
         df = df.join(df_info)
@@ -56,8 +58,7 @@ def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weight
         idx_nan = df.index[df.isna().any(axis=1)]
         for attr in ["height_cm", "weight_kg"]:
             df.loc[idx_nan, attr] = df.loc[idx_nan].apply(
-                lambda row: _parse_missing_height_weights(row, df_info, attr),
-                axis=1
+                lambda row: _parse_missing_height_weights(row, df_info, attr), axis=1
             )
         df.drop(columns="__last_name", inplace=True)
         df.reset_index(drop=True, inplace=True)
@@ -66,9 +67,7 @@ def fetch_atp_data(file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weight
 
 
 def _parse_missing_height_weights(row, df_info, attr):
-    value = df_info.loc[
-        df_info.index.str.contains(row["__last_name"]), attr
-    ].values
+    value = df_info.loc[df_info.index.str.contains(row["__last_name"]), attr].values
     if len(value) == 1:
         return float(value[0])
     else:
