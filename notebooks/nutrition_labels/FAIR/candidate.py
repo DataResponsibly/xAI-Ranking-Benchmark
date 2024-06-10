@@ -1,9 +1,11 @@
-'''
+"""
 Created on 23.12.2016
 
 @author: meike.zehlike
-'''
+"""
+
 import uuid
+
 
 class Candidate(object):
     """
@@ -12,7 +14,6 @@ class Candidate(object):
     if the list of protected attributes is empty/null this is a candidate from a non-protected group
     natural ordering established by the qualification
     """
-
 
     def __init__(self, qualification, protectedAttributes):
         """
@@ -27,58 +28,26 @@ class Candidate(object):
         self.__originalQualification = qualification
         self.uuid = uuid.uuid4()
 
-
     @property
     def qualification(self):
         return self.__qualification
-
 
     @qualification.setter
     def qualification(self, value):
         self.__qualification = value
 
-
     @property
     def originalQualification(self):
         return self.__originalQualification
-
 
     @originalQualification.setter
     def originalQualification(self, value):
         self.__originalQualification = value
 
-
     @property
     def isProtected(self):
-        '''
+        """
         true if the list of ProtectedAttribute elements actually contains anything
         false otherwise
-        '''
+        """
         return not self.__protectedAttributes == []
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

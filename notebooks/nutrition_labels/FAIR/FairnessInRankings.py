@@ -1,22 +1,24 @@
-'''
+"""
 Created on Jan 11, 2017
 
 @author: meike.zehlike
 
 Download from : https://github.com/MilkaLichtblau/FA-IR_Ranking
-'''
+"""
 
 from scipy.stats import binom
 from .alpha_adjustment import AlphaAdjustment
 
+
 def countProtected(ranking):
     result = 0
     for candidate in ranking:
-        if candidate[1]=="pro":
+        if candidate[1] == "pro":
             result += 1
     return result
-    
-class FairnessInRankingsTester():
+
+
+class FairnessInRankingsTester:
     """
     implementation of the statistical significance test that decides if a ranking has a fair representation
     and ordering of protected candidates with respect to non-protected ones.
@@ -36,11 +38,9 @@ class FairnessInRankingsTester():
     def candidates_needed(self):
         return self.__candidatesNeeded
 
-
     @property
     def minimal_proportion(self):
         return self.__minProp
-
 
     def __init__(self, minProp, alpha, k, correctedAlpha):
         """
@@ -64,7 +64,9 @@ class FairnessInRankingsTester():
         if correctedAlpha:
             self.__candidatesNeeded = self.__candidates_needed_with_correction(k)
         else:
-            self.__candidatesNeeded = self.__calculate_protected_needed_at_each_position(k)
+            self.__candidatesNeeded = (
+                self.__calculate_protected_needed_at_each_position(k)
+            )
 
     def ranked_group_fairness_condition(self, ranking):
         """
@@ -91,7 +93,6 @@ class FairnessInRankingsTester():
                 return t, False
 
         return 0, True
-
 
     def fair_representation_condition(self, ranking):
         """
@@ -125,7 +126,7 @@ class FairnessInRankingsTester():
             # handle special case minProp = 0
             p_value = -1
         else:
-            p_value = binom.cdf(numberProtected,k,self.__minProp)
+            p_value = binom.cdf(numberProtected, k, self.__minProp)
         return p_value
 
     def calculate_p_value_right_tail(self, k, ranking):
@@ -136,7 +137,7 @@ class FairnessInRankingsTester():
             # handle special case minProp = 0
             p_value = -1
         else:
-            p_value = binom.sf(numberProtected,k,self.__minProp)
+            p_value = binom.sf(numberProtected, k, self.__minProp)
         return p_value
 
     def __calculate_protected_needed_at_each_position(self, k):
@@ -152,11 +153,9 @@ class FairnessInRankingsTester():
 
         return result
 
-
     def __candidates_needed_with_correction(self, k):
         fc = AlphaAdjustment(k, self.__minProp, self.__alpha)
         self.alpha_c = fc.compute_success_probability()
         mtableAsList = fc.mtable.m.tolist()
         mtableAsList = [int(i) for i in mtableAsList]
         return mtableAsList
-

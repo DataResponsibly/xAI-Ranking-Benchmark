@@ -3,8 +3,10 @@ Created on Jan 2, 2017
 
 @author: meike.zehlike
 """
+
 from .candidate import Candidate
 import random
+
 
 def create(fairnessProbability, k, numProtected, numNonProtected):
     """
@@ -55,6 +57,7 @@ def create(fairnessProbability, k, numProtected, numNonProtected):
 
     return rankedOutput
 
+
 def generateCandidateList(isProtected, numCandidates):
 
     candidates = []
@@ -69,4 +72,3 @@ def generateCandidateList(isProtected, numCandidates):
             candidates.append(Candidate(i, []))
 
     return candidates
-

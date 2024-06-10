@@ -1,8 +1,9 @@
-'''
+"""
 Created on Apr 12, 2017
 
 @author: meike.zehlike
-'''
+"""
+
 from .yangStoyanovichMethod import create
 from .FairnessInRankings import FairnessInRankingsTester
 
@@ -35,7 +36,8 @@ from .FairnessInRankings import FairnessInRankingsTester
 #
 #     return result, gft.candidates_needed
 
-def computeFairRankingProbability(k,p,generated_ranking,default_alpha=0.05):
+
+def computeFairRankingProbability(k, p, generated_ranking, default_alpha=0.05):
     ## generated_ranking is a list of tuples (id, "pro"),...(id,"unpro")
 
     gft = FairnessInRankingsTester(p, default_alpha, k, correctedAlpha=True)
@@ -49,17 +51,22 @@ def computeFairRankingProbability(k,p,generated_ranking,default_alpha=0.05):
 
     return p_value, isFair, posAtFail, gft.alpha_c, gft.candidates_needed
 
-def computeFairPairProbability(small_k,larger_k, p, generated_ranking, default_alpha=0.1):
+
+def computeFairPairProbability(
+    small_k, larger_k, p, generated_ranking, default_alpha=0.1
+):
     ## generated_ranking is a list of tuples (id, "pro"),...(id,"unpro")
     top_k = len(generated_ranking)
-    small_k_invalid = (small_k <=0) or (small_k > top_k)
+    small_k_invalid = (small_k <= 0) or (small_k > top_k)
     larger_k_invalid = (larger_k <= 0) or (larger_k > top_k)
 
     if small_k_invalid:
         p_value_sl = -1
         alpha_c_sl = -1
     else:
-        small_gft = FairnessInRankingsTester(p, default_alpha, small_k, correctedAlpha=True)
+        small_gft = FairnessInRankingsTester(
+            p, default_alpha, small_k, correctedAlpha=True
+        )
         p_value_sl = small_gft.calculate_p_value_left_tail(small_k, generated_ranking)
         alpha_c_sl = small_gft.alpha_c
 
@@ -67,8 +74,12 @@ def computeFairPairProbability(small_k,larger_k, p, generated_ranking, default_a
         p_value_lg = -1
         alpha_c_lg = -1
     else:
-        larger_gft = FairnessInRankingsTester(p, default_alpha, larger_k, correctedAlpha=True)
-        p_value_lg = larger_gft.calculate_p_value_right_tail(larger_k, generated_ranking)
+        larger_gft = FairnessInRankingsTester(
+            p, default_alpha, larger_k, correctedAlpha=True
+        )
+        p_value_lg = larger_gft.calculate_p_value_right_tail(
+            larger_k, generated_ranking
+        )
         alpha_c_lg = larger_gft.alpha_c
 
     return p_value_sl, alpha_c_sl, p_value_lg, alpha_c_lg
