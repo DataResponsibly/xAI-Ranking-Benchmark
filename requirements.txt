@@ -3,6 +3,10 @@
 
 git+https://github.com/DataResponsibly/ShaRP.git
 shap
+lime
+
+# dataset module
+openpyxl
 
 # Nutrition labels
 numpy
