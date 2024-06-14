@@ -5,6 +5,6 @@ from shap import Explainer
 
 
 def shap_experiment(X, score_function):
-    explainer = Explainer(score_function)
+    explainer = Explainer(score_function, masker=X)
     shap_values = explainer(X)
-    return shap_values
+    return shap_values.values

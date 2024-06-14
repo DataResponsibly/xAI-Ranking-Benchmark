@@ -12,6 +12,12 @@ Original source code:
 
 import pandas as pd
 from sharp.utils import scores_to_ordering
+from .hre import (  # noqa
+    feature_importance_DT,
+    feature_importance_LR,
+    feature_importance_OLS,
+    feature_importance_PLS
+)
 
 
 def hierarchical_ranking_explanation(X, score_function, model_type="OLS", s=5):
@@ -24,7 +30,6 @@ def hierarchical_ranking_explanation(X, score_function, model_type="OLS", s=5):
     ranks = scores_to_ordering(y)
 
     func_name = f"feature_importance_{model_type}"
-    eval(f"from hre import {func_name}")
     feature_importance_func = eval(func_name)
 
     # TODO: Refactor appropriately (do we need this loop?)
