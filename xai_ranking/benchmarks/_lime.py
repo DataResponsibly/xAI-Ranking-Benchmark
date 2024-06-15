@@ -1,26 +1,16 @@
-import numpy as np
-from lime.lime_tabular import LimeTabularExplainer
+from shap.explainers.other import LimeTabular
 
 
-def _scorer(X, score_function):
-    scores = score_function(X)
-    return np.array([1 - scores, scores]).T
-
-
-def lime_experiment(X, score_function, mode="classification"):
+def lime_experiment(X, score_function, mode="regression"):
     """
     `mode` can be one of `[classification, regression]`.
     """
     X_ = X.copy()
     X_["score"] = score_function(X)
-    explainer = LimeTabularExplainer(
-        X_,
-        feature_names=X.columns,
-        class_names=["score"],
-        discretize_continuous=False,
+    explainer = LimeTabular(
+        score_function,
+        X,
         mode=mode,
     )
-    lime_values = explainer.explain_instance(
-        X_, lambda X: _scorer(X, score_function)  # , num_features=5
-    )
+    lime_values = explainer.attributions(X)
     return lime_values

@@ -10,7 +10,7 @@ def fetch_csrank_data():
         pd.read_csv(CSRANKS_URL)
         .drop(columns="Unnamed: 0")
         .rename(columns={"Count": "Rank"})
-    )
+    ).set_index("Institution")
 
 
 def fetch_higher_education_data(year=None):
@@ -19,4 +19,4 @@ def fetch_higher_education_data(year=None):
     if year is not None:
         df = df[df["year"] == year].copy()
 
-    return df
+    return df.set_index("university_name")
