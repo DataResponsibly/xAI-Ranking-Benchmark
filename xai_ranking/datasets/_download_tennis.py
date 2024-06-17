@@ -11,10 +11,13 @@ BASE_URL = "https://zenodo.org/record/10245175/files/"
 
 
 def fetch_atp_data(
-    file="3.1_ATP_info.xlsx", sheet_name=None, add_heights_weights=False
+    file="3.1_ATP_info.xlsx", sheet_name="Serve 2022", add_heights_weights=False
 ):
     """
     Loads data into memory.
+
+    Coefficients for "Serve 2022" scoring function were inferred from the data:
+    [100, 100, 100, 100, 1, -1]
 
     See https://zenodo.org/records/10245175 for more info.
     """
@@ -63,7 +66,7 @@ def fetch_atp_data(
         df.drop(columns="__last_name", inplace=True)
         df.reset_index(drop=True, inplace=True)
 
-    return df
+    return df.set_index("player_name")
 
 
 def _parse_missing_height_weights(row, df_info, attr):

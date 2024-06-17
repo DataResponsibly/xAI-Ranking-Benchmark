@@ -5,4 +5,4 @@ def human_in_the_loop(X, score_function, upper_bound=1, lower_bound=None):
     if lower_bound is None:
         lower_bound = X.shape[0]
 
-    return hilw_contributions(X, score_function, upper_bound, lower_bound)
+    return hilw_contributions(X, score_function, upper_bound, lower_bound).values

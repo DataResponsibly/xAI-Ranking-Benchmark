@@ -26,7 +26,7 @@ def hilw_contributions(df, score_function, upper_bound, lower_bound):
     # dff = pd.DataFrame()
     # grouped = df.groupby(group_feature)
 
-    print(features)
+    # print(features)
     avg_attributes = dict()
     for attr in features:
         avg_attributes[attr + "_avg"] = df.loc[:, attr].mean()

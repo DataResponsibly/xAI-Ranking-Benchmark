@@ -18,29 +18,29 @@ Datasets
 Benchmarking methods
 --------------------
 
-- [Needs testing] ShaRP (including unary, banzhaff, and Shapley measures)
+- ShaRP (including unary, banzhaff, and Shapley measures)
 
       Pliatsika, Venetia, Joao Fonseca, Tilun Wang, and Julia Stoyanovich. ShaRP: Explaining Rankings with Shapley Values. arXiv preprint arXiv:2401.16744, 2024.
 
-- [Needs testing] SHAP
+- SHAP
 
       Lundberg, S. M., & Lee, S. I. (2017). A unified approach to interpreting model predictions. Advances in neural information processing systems, 30.
 
 - [WIP] LIME
 
-- [Needs testing] HILW
+- HILW
 
       Jun Yuan and Aritra Dasgupta. A human-in-the-loop workflow for multi-factorial sensitivity analysis of algorithmic rankers. In Proceedings of the Workshop on Human-In-the-Loop Data Analytics, HILDA 2023, Seattle, WA, USA, 18 June 2023, pages 5:1–5:5. ACM, 2023.
 
-- [Needs testing] HRE
+- HRE (including explanations based on OLS, PLS, Linear Regression and Decision Tree)
 
       Hadis Anahideh and Nasrin Mohabbati-Kalejahi. Local explanations of global rankings: Insights for competitive rankings. IEEE Access, 10:30676–30693, 2022.
 
-- [TODO]
+- Participation score
 
       Abraham Gale and Amelie Marian. Explaining ranking functions. Proc. VLDB Endow., 14(4):640–652, 2020.
 
-- [Backlogged - Not planned] Nutritional Labels
+- **[Backlogged - Not planned]** Nutritional Labels
 
       Ke Yang, Julia Stoyanovich, Abolfazl Asudeh, Bill Howe, H. V. Jagadish, and Gerome Miklau. A nutritional label for rankings. In Proceedings of International Conference on the Management of Data, SIGMOD, pages 1773–1776. ACM, 2018.
 
