@@ -33,19 +33,19 @@ from xai_ranking.scorers import (
 DATASETS = [
     {
         "name": "ATP",
-        "data": fetch_atp_data().head(5),
+        "data": fetch_atp_data().head(20),
         "preprocess": preprocess_atp_data,
         "scorer": atp_score,
     },
     {
         "name": "CSRank",
-        "data": fetch_csrank_data().head(5),
+        "data": fetch_csrank_data().head(20),
         "preprocess": preprocess_csrank_data,
         "scorer": csrank_score,
     },
     {
         "name": "Higher Education",
-        "data": fetch_higher_education_data(year=2021).head(5),
+        "data": fetch_higher_education_data(year=2021).head(20),
         "preprocess": preprocess_higher_education_data,
         "scorer": higher_education_score,
     },
