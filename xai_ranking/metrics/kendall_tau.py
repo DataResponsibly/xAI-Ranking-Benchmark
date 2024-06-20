@@ -30,55 +30,51 @@ from xai_ranking.scorers import (
     higher_education_score,
 )
 
-datasets = [
+DATASETS = [
     {
         "name": "ATP",
-        "data": fetch_atp_data().head(20),
+        "data": fetch_atp_data().head(5),
         "preprocess": preprocess_atp_data,
         "scorer": atp_score,
     },
     {
         "name": "CSRank",
-        "data": fetch_csrank_data().head(20),
+        "data": fetch_csrank_data().head(5),
         "preprocess": preprocess_csrank_data,
         "scorer": csrank_score,
     },
     {
         "name": "Higher Education",
-        "data": fetch_higher_education_data(year=2021).head(20),
+        "data": fetch_higher_education_data(year=2021).head(5),
         "preprocess": preprocess_higher_education_data,
         "scorer": higher_education_score,
     },
-]
-xai_methods = [
-    {"name": "LIME", "experiment": lime_experiment},
-    {"name": "SHAP", "experiment": shap_experiment},
-    {"name": "ShaRP", "experiment": sharp_experiment},
-    # {"name": "Participation", "experiment": participation_experiment},
-    {"name": "HRE", "experiment": hierarchical_ranking_explanation},
-    {"name": "HIL", "experiment": human_in_the_loop},
 ]
 
 RNG_SEED = 42
 
 
-def compare_():
+def compare_methods(method1, method2):
+    """
+    Compares two methods passed as function arguments
+    with Kendall tau on all datasets for each data point
+    """
     results = {}
-    for dataset in datasets:
-        results[dataset["name"]] = {}
-        for xai_method in xai_methods:
-            experiment_func = xai_method["experiment"]
-            preprocess_func = dataset["preprocess"]
-            score_func = dataset["scorer"]
-            X, ranks, scores = preprocess_func(dataset["data"])
-            contributions = experiment_func(X, score_func)
-            results[dataset["name"]][xai_method["name"]] = contributions
-            # with open(f"_contributions_{dataset['name']}_{xai_method['name']}.npy", "wb") as f:
-            #     np.save(f, contributions)
+    for dataset in DATASETS:
+        results[dataset["name"]] = []
+        preprocess_func = dataset["preprocess"]
+        score_func = dataset["scorer"]
+        X, ranks, scores = preprocess_func(dataset["data"])
+
+        contributions1 = method1(X, score_func)
+        contributions2 = method2(X, score_func)
+        
+        for data_point_idx, _ in enumerate(contributions1):
+            statistic_result = kendalltau(contributions1[data_point_idx], contributions2[data_point_idx])
+            results[dataset["name"]].append(statistic_result.statistic)
+
+    return results
 
 
 if __name__ == "__main__":
-    atp_data = fetch_atp_data(sheet_name='Serve 2022')
-    print(atp_data.columns)
-    # score_function = {"serve__pct_1st_serve": 0.5, "serve__pct_2nd_serve_points_won": 0.5}
-    # compare_sharp_hilw(atp_data, score_function)
+    print(compare_methods(human_in_the_loop, shap_experiment))
