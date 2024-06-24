@@ -1,3 +1,6 @@
+from sharp.utils import scores_to_ordering
+
+
 def preprocess_atp_data(df):
     X = df.drop(columns=["serve__standing_player", "serve__rating"])
     pct_cols = X.columns.str.contains("pct")
@@ -22,4 +25,14 @@ def preprocess_higher_education_data(df):
     X = X / 100
     ranks = df.world_rank
     scores = df.total_score
+    return X, ranks, scores
+
+
+def preprocess_movers_data(df):
+    X = df.drop(columns=["relevance", "qualification_score"])
+    ranks = scores_to_ordering(df["qualification_score"])
+    scores = df["qualification_score"]
+
+    data = X.weight_lifting_ability
+    X.weight_lifting_ability = (data - data.min()) / (data.max() - data.min())
     return X, ranks, scores
