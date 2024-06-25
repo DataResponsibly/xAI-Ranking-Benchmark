@@ -48,3 +48,16 @@ def higher_education_score(X=None):
         return weights
 
     return (np.array(X) * multiplier * weights).sum(axis=1)
+
+
+def synthethic_score(X=None):
+    """
+    If X is None, return the weights. Otherwise, return the score for each row in X.
+    Assumes X is preprocessed.
+    """
+    weights = np.array([0.25, 0.25, 0.25, 0.25])
+
+    if X is None:
+        return weights
+    
+    return (np.array(X) * weights).sum(axis=1)

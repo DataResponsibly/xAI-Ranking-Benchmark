@@ -54,27 +54,21 @@ DATASETS = [
 RNG_SEED = 42
 
 
-def compare_methods(method1, method2):
+def compare_methods(results_df1, results_df2):
     """
     Compares two methods passed as function arguments
     with Kendall tau on all datasets for each data point
     """
-    results = {}
-    for dataset in DATASETS:
-        results[dataset["name"]] = []
-        preprocess_func = dataset["preprocess"]
-        score_func = dataset["scorer"]
-        X, ranks, scores = preprocess_func(dataset["data"])
-
-        contributions1 = method1(X, score_func)
-        contributions2 = method2(X, score_func)
-        
-        for data_point_idx, _ in enumerate(contributions1):
-            statistic_result = kendalltau(contributions1[data_point_idx], contributions2[data_point_idx])
-            results[dataset["name"]].append(statistic_result.statistic)
-
+    results = []        
+    for row in results_df1.iterrows():
+        data_point_idx = row[0]
+        statistic_result = kendalltau(results_df1.iloc[data_point_idx].values[1:], results_df2.iloc[data_point_idx].values[1:])
+        results.append(statistic_result.statistic)
     return results
 
 
 if __name__ == "__main__":
-    print(compare_methods(human_in_the_loop, shap_experiment))
+    import pandas as pd
+    hilw_results = pd.read_csv("../../notebooks/results/_contributions_ATP_HIL.csv")
+    sharp_results = pd.read_csv("../../notebooks/results/_contributions_ATP_ShaRP.csv")
+    print(len(compare_methods(hilw_results, sharp_results)))
