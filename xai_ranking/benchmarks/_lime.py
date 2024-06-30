@@ -6,8 +6,6 @@ def lime_experiment(X, score_function, mode="regression", **kwargs):
     """
     `mode` can be one of `[classification, regression]`.
     """
-    X_ = X.copy()
-    X_["score"] = score_function(X)
     explainer = LimeTabular(
         score_function,
         X,
@@ -22,11 +20,9 @@ def lime_batch_experiment(X, score_function, mode="regression", batch_size=10, r
     """
     `mode` can be one of `[classification, regression]`.
     """
-    # Why are next two lines here?
-    X_ = X.copy()
-    X_["score"] = score_function(X)
+    batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
+    batch = X[batch_indices]
 
-    batch = numpy.random.RandomState(random_state).choice(X, batch_size)
     explainer = LimeTabular(
         score_function,
         batch,

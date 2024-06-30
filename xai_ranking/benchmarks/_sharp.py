@@ -44,7 +44,9 @@ def sharp_batch_experiment(
         n_jobs=n_jobs,
     )
 
-    batch = numpy.random.RandomState(random_state).choice(X, batch_size)
+    batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
+    batch = X[batch_indices]
+
     xai.fit(batch)
     contributions = xai.all(X)
     return contributions

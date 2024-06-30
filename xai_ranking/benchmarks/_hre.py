@@ -38,3 +38,29 @@ def hierarchical_ranking_explanation(X, score_function, model_type="OLS", s=5):
         obs_contr = feature_importance_func(X, y, ranks, idx, s)
         contributions.append(obs_contr)
     return np.array(contributions)
+
+
+def hierarchical_ranking_batch_explanation(X, score_function, model_type="OLS", s=5, batch_size=10, random_state=42):
+    """
+    `model_type` can be one of "DT", "LR", "OLS", "PLS".
+    """
+    batch_indices = np.random.RandomState(random_state).choice(X.index, batch_size)
+    batch = X[batch_indices].copy().reset_index(drop=True)
+    batch_scores = score_function(batch)
+
+    X = X.copy().reset_index(drop=True)
+    y = score_function(X)
+
+    func_name = f"feature_importance_{model_type}"
+    feature_importance_func = eval(func_name)
+
+    # TODO: Refactor appropriately (do we need this loop?)
+    contributions = []
+    for idx in range(X.shape[0]):
+        cur_batch_scores = np.concat((np.array([y[idx]]), batch_scores), axis=0)
+        ranks = scores_to_ordering(cur_batch_scores)
+        obs_contr = feature_importance_func(
+            np.concat((np.array([X[idx]]), batch), axis=0), cur_batch_scores, ranks, 0, s
+        )
+        contributions.append(obs_contr)
+    return np.array(contributions)
