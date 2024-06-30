@@ -64,7 +64,7 @@ def hilw_batch_contributions(df, score_function, upper_bound, lower_bound, batch
     features = df.columns
 
     batch_indices = np.random.RandomState(random_state).choice(df.index, batch_size)
-    batch = df[batch_indices]
+    batch = df.loc[batch_indices]
 
     df["rank"] = scores_to_ordering(score_function(df))
 

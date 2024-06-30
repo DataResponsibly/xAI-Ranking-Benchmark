@@ -10,10 +10,10 @@ def shap_experiment(X, score_function, **kwargs):
     return shap_values.values
 
 
-def shap_batch_experiment(X, score_function, batch_size=10, random_state=42):
+def shap_batch_experiment(X, score_function, batch_size=10, random_state=42, **kwargs):
     batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
-    batch = X[batch_indices]
+    batch = X.loc[batch_indices]
 
-    explainer = Explainer(score_function, masker=batch)
+    explainer = Explainer(score_function, masker=batch, **kwargs)
     shap_values = explainer(X)
     return shap_values.values
