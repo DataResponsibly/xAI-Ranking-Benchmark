@@ -59,10 +59,10 @@ def hierarchical_ranking_batch_explanation(
     # TODO: Refactor appropriately (do we need this loop?)
     contributions = []
     for idx in range(X.shape[0]):
-        cur_batch_scores = np.concat((np.array([y[idx]]), batch_scores), axis=0)
+        cur_batch_scores = np.concatenate((np.array([y[idx]]), batch_scores), axis=0)
         ranks = scores_to_ordering(cur_batch_scores)
         obs_contr = feature_importance_func(
-            np.concat((np.array([X.iloc[idx]]), batch), axis=0), cur_batch_scores, ranks, 0, s
+            np.concatenate((np.array([X.iloc[idx]]), batch), axis=0), cur_batch_scores, ranks, 0, s
         )
         contributions.append(obs_contr)
     return np.array(contributions)
