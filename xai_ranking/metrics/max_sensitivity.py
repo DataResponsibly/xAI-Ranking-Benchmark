@@ -48,16 +48,15 @@ def compute_sensitivity(df, target_idx, radius, explanator, score_function, dist
     # exclude the target point
     neighbors = neighbors[neighbors.index != target_point_idx]
     
-    max_explanation_distance = float("-inf")
     contributions = explanator(df, score_function)
     target_point_contri = contributions[target_idx]
-    for neighbor in neighbors.iterrows():
-        neighbor_idx = df.index.get_loc(neighbor[0])
-        neighbor_contri = contributions[neighbor_idx]
-        distance = distance_func(target_point_contri, neighbor_contri).statistic
-        max_explanation_distance = max(max_explanation_distance, distance)
-    
-    return distance
+    neighbors_indices = df.index.get_indexer(neighbors.index)
+    neighbors_contributions = contributions[neighbors_indices]
+
+    distances = np.array([distance_func(target_point_contri, contrib).statistic for contrib in neighbors_contributions])
+    max_explanation_distance = np.max(distances)
+
+    return max_explanation_distance
 
 
 if __name__ == "__main__":
