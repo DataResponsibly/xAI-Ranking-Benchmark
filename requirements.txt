@@ -22,7 +22,6 @@ click
 Sphinx
 coverage
 flake8
-ml-research
 
 #L2R
 lightgbm
