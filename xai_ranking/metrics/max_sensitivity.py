@@ -35,19 +35,20 @@ from xai_ranking.metrics import kendall_tau
 RNG_SEED = 42
 
 
-def compute_sensitivity(df, target_idx, radius, explanator, score_function, distance_func):
+def compute_sensitivity(df, target_idx, num_neighbors, explanator, score_function, distance_func):
     """
     Computes max sensitivity of explanation method
     for the point of interest based on points in its radius
     """
     target_point = df.iloc[target_idx].values
     target_point_idx = df.iloc[target_idx].name
-    euclidean_distances = df.apply(lambda row: euclidean(target_point, row.values), axis=1)
 
-    neighbors = df[euclidean_distances <= radius]
-    # exclude the target point
-    neighbors = neighbors[neighbors.index != target_point_idx]
-    
+    euclidean_distances = df.apply(lambda row: euclidean(target_point, row.values), axis=1)
+    # neighbors = df[euclidean_distances <= num_neighbors]
+    neighbors_indices = euclidean_distances.nsmallest(num_neighbors+1).index
+    neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
+    neighbors = df.loc[neighbors_indices]
+
     contributions = explanator(df, score_function)
     target_point_contri = contributions[target_idx]
     neighbors_indices = df.index.get_indexer(neighbors.index)
@@ -61,6 +62,6 @@ def compute_sensitivity(df, target_idx, radius, explanator, score_function, dist
 
 if __name__ == "__main__":
     target_idx = 2
-    radius = 0.05
-    data, _, _ = preprocess_atp_data(fetch_atp_data().head(5))
-    print(compute_sensitivity(data, target_idx, radius, human_in_the_loop, atp_score, kendalltau))
+    num_neighbors = 2
+    data, _, _ = preprocess_atp_data(fetch_atp_data().head(10))
+    print(compute_sensitivity(data, target_idx, num_neighbors, human_in_the_loop, atp_score, kendalltau))
