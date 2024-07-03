@@ -51,7 +51,7 @@ def compute_sensitivity(df, target_idx, num_neighbors, explanator, score_functio
 
     contributions = explanator(df, score_function)
     target_point_contri = contributions[target_idx]
-    neighbors_indices = df.index.get_indexer(neighbors.index)
+    neighbors_indices = df.index.get_indexer(neighbors_indices)
     neighbors_contributions = contributions[neighbors_indices]
 
     distances = np.array([distance_func(target_point_contri, contrib).statistic for contrib in neighbors_contributions])
