@@ -4,7 +4,7 @@
 from shap import Explainer
 
 
-def shap_experiment(X, score_function):
-    explainer = Explainer(score_function, masker=X)
+def shap_experiment(X, score_function, **kwargs):
+    explainer = Explainer(score_function, masker=X, **kwargs)
     shap_values = explainer(X)
     return shap_values.values
