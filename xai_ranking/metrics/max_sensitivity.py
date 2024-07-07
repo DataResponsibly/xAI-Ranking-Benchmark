@@ -35,24 +35,26 @@ from xai_ranking.metrics import kendall_tau
 RNG_SEED = 42
 
 
-def compute_sensitivity(df, target_idx, num_neighbors, explanator, score_function, distance_func):
+def compute_sensitivity(features_df, contri_df, target_idx, num_neighbors, score_function, distance_func):
     """
     Computes max sensitivity of explanation method
     for the point of interest based on points in its radius
     """
-    target_point = df.iloc[target_idx].values
-    target_point_idx = df.iloc[target_idx].name
+    target_point = features_df.iloc[target_idx].values
+    target_point_idx = features_df.iloc[target_idx].name   # actual index in df
+    
+    # Define the range around the target point
+    start_idx = max(0, target_idx - 2*num_neighbors)
+    end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
 
-    euclidean_distances = df.apply(lambda row: euclidean(target_point, row.values), axis=1)
-    # neighbors = df[euclidean_distances <= num_neighbors]
-    neighbors_indices = euclidean_distances.nsmallest(num_neighbors+1).index
+    features_df_subset = features_df.iloc[start_idx:end_idx]
+
+    euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
+    neighbors_indices = euclidean_distances.nsmallest(num_neighbors+1).index     # actual indexes in df
     neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
-    neighbors = df.loc[neighbors_indices]
 
-    contributions = explanator(df, score_function)
-    target_point_contri = contributions[target_idx]
-    neighbors_indices = df.index.get_indexer(neighbors_indices)
-    neighbors_contributions = contributions[neighbors_indices]
+    neighbors_contributions = contri_df.loc[neighbors_indices].values
+    target_point_contri = contri_df.loc[target_point_idx].values
 
     distances = np.array([distance_func(target_point_contri, contrib).statistic for contrib in neighbors_contributions])
     max_explanation_distance = np.max(distances)
@@ -63,5 +65,6 @@ def compute_sensitivity(df, target_idx, num_neighbors, explanator, score_functio
 if __name__ == "__main__":
     target_idx = 2
     num_neighbors = 2
-    data, _, _ = preprocess_atp_data(fetch_atp_data().head(10))
-    print(compute_sensitivity(data, target_idx, num_neighbors, human_in_the_loop, atp_score, kendalltau))
+    features_data, _, _ = preprocess_atp_data(fetch_atp_data().head(10))
+    contri_data = pd.read_csv("../../notebooks/results/_contributions_ATP_HIL.csv", index_col="player_name")
+    print(compute_sensitivity(features_data, contri_data, target_idx, num_neighbors, atp_score, kendalltau))
