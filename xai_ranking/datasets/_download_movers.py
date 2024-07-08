@@ -8,7 +8,7 @@ from os.path import dirname, abspath, join
 import pandas as pd
 
 
-def fetch_movers_data():
+def fetch_movers_data(test=False):
     """
     Fetches a dataset with fictional info on applications for a moving company
     taken from:
@@ -29,14 +29,18 @@ def fetch_movers_data():
         pd.DataFrame: The fetched moving company data.
 
     """
-    filepath = join(dirname(abspath(__file__)), "files", "R10_test_ranklib.txt")
+    split = "test" if test else "train"
+    filepath = join(dirname(abspath(__file__)), "files", f"R10_{split}_ranklib.txt")
     df = pd.read_csv(
         filepath,
         delimiter=" ",
         names=["relevance", "qid", "gender", "race", "X", "Y", "meta"],
     )
-    df.drop(columns=["qid", "meta"], inplace=True)
-    # df["qid"] = df["qid"].str.replace("qid:", "")
+    df.drop(columns=["meta"], inplace=True)
+
+    df["qid"] = df["qid"].str.replace("qid:", "")
+    df.set_index("qid", inplace=True)
+
     df["gender"] = df["gender"].str.replace("1:", "")
     df["race"] = df["race"].str.replace("2:", "")
     df["X"] = df["X"].str.replace("3:", "")
