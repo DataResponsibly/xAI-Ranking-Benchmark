@@ -1,0 +1,490 @@
+
+Jupyter server is running on: cs129.hpc.nyu.edu
+Job starts at: Thu Jun 27 10:52:47 AM EDT 2024
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 33444:localhost:33444 ka3292@greene.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to greene with command
+
+ssh ka3292@greene
+
+Please open an iTerm window, run command
+
+ssh -L 33444:localhost:33444 ka3292@greene
+
+Step 2:
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+The Jupyter Notebook is running at: cs129.hpc.nyu.edu
+the URL is something: http://localhost:33444/?token=XXXXXXXX (see your token below)
+you should be able to connect to jupyter notebook running remotly on greene compute node with above url
+
+[I 10:52:57.120 NotebookApp] Serving notebooks from local directory: /home/ka3292/xAI-Ranking-Benchmark/notebooks
+[I 10:52:57.121 NotebookApp] Jupyter Notebook 6.1.5 is running at:
+[I 10:52:57.121 NotebookApp] http://localhost:33444/?token=d02c877090bcbbfc8a02f382b8c137eb1449c1c58d5e52e7
+[I 10:52:57.121 NotebookApp]  or http://127.0.0.1:33444/?token=d02c877090bcbbfc8a02f382b8c137eb1449c1c58d5e52e7
+[I 10:52:57.121 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:52:57.194 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/ka3292/.local/share/jupyter/runtime/nbserver-2948527-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:33444/?token=d02c877090bcbbfc8a02f382b8c137eb1449c1c58d5e52e7
+     or http://127.0.0.1:33444/?token=d02c877090bcbbfc8a02f382b8c137eb1449c1c58d5e52e7
+[I 10:54:33.780 NotebookApp] 302 GET /?token=d02c877090bcbbfc8a02f382b8c137eb1449c1c58d5e52e7 (127.0.0.1) 0.46ms
+[E 10:54:44.566 NotebookApp] Uncaught exception GET /notebooks/0.1-experiment-synthetic.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/0.1-experiment-synthetic.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 23, in get_frontend_exporters
+        from nbconvert.exporters.base import get_export_names, get_exporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:54:44.597 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:54:44.597 NotebookApp] 500 GET /notebooks/0.1-experiment-synthetic.ipynb (127.0.0.1) 111.13ms referer=http://localhost:33444/tree
+[E 10:54:56.874 NotebookApp] Uncaught exception GET /notebooks/0.1-experiment-csrank.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/0.1-experiment-csrank.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:54:56.875 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:54:56.875 NotebookApp] 500 GET /notebooks/0.1-experiment-csrank.ipynb (127.0.0.1) 3308.36ms referer=http://localhost:33444/tree
+[E 10:55:10.834 NotebookApp] Uncaught exception GET /notebooks/Nutrition_Labels_For_Rankings.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/Nutrition_Labels_For_Rankings.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:55:10.835 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:55:10.835 NotebookApp] 500 GET /notebooks/Nutrition_Labels_For_Rankings.ipynb (127.0.0.1) 21.56ms referer=http://localhost:33444/tree
+[E 10:55:19.251 NotebookApp] Uncaught exception GET /notebooks/xAI_comparison_Dasgupta.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/xAI_comparison_Dasgupta.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:55:19.252 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:55:19.252 NotebookApp] 500 GET /notebooks/xAI_comparison_Dasgupta.ipynb (127.0.0.1) 20.88ms referer=http://localhost:33444/tree
+[E 10:55:22.495 NotebookApp] Uncaught exception GET /notebooks/0.1-experiment-higher_education.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/0.1-experiment-higher_education.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:55:22.496 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:55:22.496 NotebookApp] 500 GET /notebooks/0.1-experiment-higher_education.ipynb (127.0.0.1) 20.16ms referer=http://localhost:33444/tree
+[E 10:55:32.939 NotebookApp] Uncaught exception GET /notebooks/0.1-experiment-higher_education.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/0.1-experiment-higher_education.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:55:32.940 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:55:32.940 NotebookApp] 500 GET /notebooks/0.1-experiment-higher_education.ipynb (127.0.0.1) 21.70ms referer=http://localhost:33444/tree
+[E 10:55:44.195 NotebookApp] Uncaught exception GET /notebooks/xAI_comparison_Dasgupta.ipynb (127.0.0.1)
+    HTTPServerRequest(protocol='http', host='localhost:33444', method='GET', uri='/notebooks/xAI_comparison_Dasgupta.ipynb', version='HTTP/1.1', remote_ip='127.0.0.1')
+    Traceback (most recent call last):
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/ext3/miniconda3/lib/python3.8/site-packages/tornado/gen.py", line 775, in run
+        yielded = self.gen.send(value)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 95, in get
+        self.write(self.render_template('notebook.html',
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/base/handlers.py", line 512, in render_template
+        return template.render(**ns)
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+        self.environment.handle_exception()
+      File "/home/ka3292/.local/lib/python3.8/site-packages/jinja2/environment.py", line 939, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/page.html", line 154, in top-level template code
+        {% block header %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/templates/notebook.html", line 115, in block 'header'
+        {% for exporter in get_frontend_exporters() %}
+      File "/ext3/miniconda3/lib/python3.8/site-packages/notebook/notebook/handlers.py", line 40, in get_frontend_exporters
+        for name in get_export_names():
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 141, in get_export_names
+        e = get_exporter(exporter_name)(config=config)
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/base.py", line 101, in get_exporter
+        exporter = entrypoints.get_single('nbconvert.exporters', name).load()
+      File "/ext3/miniconda3/lib/python3.8/site-packages/entrypoints.py", line 82, in load
+        mod = import_module(self.module_name)
+      File "/ext3/miniconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 961, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+      File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+      File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+      File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/__init__.py", line 4, in <module>
+        from .exporters import *
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/__init__.py", line 3, in <module>
+        from .html import HTMLExporter
+      File "/ext3/miniconda3/lib/python3.8/site-packages/nbconvert/exporters/html.py", line 14, in <module>
+        from jinja2 import contextfilter
+    ImportError: cannot import name 'contextfilter' from 'jinja2' (/home/ka3292/.local/lib/python3.8/site-packages/jinja2/__init__.py)
+[E 10:55:44.196 NotebookApp] {
+      "Host": "localhost:33444",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": "\"Windows\"",
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Dest": "document",
+      "Referer": "http://localhost:33444/tree",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Cookie": "username-localhost-14962=\"2|1:0|10:1718889747|24:username-localhost-14962|44:YTMyYTNhODA3ODZkNDg0MjhjYWI1ZGEzZTk0MTM2YzY=|4f95c26ab01f979a26774e1188e9fbb55f7525716b0de859403739c23826f86c\"; _xsrf=2|2eed893b|05bae86ff417ccc3b65a23a858159191|1718889747; username-localhost-16724=\"2|1:0|10:1719339775|24:username-localhost-16724|44:NzdkOGM4ODdlYTZlNGZmZTk5YTliZjk2OGQ3NWE3OWQ=|0fb186f9d49b0e111deac0fd62bc63441491f36e1c794cc4cd264907610448d8\"; username-localhost-28102=\"2|1:0|10:1719390740|24:username-localhost-28102|44:MzFhZGM3N2MwNDZiNGFjZDk3ZjU4YWI5N2VlZWZhYTY=|e4b24937785b53602131954fc8446bcace36fce5d918493406eaee86d3c21a12\"; username-localhost-33444=\"2|1:0|10:1719500073|24:username-localhost-33444|44:MWI2MjE2MzJiNjMzNGQ2MGI1NTQyODNhMjhkY2Q5ZTg=|931823f02325db25e290cadf590f1677963d23068180fca405228b4972a59fa2\""
+    }
+[E 10:55:44.196 NotebookApp] 500 GET /notebooks/xAI_comparison_Dasgupta.ipynb (127.0.0.1) 21.53ms referer=http://localhost:33444/tree
+slurmstepd: error: *** JOB 47999460 ON cs129 CANCELLED AT 2024-06-27T20:52:51 DUE TO TIME LIMIT ***
