@@ -42,7 +42,7 @@ def compute_sensitivity(features_df, contri_df, target_idx, num_neighbors, score
     """
     target_point = features_df.iloc[target_idx].values
     target_point_idx = features_df.iloc[target_idx].name   # actual index in df
-    
+
     # Define the range around the target point
     start_idx = max(0, target_idx - 2*num_neighbors)
     end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
