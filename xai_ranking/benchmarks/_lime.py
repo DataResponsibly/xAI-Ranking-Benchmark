@@ -10,7 +10,6 @@ def lime_experiment(X, score_function, mode="regression", **kwargs):
         score_function,
         X,
         mode=mode,
-        **kwargs,
     )
     lime_values = explainer.attributions(X)
     return lime_values
@@ -27,7 +26,6 @@ def lime_batch_experiment(X, score_function, mode="regression", batch_size=10, r
         score_function,
         batch,
         mode=mode,
-        **kwargs
     )
     lime_values = explainer.attributions(X)
     return lime_values

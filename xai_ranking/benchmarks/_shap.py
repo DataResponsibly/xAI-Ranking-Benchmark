@@ -5,7 +5,7 @@ from shap import Explainer
 
 
 def shap_experiment(X, score_function, **kwargs):
-    explainer = Explainer(score_function, masker=X, **kwargs)
+    explainer = Explainer(score_function, masker=X)
     shap_values = explainer(X)
     return shap_values.values
 
@@ -14,6 +14,6 @@ def shap_batch_experiment(X, score_function, batch_size=10, random_state=42, **k
     batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices]
 
-    explainer = Explainer(score_function, masker=batch, **kwargs)
+    explainer = Explainer(score_function, masker=batch)
     shap_values = explainer(X)
     return shap_values.values
