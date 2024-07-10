@@ -1,7 +1,7 @@
 """
 Module with all methods from Dasgupta paper
 """
-
+import numpy as np
 import pandas as pd
 
 # import plotly.graph_objects as go
@@ -30,6 +30,51 @@ def hilw_contributions(df, score_function, upper_bound, lower_bound):
     avg_attributes = dict()
     for attr in features:
         avg_attributes[attr + "_avg"] = df.loc[:, attr].mean()
+        df[attr + "_contri"] = df[attr] - avg_attributes[attr + "_avg"]
+
+    # use topN to subset the data
+    df = df.query(f"{upper_bound} <= rank <= {lower_bound}")
+    # grouped = dff.groupby(group_feature)
+
+    contri_attributes = [x for x in df.columns if str(x).endswith("_contri")]
+
+    # df_mean_contri = pd.DataFrame(index=contri_attributes)
+
+    mean_contri = [df[attr].abs().tolist() for attr in contri_attributes]
+    df_mean_contri = pd.DataFrame(data=mean_contri, index=contri_attributes).T
+
+    # if num_batches == 1:
+    #     df_mean_contri = transform_df(df_mean_contri)
+    #     df_mean_contri_privileged = transform_df(df_mean_contri_privileged)
+    #     df_mean_contri_protected = transform_df(df_mean_contri_protected)
+
+    return df_mean_contri
+
+
+def hilw_batch_contributions(df, score_function, upper_bound, lower_bound, batch_size, random_state):
+    """
+    Based on Dasgupta's original implementation.
+
+    input: df_all, weight
+    hilw contributions for the entire population (no groupings, no batches).
+    """
+
+    df = df.copy()
+
+    features = df.columns
+
+    batch_indices = np.random.RandomState(random_state).choice(df.index, batch_size)
+    batch = df.loc[batch_indices]
+
+    df["rank"] = scores_to_ordering(score_function(df))
+
+    # dff = pd.DataFrame()
+    # grouped = df.groupby(group_feature)
+
+    # print(features)
+    avg_attributes = dict()
+    for attr in features:
+        avg_attributes[attr + "_avg"] = batch.loc[:, attr].mean()  # TODO: replace with batch here
         df[attr + "_contri"] = df[attr] - avg_attributes[attr + "_avg"]
 
     # use topN to subset the data
