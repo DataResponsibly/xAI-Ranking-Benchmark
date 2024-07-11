@@ -15,7 +15,9 @@ def lime_experiment(X, score_function, mode="regression", **kwargs):
     return lime_values
 
 
-def lime_batch_experiment(X, score_function, mode="regression", batch_size=10, random_state=42, **kwargs):
+def lime_batch_experiment(
+    X, score_function, mode="regression", batch_size=10, random_state=42, **kwargs
+):
     """
     `mode` can be one of `[classification, regression]`.
     """

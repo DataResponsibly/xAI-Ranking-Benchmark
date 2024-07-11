@@ -5,6 +5,7 @@ git+https://github.com/DataResponsibly/ShaRP.git
 shap
 lime
 statsmodels
+ml-research
 
 # dataset module
 openpyxl

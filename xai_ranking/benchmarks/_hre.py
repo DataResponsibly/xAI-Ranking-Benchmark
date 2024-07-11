@@ -20,7 +20,9 @@ from .hre import (  # noqa
 )
 
 
-def hierarchical_ranking_explanation(X, score_function, model_type="OLS", s=5, *args, **kwargs):
+def hierarchical_ranking_explanation(
+    X, score_function, model_type="OLS", s=5, *args, **kwargs
+):
     """
     `model_type` can be one of "DT", "LR", "OLS", "PLS".
     """
@@ -41,7 +43,14 @@ def hierarchical_ranking_explanation(X, score_function, model_type="OLS", s=5, *
 
 
 def hierarchical_ranking_batch_explanation(
-        X, score_function, model_type="OLS", s=5, batch_size=10, random_state=42, *args, **kwargs
+    X,
+    score_function,
+    model_type="OLS",
+    s=5,
+    batch_size=10,
+    random_state=42,
+    *args,
+    **kwargs,
 ):
     """
     `model_type` can be one of "DT", "LR", "OLS", "PLS".
@@ -62,7 +71,11 @@ def hierarchical_ranking_batch_explanation(
         cur_batch_scores = np.concatenate((np.array([y[idx]]), batch_scores), axis=0)
         ranks = scores_to_ordering(cur_batch_scores)
         obs_contr = feature_importance_func(
-            np.concatenate((np.array([X.iloc[idx]]), batch), axis=0), cur_batch_scores, ranks, 0, s
+            np.concatenate((np.array([X.iloc[idx]]), batch), axis=0),
+            cur_batch_scores,
+            ranks,
+            0,
+            s,
         )
         contributions.append(obs_contr)
     return np.array(contributions)

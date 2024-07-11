@@ -1,6 +1,7 @@
 """
 Module with all methods from Dasgupta paper
 """
+
 import numpy as np
 import pandas as pd
 
@@ -51,7 +52,9 @@ def hilw_contributions(df, score_function, upper_bound, lower_bound):
     return df_mean_contri
 
 
-def hilw_batch_contributions(df, score_function, upper_bound, lower_bound, batch_size, random_state):
+def hilw_batch_contributions(
+    df, score_function, upper_bound, lower_bound, batch_size, random_state
+):
     """
     Based on Dasgupta's original implementation.
 
@@ -74,7 +77,9 @@ def hilw_batch_contributions(df, score_function, upper_bound, lower_bound, batch
     # print(features)
     avg_attributes = dict()
     for attr in features:
-        avg_attributes[attr + "_avg"] = batch.loc[:, attr].mean()  # TODO: replace with batch here
+        avg_attributes[attr + "_avg"] = batch.loc[
+            :, attr
+        ].mean()  # TODO: replace with batch here
         df[attr + "_contri"] = df[attr] - avg_attributes[attr + "_avg"]
 
     # use topN to subset the data

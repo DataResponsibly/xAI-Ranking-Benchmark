@@ -32,13 +32,13 @@ def sharp_experiment(
 
 
 def sharp_batch_experiment(
-        X,
-        score_function,
-        measure="shapley",
-        verbose=0,
-        n_jobs=-1,
-        random_state=42,
-        **kwargs
+    X,
+    score_function,
+    measure="shapley",
+    verbose=0,
+    n_jobs=-1,
+    random_state=42,
+    **kwargs
 ):
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
     sample_size = None if "sample_size" not in kwargs else kwargs["sample_size"]
