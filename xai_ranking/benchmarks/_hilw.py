@@ -15,11 +15,11 @@ def human_in_the_loop_batch_experiment(
     score_function,
     upper_bound=1,
     lower_bound=None,
-    batch_size=10,
     random_state=42,
     *args,
     **kwargs
 ):
+    batch_size = 0.1 * len(X) if "batch_size" not in kwargs else kwargs["batch_size"]
     if lower_bound is None:
         lower_bound = X.shape[0]
 

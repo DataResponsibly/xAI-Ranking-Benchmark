@@ -43,7 +43,7 @@ def sharp_batch_experiment(
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
     sample_size = None if "sample_size" not in kwargs else kwargs["sample_size"]
     replace = False if "replace" not in kwargs else kwargs["replace"]
-    batch_size = 10 if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_size = 0.1 * len(X) if "batch_size" not in kwargs else kwargs["batch_size"]
     xai = ShaRP(
         qoi=qoi,
         target_function=score_function,
