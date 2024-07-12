@@ -1,3 +1,5 @@
+import numpy as np
+
 from xai_ranking.benchmarks.hilw import hilw_contributions, hilw_batch_contributions
 
 
@@ -19,7 +21,7 @@ def human_in_the_loop_batch_experiment(
     *args,
     **kwargs
 ):
-    batch_size = 0.1 * len(X) if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
     if lower_bound is None:
         lower_bound = X.shape[0]
 
