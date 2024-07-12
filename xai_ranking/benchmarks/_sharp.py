@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 from sharp import ShaRP
 
 
@@ -12,14 +12,10 @@ def sharp_experiment(
     **kwargs
 ):
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
-    sample_size = None if "sample_size" not in kwargs else kwargs["sample_size"]
-    replace = False if "replace" not in kwargs else kwargs["replace"]
     xai = ShaRP(
         qoi=qoi,
         target_function=score_function,
         measure=measure,
-        sample_size=sample_size,
-        replace=replace,
         random_state=random_state,
         verbose=verbose,
         n_jobs=n_jobs,
@@ -41,22 +37,18 @@ def sharp_batch_experiment(
     **kwargs
 ):
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
-    sample_size = None if "sample_size" not in kwargs else kwargs["sample_size"]
-    replace = False if "replace" not in kwargs else kwargs["replace"]
-    batch_size = 10 if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
     xai = ShaRP(
         qoi=qoi,
         target_function=score_function,
         measure=measure,
-        sample_size=sample_size,
-        replace=replace,
         random_state=random_state,
         verbose=verbose,
         n_jobs=n_jobs,
         **kwargs
     )
 
-    batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
+    batch_indices = np.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices]
 
     xai.fit(batch)

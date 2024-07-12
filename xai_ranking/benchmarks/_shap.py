@@ -1,6 +1,6 @@
 # Based on:
 # https://shap.readthedocs.io/en/latest/example_notebooks/tabular_examples/model_agnostic/Census%20income%20classification%20with%20scikit-learn.html
-import numpy
+import numpy as np
 from shap import Explainer
 
 
@@ -10,8 +10,9 @@ def shap_experiment(X, score_function, **kwargs):
     return shap_values.values
 
 
-def shap_batch_experiment(X, score_function, batch_size=10, random_state=42, **kwargs):
-    batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
+def shap_batch_experiment(X, score_function, random_state=42, **kwargs):
+    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_indices = np.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices]
 
     explainer = Explainer(score_function, masker=batch)

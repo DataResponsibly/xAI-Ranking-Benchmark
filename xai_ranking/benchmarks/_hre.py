@@ -47,7 +47,6 @@ def hierarchical_ranking_batch_explanation(
     score_function,
     model_type="OLS",
     s=5,
-    batch_size=10,
     random_state=42,
     *args,
     **kwargs,
@@ -55,6 +54,7 @@ def hierarchical_ranking_batch_explanation(
     """
     `model_type` can be one of "DT", "LR", "OLS", "PLS".
     """
+    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
     batch_indices = np.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices].copy().reset_index(drop=True)
     batch_scores = score_function(batch)

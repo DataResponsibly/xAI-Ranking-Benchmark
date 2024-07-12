@@ -1,3 +1,4 @@
+import numpy as np
 import numpy.random
 from shap.explainers.other import LimeTabular
 
@@ -16,11 +17,12 @@ def lime_experiment(X, score_function, mode="regression", **kwargs):
 
 
 def lime_batch_experiment(
-    X, score_function, mode="regression", batch_size=10, random_state=42, **kwargs
+    X, score_function, mode="regression", random_state=42, **kwargs
 ):
     """
     `mode` can be one of `[classification, regression]`.
     """
+    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
     batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices]
 
