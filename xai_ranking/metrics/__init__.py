@@ -31,13 +31,13 @@ def row_wise_jaccard(results1, results2, n_features):
     return row_sensitivity
 
 
-def kendall_sensitivity(results1, results2):
+def kendall_agreement(results1, results2):
     return results1.apply(
         lambda row: row_wise_kendall(row, results2.loc[row.name]), axis=1
     ).mean()
 
 
-def jaccard_sensitivity(results1, results2, n_features=None):
+def jaccard_agreement(results1, results2, n_features=None):
     if n_features is None:
         n_features = results1.shape[1]
     return results1.apply(
@@ -45,9 +45,9 @@ def jaccard_sensitivity(results1, results2, n_features=None):
     ).mean()
 
 
-def compute_all_sensitivity(results, n_features=None):
+def compute_all_agreement(results, n_features=None):
     """
-    Compute the sensitivity of results for different datasets and methods.
+    Compute the agreement of results for different datasets and methods.
 
     Parameters
     ----------
@@ -55,44 +55,44 @@ def compute_all_sensitivity(results, n_features=None):
         A dictionary containing the results for different datasets and methods.
 
     n_features: int or None
-        The number of top features to consider to compute Jaccard sensitivity.
+        The number of top features to consider to compute Jaccard agreement.
         If None, all features are considered.
 
     Returns
     -------
     all_sensitivities: dict
-        A dictionary containing the sensitivity values for each dataset and method.
+        A dictionary containing the agreement scores for each dataset and method.
 
     Notes
     -----
-    - The sensitivity is computed by comparing the rankings of the results.
+    - The agreement is computed by comparing the rankings of the results.
     - The method names starting with "BATCH_" are excluded from the computation.
-    - The sensitivity is computed using Kendall's tau and Jaccard similarity.
+    - The agreement is computed using Kendall's tau and Jaccard similarity.
     """
     datasets = list(results.keys())
     methods = list(results[datasets[0]].keys())
     methods = [method for method in methods if not method.startswith("BATCH_")]
 
-    all_sensitivities = {}
+    all_agreements = {}
     for dataset in datasets:
-        data_sensitivity = {
+        data_agreement = {
             "kendall": pd.DataFrame(columns=methods, index=methods),
             "jaccard": pd.DataFrame(columns=methods, index=methods),
         }
         for method1, method2 in product(methods, methods):
             try:  # TODO: REMOVE LATER; only for debugging
-                data_sensitivity["kendall"].loc[method1, method2] = kendall_sensitivity(
+                data_agreement["kendall"].loc[method1, method2] = kendall_agreement(
                     results[dataset][method1][0], results[dataset][method2][0]
                 )
-                data_sensitivity["jaccard"].loc[method1, method2] = jaccard_sensitivity(
+                data_agreement["jaccard"].loc[method1, method2] = jaccard_agreement(
                     results[dataset][method1][0],
                     results[dataset][method2][0],
                     n_features,
                 )
             except:
                 pass
-        all_sensitivities[dataset] = data_sensitivity
-    return all_sensitivities
+        all_agreements[dataset] = data_agreement
+    return all_agreements
 
 
 def stability(population_experiments, batch_experiments, axis=None):
