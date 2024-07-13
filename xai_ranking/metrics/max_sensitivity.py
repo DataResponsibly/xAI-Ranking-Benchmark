@@ -45,16 +45,18 @@ def compute_sensitivity(features_df, contri_df, target_idx, num_neighbors, score
 
     # 1. Select fixed number of neighbors that have a similar outcome
     # Define the range around the target point
-    # start_idx = max(0, target_idx - 2*num_neighbors)
-    # end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
+    # fixed number, same outcome
+    start_idx = max(0, target_idx - 2*num_neighbors)
+    end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
 
-    # features_df_subset = features_df.iloc[start_idx:end_idx]
+    features_df_subset = features_df.iloc[start_idx:end_idx]
     
-    # euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
-    # neighbors_indices = euclidean_distances.nsmallest(num_neighbors+1).index     # actual indexes in df
-    # neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
+    euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
+    neighbors_indices = euclidean_distances.nsmallest(num_neighbors+1).index     # actual indexes in df
+    neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
 
     # 2. Select fixed number of neighbors regardless of outcome
+    # fixed number, any outcome
     # features_df_subset = features_df
     
     # euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
@@ -62,6 +64,7 @@ def compute_sensitivity(features_df, contri_df, target_idx, num_neighbors, score
     # neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
 
     # 3. Select neighbors that are close based on a threshold and if they have similar outcome
+    # close, same outcome
     # threshold = 0.1
     # start_idx = max(0, target_idx - 2*num_neighbors)
     # end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
@@ -73,23 +76,26 @@ def compute_sensitivity(features_df, contri_df, target_idx, num_neighbors, score
     # neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
 
     # 4. Select neighbors that are close based on a threshold regardless of outcome
-    threshold = 0.1
-    start_idx = max(0, target_idx - 2*num_neighbors)
-    end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
+    # close, any outcome
+    # threshold = 0.1
+    # start_idx = max(0, target_idx - 2*num_neighbors)
+    # end_idx = min(len(features_df), target_idx + 2*num_neighbors + 1)  # +1 to include the target point itself
 
-    features_df_subset = features_df.iloc[start_idx:end_idx]
+    # features_df_subset = features_df.iloc[start_idx:end_idx]
 
-    euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
-    neighbors_indices = euclidean_distances[euclidean_distances < threshold].index     # actual indexes in df
-    neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
+    # euclidean_distances = features_df_subset.apply(lambda row: euclidean(target_point, row.values), axis=1)
+    
+    # neighbors_indices = euclidean_distances[euclidean_distances < threshold].index     # actual indexes in df
+    # neighbors_indices = neighbors_indices[neighbors_indices != target_point_idx]
 
     neighbors_contributions = contri_df.loc[neighbors_indices].values
     target_point_contri = contri_df.loc[target_point_idx].values
 
     distances = np.array([distance_func(target_point_contri, contrib).statistic for contrib in neighbors_contributions])
-    max_explanation_distance = np.max(distances)
-
-    return max_explanation_distance
+    # print(distances)
+    if len(distances) != 0:
+        max_explanation_distance = np.max(distances)
+        return max_explanation_distance
 
 
 if __name__ == "__main__":
