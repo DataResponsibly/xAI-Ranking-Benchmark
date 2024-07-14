@@ -11,8 +11,9 @@ def atp_score(X=None):
     if X is None:
         return weights
 
-    if X.ndim == 1:
+    if np.array(X).ndim == 1:
         X = np.array(X).reshape(1, -1)
+
     return (X * weights).sum(axis=1)
 
 
@@ -28,6 +29,9 @@ def csrank_score(X=None):
 
     # multiplier contains the maximum values in the original dataset
     multiplier = np.array([71.4, 12.6, 21.1, 13.8])
+
+    if np.array(X).ndim == 1:
+        X = np.array(X).reshape(1, -1)
 
     return np.clip(
         (np.array(X)[:, :-1] * multiplier) ** weights + 1, a_min=1, a_max=np.inf
@@ -46,5 +50,8 @@ def higher_education_score(X=None):
 
     if X is None:
         return weights
+
+    if np.array(X).ndim == 1:
+        X = np.array(X).reshape(1, -1)
 
     return (np.array(X) * multiplier * weights).sum(axis=1)
