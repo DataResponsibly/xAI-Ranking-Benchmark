@@ -28,16 +28,16 @@ def row_wise_jaccard(results1, results2, n_features):
 
 
 def kendall_agreement(results1, results2):
-    return results1.apply(
-        lambda row: row_wise_kendall(row, results2.loc[row.name]), axis=1
+    return results1.reset_index(drop=True).apply(
+        lambda row: row_wise_kendall(row, results2.iloc[row.name]), axis=1
     ).mean()
 
 
 def jaccard_agreement(results1, results2, n_features=None):
     if n_features is None:
         n_features = results1.shape[1]
-    return results1.apply(
-        lambda row: row_wise_jaccard(row, results2.loc[row.name], n_features), axis=1
+    return results1.reset_index(drop=True).apply(
+        lambda row: row_wise_jaccard(row, results2.iloc[row.name], n_features), axis=1
     ).mean()
 
 

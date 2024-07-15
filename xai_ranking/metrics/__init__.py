@@ -5,9 +5,7 @@ Implementation of metrics for xAI performance analysis.
 from ._sensitivity import sensitivity, compute_all_sensitivity
 from ._stability import stability, compute_all_stability
 from ._agreement import kendall_agreement, jaccard_agreement, compute_all_agreement
-
-def fidelity():  # TODO
-    pass
+from ._fidelity import fidelity, compute_all_fidelity
 
 
 __all__ = [
@@ -18,4 +16,6 @@ __all__ = [
     "kendall_agreement",
     "jaccard_agreement",
     "compute_all_agreement",
+    "fidelity",
+    "compute_all_fidelity"
 ]

@@ -5,7 +5,9 @@ from xai_ranking.metrics._agreement import row_wise_kendall
 from sharp.utils import scores_to_ordering
 
 
-def row_wise_sensitivity(original_data, contributions, row_idx, rankings, n_neighbors, agg_type="mean"):
+def row_wise_sensitivity(
+    original_data, contributions, row_idx, rankings, n_neighbors=10, agg_type="mean"
+):
     row_data = np.array(original_data)[row_idx]
     row_cont = np.array(contributions)[row_idx]
     row_rank = np.array(rankings)[row_idx]
@@ -40,7 +42,7 @@ def row_wise_sensitivity(original_data, contributions, row_idx, rankings, n_neig
         raise ValueError(f"Unknown aggregation type: {agg_type}")
 
 
-def sensitivity(original_data, contributions, rankings, n_neighbors, agg_type="mean"):
+def sensitivity(original_data, contributions, rankings, n_neighbors=10, agg_type="mean"):
     sensitivities = np.vectorize(
         lambda row_idx: row_wise_sensitivity(
             original_data, contributions, row_idx, rankings, n_neighbors, agg_type
@@ -51,7 +53,7 @@ def sensitivity(original_data, contributions, rankings, n_neighbors, agg_type="m
     return np.mean(sensitivities), np.std(sensitivities) / np.sqrt(sensitivities.size)
 
 
-def compute_all_sensitivity(original_data, results, n_neighbors, agg_type="mean"):
+def compute_all_sensitivity(original_data, results, n_neighbors=10, agg_type="mean"):
     datasets = list(results.keys())
     methods = list(results[datasets[0]].keys())
     methods = [method for method in methods if not method.startswith("BATCH_")]
@@ -71,7 +73,7 @@ def compute_all_sensitivity(original_data, results, n_neighbors, agg_type="mean"
 
                 res_ = sensitivity(
                     original_data=dataset["data"][0], 
-                    contributions=results[dataset_name][method][0], 
+                    contributions=results[dataset_name][method][0],
                     rankings=rankings,
                     n_neighbors=n_neighbors,
                     agg_type=agg_type
