@@ -13,15 +13,13 @@ def human_in_the_loop_experiment(
 
 
 def human_in_the_loop_batch_experiment(
-    X,
-    score_function,
-    upper_bound=1,
-    lower_bound=None,
-    random_state=42,
-    *args,
-    **kwargs
+    X, score_function, upper_bound=1, lower_bound=None, random_state=42, *args, **kwargs
 ):
-    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_size = (
+        np.ceil(0.1 * len(X)).astype(int)
+        if "batch_size" not in kwargs
+        else kwargs["batch_size"]
+    )
     if lower_bound is None:
         lower_bound = X.shape[0]
 

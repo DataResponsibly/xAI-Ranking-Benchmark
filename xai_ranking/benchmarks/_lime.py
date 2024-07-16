@@ -22,7 +22,11 @@ def lime_batch_experiment(
     """
     `mode` can be one of `[classification, regression]`.
     """
-    batch_size = np.ceil(0.1 * len(X)).astype(int) if "batch_size" not in kwargs else kwargs["batch_size"]
+    batch_size = (
+        np.ceil(0.1 * len(X)).astype(int)
+        if "batch_size" not in kwargs
+        else kwargs["batch_size"]
+    )
     batch_indices = numpy.random.RandomState(random_state).choice(X.index, batch_size)
     batch = X.loc[batch_indices]
 
