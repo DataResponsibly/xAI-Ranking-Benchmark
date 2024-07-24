@@ -4,16 +4,21 @@ from scipy.spatial.distance import euclidean
 from sharp.utils import scores_to_ordering
 
 
-def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors):
+def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors, similar_outcome=True):
     row_data = np.array(original_data)[row_idx]
     row_rank = np.array(rankings)[row_idx]
     min_ranking = max(0, row_rank - n_neighbors)
     max_ranking = min(row_rank + n_neighbors, max(rankings))
 
     # Select neighbors that are close ranking-wise
-    mask = (
-        (rankings >= min_ranking) & (rankings <= max_ranking) & (rankings != row_rank)
-    )
+    if similar_outcome:
+        mask = (
+            (rankings >= min_ranking) & (rankings <= max_ranking) & (rankings != row_rank)
+        )
+    else:
+        mask = (
+            (rankings < min_ranking) | (rankings > max_ranking)
+        )
     data_neighbors = np.array(original_data)[mask]
     cont_neighbors = np.array(contributions)[mask]
 
@@ -25,6 +30,23 @@ def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors
     data_neighbors = data_neighbors[neighbors_idx]
     cont_neighbors = cont_neighbors[neighbors_idx]
     return data_neighbors, cont_neighbors
+
+def _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold):
+    row_data = np.array(original_data)[row_idx]
+
+    data_neighbors = np.array(original_data)
+    cont_neighbors = np.array(contributions)
+    rank_neighbors = np.array(rankings)
+
+    # Select neighbors that are close distance-wise
+    distances = np.apply_along_axis(
+        lambda row: euclidean(row, row_data), 1, data_neighbors
+    )
+    neighbors_idx = np.where(distances <= threshold)[0]
+    data_neighbors = data_neighbors[neighbors_idx]
+    cont_neighbors = cont_neighbors[neighbors_idx]
+    rank_neighbors = rank_neighbors[neighbors_idx]
+    return data_neighbors, cont_neighbors, rank_neighbors, distances[distances <= threshold]
 
 
 def _get_importance_mask(row_cont, threshold):

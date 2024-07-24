@@ -12,6 +12,7 @@ def sharp_experiment(
     **kwargs
 ):
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
+    kwargs.pop("qoi")
     xai = ShaRP(
         qoi=qoi,
         target_function=score_function,
@@ -37,6 +38,7 @@ def sharp_batch_experiment(
     **kwargs
 ):
     qoi = "rank" if "qoi" not in kwargs else kwargs["qoi"]
+    kwargs.pop("qoi")
     batch_size = (
         np.ceil(0.1 * len(X)).astype(int)
         if "batch_size" not in kwargs

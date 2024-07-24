@@ -55,3 +55,18 @@ def higher_education_score(X=None):
         X = np.array(X).reshape(1, -1)
 
     return (np.array(X) * multiplier * weights).sum(axis=1)
+
+def synthetic_equal_score_3ftrs(X=None):
+    """
+    If X is None, return the weights. Otherwise, return the score for each row in X.
+    Assumes X is preprocessed.
+    """
+    weights = np.array([0.333, 0.333, 0.334])
+
+    if X is None:
+        return weights
+
+    if np.array(X).ndim == 1:
+        X = np.array(X).reshape(1, -1)
+
+    return (X * weights).sum(axis=1)

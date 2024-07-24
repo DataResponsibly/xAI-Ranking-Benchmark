@@ -1,4 +1,5 @@
 from sharp.utils import scores_to_ordering
+from xai_ranking.scorers import synthetic_equal_score_3ftrs
 
 
 def preprocess_atp_data(df):
@@ -35,4 +36,10 @@ def preprocess_movers_data(df):
 
     data = X.weight_lifting_ability
     X.weight_lifting_ability = (data - data.min()) / (data.max() - data.min())
+    return X, ranks, scores
+
+def preprocess_synthetic_data(df):
+    X = df
+    scores = synthetic_equal_score_3ftrs(X)
+    ranks = scores_to_ordering(scores)
     return X, ranks, scores
