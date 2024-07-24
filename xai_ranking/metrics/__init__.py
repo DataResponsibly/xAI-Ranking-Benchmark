@@ -1,5 +1,8 @@
 from ._base import kendall_agreement, jaccard_agreement, euclidean_agreement
-from ._sensitivity import outcome_sensitivity, explanation_sensitivity
+from ._sensitivity import (outcome_sensitivity,
+    explanation_sensitivity,
+    explanation_sensitivity_all_neighbors
+)
 from ._consistency import (
     bootstrapped_explanation_consistency,
     cross_method_explanation_consistency,
@@ -12,6 +15,7 @@ __all__ = [
     "euclidean_agreement",
     "outcome_sensitivity",
     "explanation_sensitivity",
+    "row_wise_explanation_sensitivity_all_neighbors",
     "bootstrapped_explanation_consistency",
     "cross_method_explanation_consistency",
     "cross_method_outcome_consistency",

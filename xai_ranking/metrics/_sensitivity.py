@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.utils import check_random_state
 from sharp.utils import scores_to_ordering
-from ._base import _find_neighbors, _get_importance_mask, _ROW_WISE_MEASURES
+from ._base import _find_neighbors, _find_all_neighbors, _get_importance_mask, _ROW_WISE_MEASURES
 
 
 def _pairwise_outcome_sensitivity(
@@ -132,13 +132,14 @@ def row_wise_explanation_sensitivity(
     n_neighbors=10,
     agg_type="mean",
     measure="kendall",
+    similar_outcome=True,
     **kwargs,
 ):
     row_cont = np.array(contributions)[row_idx]
 
     # Select close neighbors
     data_neighbors, cont_neighbors = _find_neighbors(
-        original_data, rankings, contributions, row_idx, n_neighbors
+        original_data, rankings, contributions, row_idx, n_neighbors, similar_outcome
     )
 
     # Compute Kendall tau distance between the target point and its neighbors
@@ -155,14 +156,51 @@ def row_wise_explanation_sensitivity(
         raise ValueError(f"Unknown aggregation type: {agg_type}")
 
 
+def row_wise_explanation_sensitivity_all_neighbors(
+    original_data,
+    contributions,
+    row_idx,
+    rankings,
+    threshold=0.1,
+    measure="kendall",
+    **kwargs,
+):
+    row_cont = np.array(contributions)[row_idx]
+    row_rank = np.array(rankings)[row_idx]
+
+    # Select all neighbors that are under the threshold
+    data_neighbors, cont_neighbors, rank_neighbors, feature_distances = _find_all_neighbors(
+        original_data, rankings, contributions, row_idx, threshold
+    )
+
+    # Compute the measure (e.g. Kendall tau) distance between the target point and its neighbors
+    measure_distances = np.apply_along_axis(
+        lambda row: _ROW_WISE_MEASURES[measure](row, row_cont, **kwargs), 1,
+        cont_neighbors
+    )
+
+    return measure_distances, row_rank - rank_neighbors, feature_distances
+
+
 def explanation_sensitivity(
     original_data, contributions, rankings, n_neighbors=10, agg_type="mean",
-    measure="kendall", **kwargs
+    measure="kendall", similar_outcome=True, **kwargs
 ):
     sensitivities = np.vectorize(
         lambda row_idx: row_wise_explanation_sensitivity(
             original_data, contributions, row_idx, rankings, n_neighbors,
-            agg_type, measure, **kwargs
+            agg_type, measure, similar_outcome, **kwargs
         )
     )(np.arange(len(original_data)))
     return np.mean(sensitivities), np.std(sensitivities) / np.sqrt(sensitivities.size)
+
+
+def explanation_sensitivity_all_neighbors(
+    original_data, contributions, rankings,
+    measure="kendall", threshold=0.1, **kwargs
+):
+    result = lambda row_idx: row_wise_explanation_sensitivity_all_neighbors(
+            original_data, contributions, row_idx, rankings, threshold,
+            measure, **kwargs
+        )
+    return result
