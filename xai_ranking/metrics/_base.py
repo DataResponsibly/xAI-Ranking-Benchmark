@@ -1,5 +1,5 @@
+from itertools import product, combinations
 import numpy as np
-from scipy.stats import kendalltau
 from scipy.spatial.distance import euclidean
 from sharp.utils import scores_to_ordering
 
@@ -38,7 +38,24 @@ def _get_importance_mask(row_cont, threshold):
         cumulative_cont = np.cumsum(np.abs(row_cont)[order]) / total_contribution
         mask = (cumulative_cont < 1 - threshold)[original_order]
 
-    return mask
+    # Check whether ties exist
+    possible_configs = [mask.copy()]
+    tie_values = [
+        (idx_old, cont) 
+        for idx_old, cont in enumerate(row_cont[mask]) 
+        if cont in row_cont[~mask]
+    ]
+    for idx_old, tie_val in tie_values:
+        idx_new = np.where(row_cont == tie_val)[0]
+        # Exclude idx_old
+        idx_new = idx_new[idx_new != idx_old]
+        for idx in idx_new:
+            new_mask = mask.copy()
+            new_mask[idx_old] = False
+            new_mask[idx] = True
+            possible_configs.append(new_mask)
+
+    return possible_configs
 
 
 def jaccard_similarity(a, b):
@@ -47,10 +64,19 @@ def jaccard_similarity(a, b):
     return float(intersection) / union
 
 
+def kendall_similarity(a, b):
+    normalizer = (len(a)*(len(a)-1))/2
+    idx_pair = list(combinations(range(len(a)), 2))
+    val_pair_a = [(a[i], a[j]) for i, j in idx_pair if a[i] != a[j]]
+    val_pair_b = [(b[i], b[j]) for i, j in idx_pair if b[i] != b[j]]
+    inversions = sum([(val2, val1) in val_pair_b for val1, val2 in val_pair_a])
+    return (normalizer - inversions) / normalizer
+
+
 def row_wise_kendall(results1, results2):
     """
-    Calculate the row-wise Kendall's tau correlation coefficient between two
-    sets of contributions.
+    Calculate the row-wise Kendall's similarity between two sets of
+    contributions.
 
     Parameters
     ----------
@@ -62,29 +88,31 @@ def row_wise_kendall(results1, results2):
     Returns
     -------
     float
-        The row-wise Kendall's tau correlation coefficient.
+        The row-wise Kendall's similarity.
 
     Notes
     -----
-    The row-wise Kendall's tau correlation coefficient measures the similarity
+    The row-wise Kendall's similarity measures the similarity
     between two sets of rankings. It takes into account ties and is robust to
     outliers.
 
-    Examples
-    --------
-    >>> results1 = [1, 2, 3, 4]
-    >>> results2 = [4, 3, 2, 1]
-    >>> row_wise_kendall(results1, results2)
-    -1.0
-
-    >>> results1 = [1, 2, 3, 4]
-    >>> results2 = [1, 2, 3, 4]
-    >>> row_wise_kendall(results1, results2)
-    1.0
     """
-    row_res1 = scores_to_ordering(results1, direction=1)
-    row_res2 = scores_to_ordering(results2, direction=1)
-    row_sensitivity = kendalltau(row_res1, row_res2).statistic
+    results = [results1, results2]
+
+    # Check for ties
+    ranks = []
+    for result in results:
+        rank = scores_to_ordering(result, direction=1)
+
+        # Correct rank values to reflect ties
+        for val in result:
+            mask = result == val
+            if mask.sum() > 1:
+                rank[mask] = rank[mask].max()
+
+        ranks.append(rank)
+
+    row_sensitivity = kendall_similarity(*ranks)
     return row_sensitivity
 
 
@@ -135,13 +163,16 @@ def row_wise_jaccard(results1, results2, n_features):
     if n_features is None:
         n_features = results1.shape[1]
 
-    mask1 = _get_importance_mask(results1, n_features)
-    mask2 = _get_importance_mask(results2, n_features)
+    masks1 = _get_importance_mask(results1, n_features)
+    masks2 = _get_importance_mask(results2, n_features)
 
-    top_idx1 = np.indices(results1.shape)[0, mask1]
-    top_idx2 = np.indices(results1.shape)[0, mask2]
-    row_similarity = jaccard_similarity(top_idx1, top_idx2)
-    return row_similarity
+    row_similarities = []
+    for mask1, mask2 in product(masks1, masks2):
+        top_idx1 = np.indices(results1.shape)[0, mask1]
+        top_idx2 = np.indices(results1.shape)[0, mask2]
+        row_similarity = jaccard_similarity(top_idx1, top_idx2)
+        row_similarities.append(row_similarity)
+    return max(row_similarities)
 
 
 def row_wise_euclidean(results1, results2):
@@ -153,8 +184,8 @@ def row_wise_euclidean(results1, results2):
 def euclidean_agreement(results1, results2):
     """
     Calculate the Euclidean agreement between two sets of contributions across a
-    dataset. Results are normalized, 0 means most similar and 1 means most
-    dis-similar.
+    dataset. Results are normalized, 0 means most dis-similar and 1 means most
+    similar.
 
     Parameters
     ----------
@@ -177,15 +208,15 @@ def euclidean_agreement(results1, results2):
     vectors in `results1` and `results2` using the Euclidean distance.
     """
     return results1.reset_index(drop=True).apply(
-        lambda row: row_wise_euclidean(row, results2.iloc[row.name]), axis=1
+        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name]), axis=1
     )
 
 
 def kendall_agreement(results1, results2):
     """
     Calculate the Kendall agreement between two sets of contributions across a
-    dataset. Results are normalized, 0 means most similar and 1 means most
-    dis-similar.
+    dataset. Results are normalized, 0 means most dis-similar and 1 means most
+    similar.
 
     Parameters
     ----------
@@ -199,8 +230,8 @@ def kendall_agreement(results1, results2):
     pandas.Series
         A pandas Series containing the Kendall agreement values for each pair
         of contributions vectors in `results1` and `results2`. The values are
-        normalized between 0 and 1, where 0 means most similar and 1 means most
-        dissimilar.
+        normalized between 0 and 1, where 0 means most dis-similar and 1 means most
+        similar.
 
     Notes
     -----
@@ -209,14 +240,14 @@ def kendall_agreement(results1, results2):
     coefficient. The agreement is then averaged across all pairs of rankings.
     """
     return results1.reset_index(drop=True).apply(
-        lambda row: (1 - row_wise_kendall(row, results2.iloc[row.name])) / 2, axis=1
+        lambda row: row_wise_kendall(row, results2.iloc[row.name]), axis=1
     )
 
 
 def jaccard_agreement(results1, results2, n_features=0.8):
     """
     Calculate the Jaccard similarity between two sets of results. Results are
-    normalized, 0 means most similar and 1 means most dis-similar.
+    normalized, 0 means most dis-similar and 1 means most similar.
 
     Parameters
     ----------
@@ -247,7 +278,7 @@ def jaccard_agreement(results1, results2, n_features=0.8):
         n_features = results1.shape[1]
 
     return results1.reset_index(drop=True).apply(
-        lambda row: 1 - row_wise_jaccard(row, results2.iloc[row.name], n_features),
+        lambda row: row_wise_jaccard(row, results2.iloc[row.name], n_features),
         axis=1,
     )
 
