@@ -10,28 +10,55 @@ from sklearn.preprocessing import MinMaxScaler
 from sharp.utils import scores_to_ordering
 
 
-def hilw_contributions(df, score_function, upper_bound, lower_bound):
+def hilw_contributions(df, score_function, upper_bound, lower_bound, method="shapley", **kwargs):
     """
     Based on Dasgupta's original implementation.
+    
+    `method` should be one of the following: `shapley`, `standardized shapley`, `rank-relevance shapley`
 
-    input: df_all, weight
     hilw contributions for the entire population (no groupings, no batches).
     """
+
+    exponential = 1 if "exponential" not in kwargs else kwargs["exponential"]
 
     df = df.copy()
 
     features = df.columns
 
     df["rank"] = scores_to_ordering(score_function(df))
+    weights = score_function()
 
     # dff = pd.DataFrame()
     # grouped = df.groupby(group_feature)
 
     # print(features)
-    avg_attributes = dict()
-    for attr in features:
-        avg_attributes[attr + "_avg"] = df.loc[:, attr].mean()
-        df[attr + "_contri"] = df[attr] - avg_attributes[attr + "_avg"]
+    if method == "shapley":
+        avg_attributes = dict()
+        for num_attr, attr in enumerate(features):
+            avg_attributes[attr + "_avg"] = df.loc[:, attr].mean()
+            df[attr + "_contri"] = weights[num_attr] * (
+                df[attr] - avg_attributes[attr + "_avg"]
+            )
+
+    elif method == "standardized shapley":
+        score_sum = df.loc[:, "score"].sum()
+        for num_attr, attr in enumerate(features):
+            df[attr + "_contri"] = weights[num_attr] * df[attr] / score_sum
+
+    elif method == "rank-relevance shapley":
+        rank_max = df.loc[:, "rank"].max()
+
+        df["attention"] = (1 - df["rank"] / rank_max) ** exponential
+        df[["attention"]] = MinMaxScaler().fit_transform(
+            df[["attention"]]
+        )  # scale the attention back to 0 to 1
+
+        ## the raw payout is the score_std
+        df["score_std"] = sum([weights[num_attr] * df[attr] for num_attr, attr in enumerate(features)])
+        for num_attr, attr in enumerate(features):
+            df[attr + "_contri"] = (
+                weights[num_attr] * df[attr] * df["attention"] / df["score_std"]
+            )
 
     # use topN to subset the data
     df = df.query(f"{upper_bound} <= rank <= {lower_bound}")

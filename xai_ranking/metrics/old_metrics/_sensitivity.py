@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import euclidean
-from xai_ranking.metrics._agreement import row_wise_kendall
+from ._agreement import row_wise_kendall
 from sharp.utils import scores_to_ordering
 
 
