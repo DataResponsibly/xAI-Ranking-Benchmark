@@ -38,6 +38,7 @@ def preprocess_movers_data(df):
     X.weight_lifting_ability = (data - data.min()) / (data.max() - data.min())
     return X, ranks, scores
 
+
 def preprocess_synthetic_data(df):
     X = df
     scores = synthetic_equal_score_3ftrs(X)

@@ -56,6 +56,7 @@ def higher_education_score(X=None):
 
     return (np.array(X) * multiplier * weights).sum(axis=1)
 
+
 def synthetic_equal_score_3ftrs(X=None):
     """
     If X is None, return the weights. Otherwise, return the score for each row in X.

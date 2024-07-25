@@ -4,7 +4,9 @@ from scipy.spatial.distance import euclidean
 from sharp.utils import scores_to_ordering
 
 
-def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors, similar_outcome=True):
+def _find_neighbors(
+    original_data, rankings, contributions, row_idx, n_neighbors, similar_outcome=True
+):
     row_data = np.array(original_data)[row_idx]
     row_rank = np.array(rankings)[row_idx]
     min_ranking = max(0, row_rank - n_neighbors)
@@ -13,12 +15,12 @@ def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors
     # Select neighbors that are close ranking-wise
     if similar_outcome:
         mask = (
-            (rankings >= min_ranking) & (rankings <= max_ranking) & (rankings != row_rank)
+            (rankings >= min_ranking)
+            & (rankings <= max_ranking)
+            & (rankings != row_rank)
         )
     else:
-        mask = (
-            (rankings < min_ranking) | (rankings > max_ranking)
-        )
+        mask = (rankings < min_ranking) | (rankings > max_ranking)
     data_neighbors = np.array(original_data)[mask]
     cont_neighbors = np.array(contributions)[mask]
 
@@ -30,6 +32,7 @@ def _find_neighbors(original_data, rankings, contributions, row_idx, n_neighbors
     data_neighbors = data_neighbors[neighbors_idx]
     cont_neighbors = cont_neighbors[neighbors_idx]
     return data_neighbors, cont_neighbors
+
 
 def _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold):
     row_data = np.array(original_data)[row_idx]
@@ -46,7 +49,12 @@ def _find_all_neighbors(original_data, rankings, contributions, row_idx, thresho
     data_neighbors = data_neighbors[neighbors_idx]
     cont_neighbors = cont_neighbors[neighbors_idx]
     rank_neighbors = rank_neighbors[neighbors_idx]
-    return data_neighbors, cont_neighbors, rank_neighbors, distances[distances <= threshold]
+    return (
+        data_neighbors,
+        cont_neighbors,
+        rank_neighbors,
+        distances[distances <= threshold],
+    )
 
 
 def _get_importance_mask(row_cont, threshold):
@@ -63,8 +71,8 @@ def _get_importance_mask(row_cont, threshold):
     # Check whether ties exist
     possible_configs = [mask.copy()]
     tie_values = [
-        (idx_old, cont) 
-        for idx_old, cont in enumerate(row_cont[mask]) 
+        (idx_old, cont)
+        for idx_old, cont in enumerate(row_cont[mask])
         if cont in row_cont[~mask]
     ]
     for idx_old, tie_val in tie_values:
@@ -87,7 +95,7 @@ def jaccard_similarity(a, b):
 
 
 def kendall_similarity(a, b):
-    normalizer = (len(a)*(len(a)-1))/2
+    normalizer = (len(a) * (len(a) - 1)) / 2
     idx_pair = list(combinations(range(len(a)), 2))
     val_pair_a = [(a[i], a[j]) for i, j in idx_pair if a[i] != a[j]]
     val_pair_b = [(b[i], b[j]) for i, j in idx_pair if b[i] != b[j]]

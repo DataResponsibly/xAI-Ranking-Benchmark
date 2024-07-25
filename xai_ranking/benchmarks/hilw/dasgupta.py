@@ -10,10 +10,12 @@ from sklearn.preprocessing import MinMaxScaler
 from sharp.utils import scores_to_ordering
 
 
-def hilw_contributions(df, score_function, upper_bound, lower_bound, method="shapley", **kwargs):
+def hilw_contributions(
+    df, score_function, upper_bound, lower_bound, method="shapley", **kwargs
+):
     """
     Based on Dasgupta's original implementation.
-    
+
     `method` should be one of the following: `shapley`, `standardized shapley`, `rank-relevance shapley`
 
     hilw contributions for the entire population (no groupings, no batches).
@@ -54,7 +56,9 @@ def hilw_contributions(df, score_function, upper_bound, lower_bound, method="sha
         )  # scale the attention back to 0 to 1
 
         ## the raw payout is the score_std
-        df["score_std"] = sum([weights[num_attr] * df[attr] for num_attr, attr in enumerate(features)])
+        df["score_std"] = sum(
+            [weights[num_attr] * df[attr] for num_attr, attr in enumerate(features)]
+        )
         for num_attr, attr in enumerate(features):
             df[attr + "_contri"] = (
                 weights[num_attr] * df[attr] * df["attention"] / df["score_std"]
