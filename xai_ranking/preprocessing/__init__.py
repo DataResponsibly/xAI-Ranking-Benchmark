@@ -14,7 +14,7 @@ def preprocess_atp_data(df):
 def preprocess_csrank_data(df):
     X = df.drop(columns=["Rank", "Score"])
     X = X.iloc[:, X.columns.str.contains("Count")]
-    X["Faculty"] = df["Faculty"]
+    # X["Faculty"] = df["Faculty"]
     X = X / X.max()
     ranks = df.Rank
     scores = df.Score

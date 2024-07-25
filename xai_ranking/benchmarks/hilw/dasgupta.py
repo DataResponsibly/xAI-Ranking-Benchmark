@@ -29,6 +29,8 @@ def hilw_contributions(
 
     df["rank"] = scores_to_ordering(score_function(df))
     weights = score_function()
+    if len(weights) < len(features):
+        features = features[:len(weights)]
 
     # dff = pd.DataFrame()
     # grouped = df.groupby(group_feature)
