@@ -11,7 +11,7 @@ from sharp.utils import scores_to_ordering
 
 
 def hilw_contributions(
-    df, score_function, upper_bound, lower_bound, method="shapley", **kwargs
+    df, score_function, upper_bound, lower_bound, method_type="shapley", **kwargs
 ):
     """
     Based on Dasgupta's original implementation.
@@ -34,7 +34,7 @@ def hilw_contributions(
     # grouped = df.groupby(group_feature)
 
     # print(features)
-    if method == "shapley":
+    if method_type == "shapley":
         avg_attributes = dict()
         for num_attr, attr in enumerate(features):
             avg_attributes[attr + "_avg"] = df.loc[:, attr].mean()
@@ -42,12 +42,12 @@ def hilw_contributions(
                 df[attr] - avg_attributes[attr + "_avg"]
             )
 
-    elif method == "standardized shapley":
+    elif method_type == "standardized shapley":
         score_sum = df.loc[:, "score"].sum()
         for num_attr, attr in enumerate(features):
             df[attr + "_contri"] = weights[num_attr] * df[attr] / score_sum
 
-    elif method == "rank-relevance shapley":
+    elif method_type == "rank-relevance shapley":
         rank_max = df.loc[:, "rank"].max()
 
         df["attention"] = (1 - df["rank"] / rank_max) ** exponential
