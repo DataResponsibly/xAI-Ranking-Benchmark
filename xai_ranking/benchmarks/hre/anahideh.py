@@ -98,7 +98,7 @@ def feature_importance_LR(X, y, ranks, idx, s):
 
     #  Compute standard errors of the parameter estimates
     y_hat = lr.predict(X[mask])
-    residuals = y[mask].values - y_hat
+    residuals = np.array(y[mask]) - y_hat
     rss = residuals.T @ residuals
     sigma_squared_hat = rss / (N - p)
     var_beta_hat = (
