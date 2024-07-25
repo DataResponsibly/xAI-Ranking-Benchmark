@@ -2,18 +2,20 @@ import numpy as np
 
 
 def outcome_fidelity(
-    contributions, target, avg_target, dataset_size=1, target_pairs=None, rank=True
+    contributions, target, avg_target, target_max=1, target_pairs=None, rank=True
 ):
     if target_pairs is None:
         if rank:
             avg_est_err = (
                 1
                 - np.mean(np.abs(target - (avg_target - contributions.sum(axis=1))))
-                / dataset_size
+                / target_max
             )
         else:
             avg_est_err = np.mean(
-                np.abs(target - (avg_target + contributions.sum(axis=1)))
+                1
+                - np.abs(target - (avg_target + contributions.sum(axis=1)))
+                / target_max
             )
     else:
         if rank:
