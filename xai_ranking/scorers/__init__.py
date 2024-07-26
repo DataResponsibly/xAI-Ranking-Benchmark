@@ -34,7 +34,7 @@ def csrank_score(X=None):
         X = np.array(X).reshape(1, -1)
 
     return np.clip(
-        (np.array(X)[:, :-1] * multiplier) ** weights + 1, a_min=1, a_max=np.inf
+        (np.array(X) * multiplier) ** weights + 1, a_min=1, a_max=np.inf
     ).prod(axis=1) ** (1 / weights.sum())
 
 
