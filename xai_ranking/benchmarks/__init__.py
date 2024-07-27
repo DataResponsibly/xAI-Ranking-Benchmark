@@ -6,6 +6,7 @@ from ._hre import (
 from ._lime import lime_experiment, lime_batch_experiment
 from ._shap import shap_experiment, shap_batch_experiment
 from ._sharp import sharp_experiment, sharp_batch_experiment
+from ._rank_lime import rank_lime_experiment
 from ._participation import participation_experiment
 
 __all__ = [
@@ -19,5 +20,6 @@ __all__ = [
     "shap_batch_experiment",
     "sharp_experiment",
     "sharp_batch_experiment",
+    "rank_lime_experiment",
     "participation_experiment",
 ]
