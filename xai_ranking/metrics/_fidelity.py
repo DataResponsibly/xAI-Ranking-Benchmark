@@ -14,8 +14,7 @@ def outcome_fidelity(
         else:
             avg_est_err = np.mean(
                 1
-                - np.abs(target - (avg_target + contributions.sum(axis=1)))
-                / target_max
+                - np.abs(target - (avg_target + contributions.sum(axis=1))) / target_max
             )
     else:
         if rank:

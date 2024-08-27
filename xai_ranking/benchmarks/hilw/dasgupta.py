@@ -30,7 +30,7 @@ def hilw_contributions(
     df["rank"] = scores_to_ordering(score_function(df))
     weights = score_function()
     if len(weights) < len(features):
-        features = features[:len(weights)]
+        features = features[: len(weights)]
 
     # dff = pd.DataFrame()
     # grouped = df.groupby(group_feature)
@@ -45,7 +45,9 @@ def hilw_contributions(
             )
 
     elif method_type == "standardized shapley":
-        df["score"] = sum([weights[num_attr] * df[attr] for num_attr, attr in enumerate(features)])
+        df["score"] = sum(
+            [weights[num_attr] * df[attr] for num_attr, attr in enumerate(features)]
+        )
         score_sum = df.loc[:, "score"].sum()
         for num_attr, attr in enumerate(features):
             df[attr + "_contri"] = weights[num_attr] * df[attr] / score_sum

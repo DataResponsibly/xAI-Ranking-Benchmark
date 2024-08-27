@@ -7,10 +7,10 @@ import random
 
 
 def new_model_predict_lime(
-        array,
-        original_model_predict,
-        query_features,
-        similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
+    array,
+    original_model_predict,
+    query_features,
+    similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
 ):
     # Determine ranking for current query
     pred = original_model_predict(query_features)
@@ -30,10 +30,10 @@ def new_model_predict_lime(
 
 
 def new_model_predict_lime_individual_masking(
-        array,
-        original_model_predict,
-        query_features,
-        similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
+    array,
+    original_model_predict,
+    query_features,
+    similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
 ):
     # Determine ranking for current query
     pred = original_model_predict(query_features)
@@ -54,16 +54,16 @@ def new_model_predict_lime_individual_masking(
 
 class RankingLIME:
     def __init__(
-            self,
-            background_data,
-            original_model,
-            explanation_size=3,
-            name="",
-            rank_similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
-            individual_masking=True,
-            use_entry=0,
-            use_pandas_where=False,
-            **kwargs
+        self,
+        background_data,
+        original_model,
+        explanation_size=3,
+        name="",
+        rank_similarity_coefficient=lambda x, y: kendalltau(x, y)[0],
+        individual_masking=True,
+        use_entry=0,
+        use_pandas_where=False,
+        **kwargs
     ):
         self.background_data = background_data
         self.original_model = original_model

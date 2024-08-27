@@ -9,7 +9,9 @@ def human_in_the_loop_experiment(
     if lower_bound is None:
         lower_bound = X.shape[0]
 
-    return hilw_contributions(X, score_function, upper_bound, lower_bound, **kwargs).values
+    return hilw_contributions(
+        X, score_function, upper_bound, lower_bound, **kwargs
+    ).values
 
 
 def human_in_the_loop_batch_experiment(
