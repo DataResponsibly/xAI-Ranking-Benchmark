@@ -21,7 +21,7 @@ def outcome_fidelity(
             better_than = target < target_pairs
         else:
             better_than = target > target_pairs
-
+            
         est_better_than = contributions.sum(axis=1) > 0
         avg_est_err = (better_than == est_better_than).mean()
     return avg_est_err

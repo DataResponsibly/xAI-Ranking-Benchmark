@@ -2,6 +2,7 @@ from itertools import product, combinations
 import numpy as np
 from scipy.spatial.distance import euclidean
 from sharp.utils import scores_to_ordering
+import pandas as pd
 
 
 def _find_neighbors(
@@ -57,28 +58,39 @@ def _find_all_neighbors(original_data, rankings, contributions, row_idx, thresho
     )
 
 
+# Reviewed
 def _get_importance_mask(row_cont, threshold):
     if threshold >= 1:
-        row_res = scores_to_ordering(row_cont, direction=-1)
-        mask = row_res <= threshold
+        # Calculate order of absolute contributions
+        row_abs = np.abs(row_cont)
+        # Find n=threshold largest items
+        res = sorted(row_abs.index.values, key = lambda sub: row_abs[sub])[-threshold:]
+        # Set mask
+        mask = pd.Series(data=[True if i in res else False for i in row_cont.index.values],
+                         index=row_cont.index.values)
     else:
+        # Calculate cumulative absolute contribution order
         total_contribution = np.sum(np.abs(row_cont))
         order = np.argsort(np.abs(row_cont))
-        original_order = np.argsort(order)
         cumulative_cont = np.cumsum(np.abs(row_cont)[order]) / total_contribution
-        mask = (cumulative_cont < 1 - threshold)[original_order]
+        # Find elements withe the smallest contribution
+        # (to meet the threshold it's easier to do the reverse operation)
+        mask = (cumulative_cont < 1 - threshold)[order]
+        # Reverse array
+        mask = ~mask
 
     # Check whether ties exist
     possible_configs = [mask.copy()]
     tie_values = [
         (idx_old, cont)
-        for idx_old, cont in enumerate(row_cont[mask])
-        if cont in row_cont[~mask]
+        for idx_old, cont in row_cont[mask].items()
+        if cont in row_cont[~mask].values
     ]
+    # Make all possible sets of ties
     for idx_old, tie_val in tie_values:
-        idx_new = np.where(row_cont == tie_val)[0]
-        # Exclude idx_old
-        idx_new = idx_new[idx_new != idx_old]
+        idx_new = row_cont[row_cont == tie_val].index.values
+        # Exclude all selected indexes that have the same value
+        idx_new = list(set(idx_new).difference(mask[mask].index.values))
         for idx in idx_new:
             new_mask = mask.copy()
             new_mask[idx_old] = False
@@ -88,21 +100,28 @@ def _get_importance_mask(row_cont, threshold):
     return possible_configs
 
 
+# Reviewed
 def jaccard_similarity(a, b):
     intersection = len(list(set(a).intersection(b)))
     union = (len(set(a)) + len(set(b))) - intersection
     return float(intersection) / union
 
 
+# Reviewed
 def kendall_similarity(a, b):
     normalizer = (len(a) * (len(a) - 1)) / 2
     idx_pair = list(combinations(range(len(a)), 2))
     val_pair_a = [(a[i], a[j]) for i, j in idx_pair if a[i] != a[j]]
     val_pair_b = [(b[i], b[j]) for i, j in idx_pair if b[i] != b[j]]
-    inversions = sum([(val2, val1) in val_pair_b for val1, val2 in val_pair_a])
-    return (normalizer - inversions) / normalizer
+    inversions=0
+    for (val11, val12), (val21, val22) in zip(val_pair_a, val_pair_b):
+        if ((val11 > val12) and (val21 < val22)) or ((val11 < val12) and (val21 > val22)):
+            inversions = inversions+1
+    kt = 1 - (2 * inversions) / normalizer
+    return (kt + 1) / 2
 
 
+# Reviewed
 def row_wise_kendall(results1, results2):
     """
     Calculate the row-wise Kendall's similarity between two sets of
@@ -133,19 +152,18 @@ def row_wise_kendall(results1, results2):
     ranks = []
     for result in results:
         rank = scores_to_ordering(result, direction=1)
-
         # Correct rank values to reflect ties
         for val in result:
             mask = result == val
             if mask.sum() > 1:
                 rank[mask] = rank[mask].max()
-
         ranks.append(rank)
 
     row_sensitivity = kendall_similarity(*ranks)
     return row_sensitivity
 
 
+# Reviewed
 def row_wise_jaccard(results1, results2, n_features):
     """
     Calculate the row-wise Jaccard similarity between two sets of results.
@@ -190,6 +208,7 @@ def row_wise_jaccard(results1, results2, n_features):
     >>> n_features = 2
     >>> row_wise_jaccard(results1, results2, n_features)
     """
+    
     if n_features is None:
         n_features = results1.shape[1]
 
@@ -198,20 +217,21 @@ def row_wise_jaccard(results1, results2, n_features):
 
     row_similarities = []
     for mask1, mask2 in product(masks1, masks2):
-        top_idx1 = np.indices(results1.shape)[0, mask1]
-        top_idx2 = np.indices(results1.shape)[0, mask2]
+        top_idx1 = mask1[mask1].index.values
+        top_idx2 = mask2[mask2].index.values
         row_similarity = jaccard_similarity(top_idx1, top_idx2)
         row_similarities.append(row_similarity)
+
     return max(row_similarities)
 
 
-def row_wise_euclidean(results1, results2):
-    total1 = np.sum(np.abs(results1))
-    total2 = np.sum(np.abs(results2))
-    return euclidean(results1 / total1, results2 / total2)
+# Reviewed
+def row_wise_euclidean(results1, results2, normalizer):
+    return euclidean(results1, results2)/normalizer
 
 
-def euclidean_agreement(results1, results2):
+# Reviewed
+def euclidean_agreement(results1, results2, normalizer):
     """
     Calculate the Euclidean agreement between two sets of contributions across a
     dataset. Results are normalized, 0 means most dis-similar and 1 means most
@@ -238,10 +258,11 @@ def euclidean_agreement(results1, results2):
     vectors in `results1` and `results2` using the Euclidean distance.
     """
     return results1.reset_index(drop=True).apply(
-        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name]), axis=1
+        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name], normalizer), axis=1
     )
 
 
+# Reviewed
 def kendall_agreement(results1, results2):
     """
     Calculate the Kendall agreement between two sets of contributions across a
@@ -273,7 +294,7 @@ def kendall_agreement(results1, results2):
         lambda row: row_wise_kendall(row, results2.iloc[row.name]), axis=1
     )
 
-
+# Reviewed
 def jaccard_agreement(results1, results2, n_features=0.8):
     """
     Calculate the Jaccard similarity between two sets of results. Results are
