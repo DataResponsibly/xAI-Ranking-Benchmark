@@ -19,7 +19,7 @@ def bootstrapped_explanation_consistency(
     sem = np.std(batch_agreement) / np.sqrt(batch_agreement.size)
     return mean, sem
 
-
+# Reviewed
 def cross_method_explanation_consistency(
     results1, results2, measure="kendall", **kwargs
 ):

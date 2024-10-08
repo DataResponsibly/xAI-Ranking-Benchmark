@@ -1,10 +1,13 @@
 from itertools import product, combinations
 import numpy as np
 from scipy.spatial.distance import euclidean
+from sklearn.preprocessing import normalize
 from sharp.utils import scores_to_ordering
 import pandas as pd
 
-
+# Not reviewed
+# Returns neighbors that are either close or far ranking wise
+# AND subselects the top n neighbors in terms of feature similarity
 def _find_neighbors(
     original_data, rankings, contributions, row_idx, n_neighbors, similar_outcome=True
 ):
@@ -20,7 +23,7 @@ def _find_neighbors(
             & (rankings <= max_ranking)
             & (rankings != row_rank)
         )
-    else:
+    else: # Select neighbors that are far ranking wise
         mask = (rankings < min_ranking) | (rankings > max_ranking)
     data_neighbors = np.array(original_data)[mask]
     cont_neighbors = np.array(contributions)[mask]
@@ -35,7 +38,10 @@ def _find_neighbors(
     return data_neighbors, cont_neighbors
 
 
-def _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold):
+# Not reviewed
+# Returns all neighbors that are similar feature wise
+# The Euclidean distance between items has to be under the threshold
+def _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold=None):
     row_data = np.array(original_data)[row_idx]
 
     data_neighbors = np.array(original_data)
@@ -46,16 +52,25 @@ def _find_all_neighbors(original_data, rankings, contributions, row_idx, thresho
     distances = np.apply_along_axis(
         lambda row: euclidean(row, row_data), 1, data_neighbors
     )
-    neighbors_idx = np.where(distances <= threshold)[0]
-    data_neighbors = data_neighbors[neighbors_idx]
-    cont_neighbors = cont_neighbors[neighbors_idx]
-    rank_neighbors = rank_neighbors[neighbors_idx]
+    # Apply threshold
+    if threshold is not None:
+        neighbors_idx = np.where(distances <= threshold)[0]
+        data_neighbors = data_neighbors[neighbors_idx]
+        cont_neighbors = cont_neighbors[neighbors_idx]
+        rank_neighbors = rank_neighbors[neighbors_idx]
+        return (
+            data_neighbors,
+            cont_neighbors,
+            rank_neighbors,
+            distances[distances <= threshold],
+        )
+    # Or return distances from all items
     return (
-        data_neighbors,
-        cont_neighbors,
-        rank_neighbors,
-        distances[distances <= threshold],
-    )
+            data_neighbors,
+            cont_neighbors,
+            rank_neighbors,
+            distances,
+        )
 
 
 # Reviewed
@@ -226,12 +241,18 @@ def row_wise_jaccard(results1, results2, n_features):
 
 
 # Reviewed
-def row_wise_euclidean(results1, results2, normalizer):
-    return euclidean(results1, results2)/normalizer
+def row_wise_euclidean(results1, results2, normalization=True):
+    if normalization:
+        # Make vectors into unit vectors
+        v1 = normalize([results1])[0]
+        v2 = normalize([results2])[0]
+        return euclidean(v1,v2)/2
+    else:
+        return euclidean(results1,results2)
 
 
 # Reviewed
-def euclidean_agreement(results1, results2, normalizer):
+def euclidean_agreement(results1, results2, normalization):
     """
     Calculate the Euclidean agreement between two sets of contributions across a
     dataset. Results are normalized, 0 means most dis-similar and 1 means most
@@ -258,7 +279,7 @@ def euclidean_agreement(results1, results2, normalizer):
     vectors in `results1` and `results2` using the Euclidean distance.
     """
     return results1.reset_index(drop=True).apply(
-        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name], normalizer), axis=1
+        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name], normalization), axis=1
     )
 
 

@@ -368,16 +368,16 @@ for dataset in datasets:
                             contr, baseline_contr, measure="jaccard", n_features=2
                         )[0]
                     )
+                    #Eulidean consistency
+                    euclidean_cons.append(
+                        cross_method_explanation_consistency(
+                            contr, baseline_contr, measure="euclidean", normalization=True
+                        )[0]
+                    )
                     # Iniatialize normalizer
                     target = scores if approach == "rank_score" else ranking
                     avg_target = target.mean()
                     max_target = X.shape[0] if approach == "rank" else target.max()
-                    #Eulidean consistency
-                    euclidean_cons.append(
-                        cross_method_explanation_consistency(
-                            contr, baseline_contr, measure="euclidean", normalizer=max_target
-                        )[0]
-                    )
                     # Fidelity
                     if approach != "pairwise":
                         res_ = outcome_fidelity(
@@ -420,7 +420,7 @@ for dataset in datasets:
             default_kwargs[parameter] = default_value
 
     results = pd.DataFrame(result_df, columns=result_cols)
-    results.to_csv("notebooks/results/time-experiment-" + dataset["name"] + ".csv")
+    results.to_csv("notebooks/results/time/time-experiment-" + dataset["name"] + ".csv")
 
 results = pd.DataFrame(result_df, columns=result_cols)
 results

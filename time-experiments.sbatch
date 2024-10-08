@@ -5,6 +5,7 @@
 #SBATCH --time=24:00:00
 #SBATCH --mem=128GB
 #SBATCH --job-name=time-experiments
+#SBATCH --account=pr_121_general
 module purge
 singularity exec \
     --overlay /scratch/vp724/benchmark/benchmark.ext3:ro \

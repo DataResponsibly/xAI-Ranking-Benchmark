@@ -1,6 +1,6 @@
 import numpy as np
 
-
+# Reviewed
 def outcome_fidelity(
     contributions, target, avg_target, target_max=1, target_pairs=None, rank=True
 ):

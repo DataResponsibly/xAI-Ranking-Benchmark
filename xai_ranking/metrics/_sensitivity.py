@@ -189,6 +189,8 @@ def row_wise_explanation_sensitivity_all_neighbors(
     return measure_distances, row_rank - rank_neighbors, feature_distances
 
 
+# Calculates the explanation sensitivity of every row of original data and its
+# closest neighbors, 
 def explanation_sensitivity(
     original_data,
     contributions,
