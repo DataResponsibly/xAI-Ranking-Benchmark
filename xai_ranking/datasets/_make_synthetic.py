@@ -8,9 +8,13 @@ from pathlib import Path
 def fetch_synthetic_data(synth_dt_version=2, item_num=1000):
     # Feature names
     column_names = ["n1", "n2", "n3"]
-    
+
     # Check if files exist, if not we will make them
-    filepath = join(dirname(abspath(__file__)), "files", f"Synthetic_{synth_dt_version}_{item_num}.txt")
+    filepath = join(
+        dirname(abspath(__file__)),
+        "files",
+        f"Synthetic_{synth_dt_version}_{item_num}.txt",
+    )
 
     if Path(filepath).is_file():
         df = pd.read_csv(
@@ -22,7 +26,7 @@ def fetch_synthetic_data(synth_dt_version=2, item_num=1000):
     else:
         # Make index names
         ind = range(0, item_num)
-    
+
         # Make features based on synthetic data version passed
         if synth_dt_version == 0:
             # All features are independent
@@ -38,7 +42,7 @@ def fetch_synthetic_data(synth_dt_version=2, item_num=1000):
             corr = -0.8
             cov1_2 = math.sqrt(var[0]) * math.sqrt(var[1]) * corr
             covs = [[var[0], cov1_2, 0], [cov1_2, var[1], 0], [0, 0, var[2]]]
-            features = np.random.multivariate_normal(means, covs, item_num)  
+            features = np.random.multivariate_normal(means, covs, item_num)
         elif synth_dt_version == 2:
             # Features 1 & 2 are negatively correlated
             # Feature 1 & 3 are positively correlated
@@ -57,10 +61,10 @@ def fetch_synthetic_data(synth_dt_version=2, item_num=1000):
             features = np.random.multivariate_normal(means, covs, item_num)
         else:
             return None
-    
+
         # Make dataframe
         df = pd.DataFrame(features, columns=column_names, index=ind)
-    
+
         # Normalize data
         for series_name, series in df.items():
             df[series_name] = (series - series.min()) / (series.max() - series.min())

@@ -5,6 +5,7 @@ from sklearn.preprocessing import normalize
 from sharp.utils import scores_to_ordering
 import pandas as pd
 
+
 # Not reviewed
 # Returns neighbors that are either close or far ranking wise
 # AND subselects the top n neighbors in terms of feature similarity
@@ -23,7 +24,7 @@ def _find_neighbors(
             & (rankings <= max_ranking)
             & (rankings != row_rank)
         )
-    else: # Select neighbors that are far ranking wise
+    else:  # Select neighbors that are far ranking wise
         mask = (rankings < min_ranking) | (rankings > max_ranking)
     data_neighbors = np.array(original_data)[mask]
     cont_neighbors = np.array(contributions)[mask]
@@ -41,7 +42,9 @@ def _find_neighbors(
 # Not reviewed
 # Returns all neighbors that are similar feature wise
 # The Euclidean distance between items has to be under the threshold
-def _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold=None):
+def _find_all_neighbors(
+    original_data, rankings, contributions, row_idx, threshold=None
+):
     row_data = np.array(original_data)[row_idx]
 
     data_neighbors = np.array(original_data)
@@ -66,11 +69,11 @@ def _find_all_neighbors(original_data, rankings, contributions, row_idx, thresho
         )
     # Or return distances from all items
     return (
-            data_neighbors,
-            cont_neighbors,
-            rank_neighbors,
-            distances,
-        )
+        data_neighbors,
+        cont_neighbors,
+        rank_neighbors,
+        distances,
+    )
 
 
 # Reviewed
@@ -79,10 +82,12 @@ def _get_importance_mask(row_cont, threshold):
         # Calculate order of absolute contributions
         row_abs = np.abs(row_cont)
         # Find n=threshold largest items
-        res = sorted(row_abs.index.values, key = lambda sub: row_abs[sub])[-threshold:]
+        res = sorted(row_abs.index.values, key=lambda sub: row_abs[sub])[-threshold:]
         # Set mask
-        mask = pd.Series(data=[True if i in res else False for i in row_cont.index.values],
-                         index=row_cont.index.values)
+        mask = pd.Series(
+            data=[True if i in res else False for i in row_cont.index.values],
+            index=row_cont.index.values,
+        )
     else:
         # Calculate cumulative absolute contribution order
         total_contribution = np.sum(np.abs(row_cont))
@@ -128,10 +133,12 @@ def kendall_similarity(a, b):
     idx_pair = list(combinations(range(len(a)), 2))
     val_pair_a = [(a[i], a[j]) for i, j in idx_pair if a[i] != a[j]]
     val_pair_b = [(b[i], b[j]) for i, j in idx_pair if b[i] != b[j]]
-    inversions=0
+    inversions = 0
     for (val11, val12), (val21, val22) in zip(val_pair_a, val_pair_b):
-        if ((val11 > val12) and (val21 < val22)) or ((val11 < val12) and (val21 > val22)):
-            inversions = inversions+1
+        if ((val11 > val12) and (val21 < val22)) or (
+            (val11 < val12) and (val21 > val22)
+        ):
+            inversions = inversions + 1
     kt = 1 - (2 * inversions) / normalizer
     return (kt + 1) / 2
 
@@ -223,7 +230,7 @@ def row_wise_jaccard(results1, results2, n_features):
     >>> n_features = 2
     >>> row_wise_jaccard(results1, results2, n_features)
     """
-    
+
     if n_features is None:
         n_features = results1.shape[1]
 
@@ -246,9 +253,9 @@ def row_wise_euclidean(results1, results2, normalization=True):
         # Make vectors into unit vectors
         v1 = normalize([results1])[0]
         v2 = normalize([results2])[0]
-        return euclidean(v1,v2)/2
+        return euclidean(v1, v2) / 2
     else:
-        return euclidean(results1,results2)
+        return euclidean(results1, results2)
 
 
 # Reviewed
@@ -279,7 +286,8 @@ def euclidean_agreement(results1, results2, normalization):
     vectors in `results1` and `results2` using the Euclidean distance.
     """
     return results1.reset_index(drop=True).apply(
-        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name], normalization), axis=1
+        lambda row: 1 - row_wise_euclidean(row, results2.iloc[row.name], normalization),
+        axis=1,
     )
 
 
@@ -314,6 +322,7 @@ def kendall_agreement(results1, results2):
     return results1.reset_index(drop=True).apply(
         lambda row: row_wise_kendall(row, results2.iloc[row.name]), axis=1
     )
+
 
 # Reviewed
 def jaccard_agreement(results1, results2, n_features=0.8):

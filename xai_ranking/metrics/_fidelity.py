@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # Reviewed
 def outcome_fidelity(
     contributions, target, avg_target, target_max=1, target_pairs=None, rank=True
@@ -21,7 +22,7 @@ def outcome_fidelity(
             better_than = target < target_pairs
         else:
             better_than = target > target_pairs
-            
+
         est_better_than = contributions.sum(axis=1) > 0
         avg_est_err = (better_than == est_better_than).mean()
     return avg_est_err
