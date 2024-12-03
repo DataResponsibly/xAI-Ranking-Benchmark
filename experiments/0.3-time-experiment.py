@@ -156,7 +156,6 @@ result_cols = (
     + [f"fidelity_{i}" for i in range(N_RUNS)]
 )
 
-
 for dataset in datasets:
     result_df = []
     # Set up basic settings
@@ -174,8 +173,12 @@ for dataset in datasets:
     ranking = scores_to_ordering(scores)
 
     # Set experiment size if we deleted too many items
-    dataset["n_observations"] = dataset["n_observations"] if X.shape[0] > dataset["n_observations"] else X.shape[0]
-    
+    dataset["n_observations"] = (
+        dataset["n_observations"]
+        if X.shape[0] > dataset["n_observations"]
+        else X.shape[0]
+    )
+
     rng = check_random_state(RNG_SEED)
 
     # rank and score indexes
@@ -184,7 +187,7 @@ for dataset in datasets:
         size=dataset["n_observations"],
         replace=False,
     )
-    
+
     # pairwise pairs
     combos = list(itertools.combinations(np.indices((X.shape[0],)).squeeze(), 2))
     pairs_indexes = rng.choice(
@@ -193,14 +196,25 @@ for dataset in datasets:
         replace=False,
     )
     pairs_sample = [combos[i] for i in pairs_indexes]
-    pairs = [(pair[0], pair[1]) if np.random.choice([0,1]) else (pair[1], pair[0]) for pair in pairs_sample]
+    pairs = [
+        (pair[0], pair[1]) if np.random.choice([0, 1]) else (pair[1], pair[0])
+        for pair in pairs_sample
+    ]
 
     for approach in approaches:
         iteration_qoi = approach
         if approach.startswith("pairwise"):
             iteration_qoi = approach.split("-")[1]
             approach = "pairwise"
-        print("----------------", dataset["name"], "|", approach, "|", iteration_qoi, "----------------")
+        print(
+            "----------------",
+            dataset["name"],
+            "|",
+            approach,
+            "|",
+            iteration_qoi,
+            "----------------",
+        )
 
         times = []
         kendall_cons = []
@@ -275,7 +289,7 @@ for dataset in datasets:
             [
                 dataset["name"],
                 dataset["n_observations"],
-                approach+"_"+iteration_qoi,
+                approach + "_" + iteration_qoi,
                 np.nan,
                 np.nan,
                 np.mean(times),
@@ -368,10 +382,13 @@ for dataset in datasets:
                             contr, baseline_contr, measure="jaccard", n_features=2
                         )[0]
                     )
-                    #Eulidean consistency
+                    # Eulidean consistency
                     euclidean_cons.append(
                         cross_method_explanation_consistency(
-                            contr, baseline_contr, measure="euclidean", normalization=True
+                            contr,
+                            baseline_contr,
+                            measure="euclidean",
+                            normalization=True,
                         )[0]
                     )
                     # Iniatialize normalizer
@@ -396,14 +413,14 @@ for dataset in datasets:
                             target_pairs=target[sam_idx2],
                             rank=True,
                         )
-        
+
                     fidelity.append(res_)
 
                 results_row = (
                     [
                         dataset["name"],
                         dataset["n_observations"],
-                        approach+"_"+iteration_qoi,
+                        approach + "_" + iteration_qoi,
                         parameter,
                         parameter_value,
                         np.mean(times),
