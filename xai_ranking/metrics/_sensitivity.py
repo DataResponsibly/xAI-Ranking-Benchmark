@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.utils import check_random_state
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from ._base import (
     _find_neighbors,
     _find_all_neighbors,

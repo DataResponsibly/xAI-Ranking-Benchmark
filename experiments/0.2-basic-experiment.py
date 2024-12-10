@@ -48,7 +48,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import kendalltau
 from mlresearch.utils import check_random_states, set_matplotlib_style
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 
 RNG_SEED = 42
 

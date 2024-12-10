@@ -1,4 +1,4 @@
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from xai_ranking.scorers import synthetic_equal_score_3ftrs
 
 

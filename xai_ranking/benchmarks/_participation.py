@@ -7,7 +7,7 @@ Participation score, as proposed in:
 Code adapted from: https://github.com/yehudagale/metricComputer/tree/main/vldb_ranking
 """
 
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 
 
 def participation_score(X, ranks, top_k=10):

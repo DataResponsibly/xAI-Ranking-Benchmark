@@ -7,7 +7,7 @@ import pandas as pd
 
 # import plotly.graph_objects as go
 from sklearn.preprocessing import MinMaxScaler
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 
 
 def hilw_contributions(

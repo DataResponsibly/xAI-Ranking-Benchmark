@@ -1,5 +1,5 @@
 import numpy as np
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from scipy.stats import kendalltau
 from functools import partial
 import lime

@@ -15,7 +15,7 @@ import random
 from sklearn.utils import check_random_state
 from lightgbm import LGBMRanker
 from sharp import ShaRP
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from xai_ranking.preprocessing import preprocess_higher_education_data
 from xai_ranking.scorers import higher_education_score
 from mlresearch.utils import check_random_states

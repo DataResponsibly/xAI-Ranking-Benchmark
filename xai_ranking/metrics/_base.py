@@ -2,7 +2,7 @@ from itertools import product, combinations
 import numpy as np
 from scipy.spatial.distance import euclidean
 from sklearn.preprocessing import normalize
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 import pandas as pd
 
 
