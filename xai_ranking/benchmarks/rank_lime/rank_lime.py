@@ -77,10 +77,7 @@ class RankingLIME:
         self.individual_masking = individual_masking
         self.use_entry = use_entry
 
-        try:
-            self.explainer = self.get_explainer()
-        except:
-            pass
+        self.explainer = self.get_explainer()
         self.rank_similarity_coefficient = rank_similarity_coefficient
         if not individual_masking:
             self.new_model_predict = partial(

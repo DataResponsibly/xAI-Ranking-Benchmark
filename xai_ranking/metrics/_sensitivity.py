@@ -179,7 +179,8 @@ def row_wise_explanation_sensitivity_all_neighbors(
         _find_all_neighbors(original_data, rankings, contributions, row_idx, threshold)
     )
 
-    # Compute the measure (e.g. Kendall tau) distance between the target point and its neighbors
+    # Compute the measure (e.g. Kendall tau) distance
+    # between the target point and its neighbors
     measure_distances = np.apply_along_axis(
         lambda row: _ROW_WISE_MEASURES[measure](row, row_cont, **kwargs),
         1,
@@ -220,7 +221,6 @@ def explanation_sensitivity(
 def explanation_sensitivity_all_neighbors(
     original_data, contributions, rankings, measure="kendall", threshold=0.1, **kwargs
 ):
-    result = lambda row_idx: row_wise_explanation_sensitivity_all_neighbors(
+    return lambda row_idx: row_wise_explanation_sensitivity_all_neighbors(
         original_data, contributions, row_idx, rankings, threshold, measure, **kwargs
     )
-    return result
