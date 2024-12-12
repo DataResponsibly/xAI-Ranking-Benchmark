@@ -1,11 +1,3 @@
-"""
-Calculates the outcome fidelity of contributions to a target, e.g.,
-how well the explanation matches the model prediction being explained.
-
-Returns:
-float: The average estimation error.
-"""
-
 import numpy as np
 
 
@@ -13,6 +5,15 @@ import numpy as np
 def outcome_fidelity(
     contributions, target, avg_target, target_max=1, target_pairs=None, rank=True
 ):
+    """
+    Calculates the outcome fidelity of contributions to a target, e.g.,
+    how well the explanation matches the model prediction being explained.
+
+    Returns
+    -------
+    avg_est_err : float
+        The average estimation error.
+    """
     if target_pairs is None:
         if rank:
             avg_est_err = (

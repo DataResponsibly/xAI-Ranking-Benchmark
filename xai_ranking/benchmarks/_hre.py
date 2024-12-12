@@ -27,9 +27,9 @@ def hierarchical_ranking_explanation(
     score_function : callable
         A function that takes the input data X and returns scores.
     model_type : str, optional
-        The type of model to use for feature importance calculation. 
-        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression), 
-        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares). 
+        The type of model to use for feature importance calculation.
+        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression),
+        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares).
         Default is "OLS".
     s : int, optional
         A parameter for the feature importance function. Default is 5.
@@ -76,9 +76,9 @@ def hierarchical_ranking_batch_explanation(
     score_function : callable
         A function that takes the input data X and returns scores.
     model_type : str, optional
-        The type of model to use for feature importance calculation. 
-        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression), 
-        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares). 
+        The type of model to use for feature importance calculation.
+        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression),
+        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares).
         Default is "OLS".
     s : int, optional
         A parameter for the feature importance function. Default is 5.
