@@ -1,8 +1,4 @@
 """
-Local Explanations of Global Rankings: Insights for Competitive Rankings
-
-Hierarchical Ranking Explanation (HRE) framework.
-
 Anahideh, H., & Mohabbati-Kalejahi, N. (2022). Local explanations of global
 rankings: insights for competitive rankings. IEEE Access, 10, 30676-30693.
 
@@ -24,7 +20,28 @@ def hierarchical_ranking_explanation(
     X, score_function, model_type="OLS", s=5, *args, **kwargs
 ):
     """
-    `model_type` can be one of "DT", "LR", "OLS", "PLS".
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which explanations are to be generated.
+    score_function : callable
+        A function that takes the input data X and returns scores.
+    model_type : str, optional
+        The type of model to use for feature importance calculation. 
+        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression), 
+        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares). 
+        Default is "OLS".
+    s : int, optional
+        A parameter for the feature importance function. Default is 5.
+    *args : tuple
+        Additional arguments to pass to the feature importance function.
+    **kwargs : dict
+        Additional keyword arguments to pass to the feature importance function.
+
+    Returns
+    -------
+    numpy.ndarray
+        An array of contributions for each observation in the input data.
     """
     # index = X.index
     X = X.copy().reset_index(drop=True)
@@ -52,7 +69,30 @@ def hierarchical_ranking_batch_explanation(
     **kwargs,
 ):
     """
-    `model_type` can be one of "DT", "LR", "OLS", "PLS".
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which explanations are to be generated.
+    score_function : callable
+        A function that takes the input data X and returns scores.
+    model_type : str, optional
+        The type of model to use for feature importance calculation. 
+        Can be one of "DT" (Decision Tree), "LR" (Logistic Regression), 
+        "OLS" (Ordinary Least Squares), or "PLS" (Partial Least Squares). 
+        Default is "OLS".
+    s : int, optional
+        A parameter for the feature importance function. Default is 5.
+    random_state : int, optional
+        The seed used by the random number generator. Default is 42.
+    *args : tuple
+        Additional arguments to pass to the feature importance function.
+    **kwargs : dict
+        Additional keyword arguments to pass to the feature importance function.
+
+    Returns
+    -------
+    numpy.ndarray
+        An array of contributions for each observation in the input data.
     """
     batch_size = (
         np.ceil(0.1 * len(X)).astype(int)

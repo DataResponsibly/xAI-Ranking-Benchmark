@@ -1,3 +1,11 @@
+"""
+Calculates the outcome fidelity of contributions to a target, e.g.,
+how well the explanation matches the model prediction being explained.
+
+Returns:
+float: The average estimation error.
+"""
+
 import numpy as np
 
 

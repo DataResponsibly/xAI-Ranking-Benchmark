@@ -3,6 +3,7 @@ import numpy as np
 
 def atp_score(X=None):
     """
+    Scorer for ATP Tennis data.
     If X is None, return the weights. Otherwise, return the score for each row in X.
     Assumes X is preprocessed.
     """
@@ -19,8 +20,11 @@ def atp_score(X=None):
 
 def csrank_score(X=None):
     """
+    Scorer for CS Rankings data.
     If X is None, return the weights. Otherwise, return the score for each row in X.
     Assumes X is preprocessed.
+    Scoring function is geometric mean of the adjusted counts per research area,
+    with number of sub-areas as exponent.
     """
     weights = np.array([5, 12, 3, 7])
 
@@ -40,6 +44,7 @@ def csrank_score(X=None):
 
 def higher_education_score(X=None):
     """
+    Scorer for Times Higher Education data.
     If X is None, return the weights. Otherwise, return the score for each row in X.
     Assumes X is preprocessed.
     """
@@ -59,6 +64,7 @@ def higher_education_score(X=None):
 
 def synthetic_equal_score_3ftrs(X=None):
     """
+    Scorer for synthetic data.
     If X is None, return the weights. Otherwise, return the score for each row in X.
     Assumes X is preprocessed.
     """

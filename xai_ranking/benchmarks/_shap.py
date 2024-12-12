@@ -1,16 +1,48 @@
-# Based on:
-# https://shap.readthedocs.io/en/latest/example_notebooks/tabular_examples/model_agnostic/Census%20income%20classification%20with%20scikit-learn.html
 import numpy as np
 from shap import Explainer
 
 
 def shap_experiment(X, score_function, **kwargs):
+    """
+    Calculates SHAP values.
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which SHAP values are to be computed.
+    score_function : callable
+        A function that takes the input data and returns the corresponding scores.
+    **kwargs : 
+        Additional keyword arguments to be passed to the Explainer.
+
+    Returns
+    -------
+    numpy.ndarray
+        The SHAP values for the input data.
+    """
     explainer = Explainer(score_function, masker=X)
     shap_values = explainer(X)
     return shap_values.values
 
 
 def shap_batch_experiment(X, score_function, random_state=42, **kwargs):
+    """
+    Calculates SHAP values.
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which SHAP values are to be computed.
+    score_function : callable
+        A function that takes the input data and returns the corresponding scores.
+    random_state : int, optional
+        The seed used by the random number generator. Default is 42.
+    **kwargs : 
+        Additional keyword arguments to be passed to the Explainer.
+
+    Returns
+    -------
+    numpy.ndarray
+        The SHAP values for the input data.
+    """
     batch_size = (
         np.ceil(0.1 * len(X)).astype(int)
         if "batch_size" not in kwargs

@@ -25,9 +25,16 @@ def fetch_movers_data(test=False):
     - Gender: 0 -> Male, 1 -> Female
     - Race: 0 -> White, 1 -> Black
 
-    Returns:
-        pd.DataFrame: The fetched moving company data.
+    Parameters
+    ----------
+    test : bool, optional
+        If True, fetches the test set. Otherwise, fetches the training set.
+        Default is False.
 
+    Returns
+    -------
+    pd.DataFrame
+        The processed moving company data.
     """
     split = "test" if test else "train"
     filepath = join(dirname(abspath(__file__)), "files", f"R10_{split}_ranklib.txt")

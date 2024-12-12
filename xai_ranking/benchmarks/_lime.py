@@ -5,7 +5,21 @@ from shap.explainers.other import LimeTabular
 
 def lime_experiment(X, score_function, mode="regression", **kwargs):
     """
-    `mode` can be one of `[classification, regression]`.
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which explanations are to be generated.
+    score_function : callable
+        The function used to score the data.
+    mode : str, default="regression"
+        The mode of the experiment. It can be either "classification" or "regression".
+    **kwargs : dict
+        Additional keyword arguments to be passed to the LIME explainer.
+
+    Returns
+    -------
+    lime_values : array-like
+        The LIME attributions for the input data `X`.
     """
     explainer = LimeTabular(
         score_function,
@@ -20,7 +34,23 @@ def lime_batch_experiment(
     X, score_function, mode="regression", random_state=42, **kwargs
 ):
     """
-    `mode` can be one of `[classification, regression]`.
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The input data for which explanations are to be generated.
+    score_function : callable
+        The function used to score the data.
+    mode : str, default="regression"
+        The mode of the experiment. It can be either "classification" or "regression".
+    random_state : int, optional
+        The seed used by the random number generator. Default is 42.
+    **kwargs : dict
+        Additional keyword arguments to be passed to the LIME explainer.
+
+    Returns
+    -------
+    lime_values : array-like
+        The LIME attributions for the input data `X`.
     """
     batch_size = (
         np.ceil(0.1 * len(X)).astype(int)

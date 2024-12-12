@@ -1,3 +1,25 @@
+"""
+This module provides functions to evaluate the consistency of explanations and outcomes 
+across different methods and samples.
+
+Functions:
+    bootstrapped_explanation_consistency:
+        Computes the mean and standard error of the mean (SEM) of the agreement between
+        a population result and multiple batch results using a specified measure.
+
+    cross_method_explanation_consistency:
+        Computes the mean and SEM of the agreement between two sets of results
+        using a specified measure.
+
+    _row_based_outcome_consistency:
+        Computes the outcome consistency for a specific row of data based on
+        the contributions from two different methods.
+
+    cross_method_outcome_consistency:
+        Computes the mean and SEM of the outcome consistency across all rows of data
+        based on the contributions from two different methods.
+"""
+
 import numpy as np
 from sklearn.utils import check_random_state
 from ._base import _MEASURES
