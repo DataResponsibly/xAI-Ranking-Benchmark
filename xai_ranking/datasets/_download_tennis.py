@@ -81,7 +81,19 @@ def preprocess(df, sheet_name):
     """
     This function replaces redundant characters in column names,
     splits players' rank and names which were in one column in some datasets,
-    and for all column names except `standing_player2` adds dataframe name to them
+    and for all column names except `standing_player2` adds dataframe name to them.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The dataframe to preprocess.
+    sheet_name : str
+        The name of the sheet from which the dataframe was read.
+
+    Returns
+    -------
+    pandas.DataFrame
+        The preprocessed dataframe with cleaned and adjusted column names.
     """
     df.columns = df.columns.str.replace(r"[^a-zA-Z0-9%_ ]", "", regex=True)
     df.columns = df.columns.str.replace(" ", "_")
