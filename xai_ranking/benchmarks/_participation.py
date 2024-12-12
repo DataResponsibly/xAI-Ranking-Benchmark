@@ -22,7 +22,7 @@ def participation_score(X, ranks, top_k=10):
         The ranks of the items.
     top_k : int, optional
         The number of top items to consider. Default is 10.
-    
+
     Returns
     -------
     pandas.Series
@@ -50,7 +50,7 @@ def weighted_participation_score(X, ranks, weights, top_k=10):
         The weights for each item.
     top_k : int, optional
         The number of top items to consider. Default is 10.
-        
+
     Returns
     -------
     pandas.Series
@@ -78,7 +78,7 @@ def participation_experiment(X, score_function, top_k=10, weights=None):
         The number of top items to consider. Default is 10.
     weights : pandas.Series, optional
         The weights for each item. Default is None.
-    
+
     Returns
     -------
     pandas.Series

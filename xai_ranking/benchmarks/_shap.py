@@ -11,7 +11,7 @@ def shap_experiment(X, score_function, **kwargs):
         The input data for which SHAP values are to be computed.
     score_function : callable
         A function that takes the input data and returns the corresponding scores.
-    **kwargs : 
+    **kwargs :
         Additional keyword arguments to be passed to the Explainer.
 
     Returns
@@ -35,7 +35,7 @@ def shap_batch_experiment(X, score_function, random_state=42, **kwargs):
         A function that takes the input data and returns the corresponding scores.
     random_state : int, optional
         The seed used by the random number generator. Default is 42.
-    **kwargs : 
+    **kwargs :
         Additional keyword arguments to be passed to the Explainer.
 
     Returns
