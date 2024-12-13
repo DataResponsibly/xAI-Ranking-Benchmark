@@ -7,7 +7,9 @@ def outcome_fidelity(
 ):
     """
     Calculates the outcome fidelity of contributions to a target, e.g.,
-    how well the explanation matches the model prediction being explained.
+    we can use an explanation to compute the outcome for the
+    item being explained (e.g., its rank), and compare it to the actual
+    observed outcome for that item.
 
     Returns
     -------
