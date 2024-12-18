@@ -2,7 +2,7 @@ from itertools import product, combinations
 import numpy as np
 from scipy.spatial.distance import euclidean
 from sklearn.preprocessing import normalize
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 import pandas as pd
 
 
@@ -210,7 +210,7 @@ def row_wise_kendall(results1, results2):
                 rank[mask] = rank[mask].max()
         ranks.append(rank)
 
-    row_sensitivity = kendall_similarity(*ranks)
+    row_sensitivity = kendall_similarity(ranks[0], ranks[1])
     return row_sensitivity
 
 

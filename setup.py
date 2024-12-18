@@ -33,9 +33,9 @@ CLASSIFIERS = [
     # "Programming Language :: Python :: 3.11",
     # "Programming Language :: Python :: 3.12",
 ]
-INSTALL_REQUIRES = (min_deps.tag_to_packages["metrics"],)
+INSTALL_REQUIRES = (min_deps.tag_to_packages["install"],)
 EXTRAS_REQUIRE = {
-    key: value for key, value in min_deps.tag_to_packages.items() if key != "metrics"
+    key: value for key, value in min_deps.tag_to_packages.items() if key != "install"
 }
 
 setup(

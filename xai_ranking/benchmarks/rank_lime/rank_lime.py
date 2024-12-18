@@ -1,5 +1,5 @@
 import numpy as np
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from scipy.stats import kendalltau
 from functools import partial
 import lime
@@ -77,10 +77,7 @@ class RankingLIME:
         self.individual_masking = individual_masking
         self.use_entry = use_entry
 
-        try:
-            self.explainer = self.get_explainer()
-        except:
-            pass
+        self.explainer = self.get_explainer()
         self.rank_similarity_coefficient = rank_similarity_coefficient
         if not individual_masking:
             self.new_model_predict = partial(

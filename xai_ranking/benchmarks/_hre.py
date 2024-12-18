@@ -7,7 +7,7 @@ Original source code:
 """
 
 import numpy as np
-from sharp.utils import scores_to_ordering
+from xai_ranking.utils import scores_to_ordering
 from .hre import (  # noqa
     feature_importance_DT,
     feature_importance_LR,
