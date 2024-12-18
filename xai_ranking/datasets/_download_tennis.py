@@ -14,13 +14,35 @@ def fetch_atp_data(
     file="3.1_ATP_info.xlsx", sheet_name="Serve 2022", add_heights_weights=False
 ):
     """
-    Loads data into memory.
-
+    Loads ATP data into memory stored by the link in the Notes section. It is possible
+    to load only one file at a time. If the file is an Excel file, the sheet name must be
+    specified.
     Coefficients for "Serve 2022" scoring function were inferred from the data:
     [100, 100, 100, 100, 1, -1]
 
-    See https://zenodo.org/records/10245175 for more info.
+    Parameters
+    ----------
+    file : str, optional
+        The name of the file to load data from. Default is "3.1_ATP_info.xlsx".
+    sheet_name : str, optional
+        The name of the sheet to load data from if the file is an Excel file. Default is "Serve 2022".
+    add_heights_weights : bool, optional
+        If True, additional height and weight information will be added to the data. Default is False.
+    Returns
+    -------
+    pandas.DataFrame
+        A DataFrame containing the loaded data, indexed by player name.
+    Raises
+    ------
+    ValueError
+        If the specified sheet name is not found in the Excel file.
+    TypeError
+        If the file extension is not recognized.
+    Notes
+    -----
+    https://zenodo.org/records/10245175 : link to the data source.
     """
+    
     if file.endswith(".xlsx"):
         xl = pd.ExcelFile(urljoin(BASE_URL, file))
         all_sheets = xl.sheet_names
