@@ -5,6 +5,17 @@ import numpy as np
 def outcome_fidelity(
     contributions, target, avg_target, target_max=1, target_pairs=None, rank=True
 ):
+    """
+    Calculates the outcome fidelity of contributions to a target, e.g.,
+    we can use an explanation to compute the outcome for the
+    item being explained (e.g., its rank), and compare it to the actual
+    observed outcome for that item.
+
+    Returns
+    -------
+    avg_est_err : float
+        The average estimation error.
+    """
     if target_pairs is None:
         if rank:
             avg_est_err = (

@@ -6,6 +6,32 @@ from pathlib import Path
 
 
 def fetch_synthetic_data(synth_dt_version=2, item_num=1000):
+    """
+    Fetches or generates synthetic data based on the specified version and number of items.
+
+    Parameters
+    ----------
+    synth_dt_version : int, optional
+        Version of the synthetic data to generate. Options are:
+        - 0: All features are independent.
+        - 1: Features 1 and 2 are negatively correlated.
+        - 2: (Default) Features 1 and 2 are negatively correlated,
+             Feature 1 and 3 are positively correlated,
+             Features 2 and 3 are negatively correlated.
+
+    item_num : int, optional
+        Number of items (rows) to generate. Default is 1000.
+
+    Returns
+    -------
+    pd.DataFrame
+        A DataFrame containing the synthetic data with columns ["n1", "n2", "n3"].
+
+    Notes
+    -----
+    If the specified synthetic data file already exists, the function reads the data from the file.
+    Otherwise, it generates the data, normalizes it, and saves it to a file.
+    """
     # Feature names
     column_names = ["n1", "n2", "n3"]
 

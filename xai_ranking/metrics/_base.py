@@ -122,6 +122,21 @@ def _get_importance_mask(row_cont, threshold):
 
 # Reviewed
 def jaccard_similarity(a, b):
+    """
+    Calculate the Jaccard similarity between two sets.
+    The Jaccard similarity is defined as the size of the intersection
+    divided by the size of the union of the sets.
+    Parameters
+    ----------
+    a : iterable
+        The first set or iterable.
+    b : iterable
+        The second set or iterable.
+    Returns
+    -------
+    float
+        The Jaccard similarity between the two sets.
+    """
     intersection = len(list(set(a).intersection(b)))
     union = (len(set(a)) + len(set(b))) - intersection
     return float(intersection) / union
@@ -129,6 +144,21 @@ def jaccard_similarity(a, b):
 
 # Reviewed
 def kendall_similarity(a, b):
+    """
+    Compute the Kendall similarity between two rankings.
+    The Kendall similarity is a measure of the correspondence between two rankings.
+    It is derived from the Kendall tau rank correlation coefficient.
+    Parameters
+    ----------
+    a : list
+        The first ranking list.
+    b : list
+        The second ranking list.
+    Returns
+    -------
+    float
+        The Kendall similarity between the two rankings, ranging from 0 to 1.
+    """
     normalizer = (len(a) * (len(a) - 1)) / 2
     idx_pair = list(combinations(range(len(a)), 2))
     val_pair_a = [(a[i], a[j]) for i, j in idx_pair if a[i] != a[j]]
@@ -166,7 +196,6 @@ def row_wise_kendall(results1, results2):
     The row-wise Kendall's similarity measures the similarity
     between two sets of rankings. It takes into account ties and is robust to
     outliers.
-
     """
     results = [results1, results2]
 
@@ -249,6 +278,23 @@ def row_wise_jaccard(results1, results2, n_features):
 
 # Reviewed
 def row_wise_euclidean(results1, results2, normalization=True):
+    """
+    Compute the row-wise Euclidean distance between two result vectors.
+    Parameters
+    ----------
+    results1 : array-like
+        The first result vector.
+    results2 : array-like
+        The second result vector.
+    normalization : bool, optional
+        If True, normalize the vectors to unit vectors before computing
+        the distance (default is True).
+    Returns
+    -------
+    float
+        The Euclidean distance between the two vectors. If normalization is True,
+        the distance is divided by 2.
+    """
     if normalization:
         # Make vectors into unit vectors
         v1 = normalize([results1])[0]

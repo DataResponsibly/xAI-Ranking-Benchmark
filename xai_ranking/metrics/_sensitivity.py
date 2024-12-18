@@ -60,6 +60,40 @@ def row_based_outcome_sensitivity(
     std_multiplier=0.2,
     random_state=None,
 ):
+    """
+    Compute the sensitivity of the outcome based on the row index by
+    comparing it with its neighbors.
+
+    Parameters
+    ----------
+    original_data : array-like of shape (n_samples, n_features)
+        The original dataset.
+    rankings : array-like of shape (n_samples,)
+        The rankings of the samples.
+    original_scores : array-like of shape (n_samples,)
+        The original scores of the samples.
+    score_func : callable
+        The scoring function used to evaluate the outcome.
+    contributions : array-like of shape (n_samples, n_features)
+        The contributions of each feature to the outcome.
+    row_idx : int
+        The index of the row for which the sensitivity is computed.
+    threshold : float, optional, default=0.8
+        The threshold value for the sensitivity computation.
+    n_neighbors : int, optional, default=10
+        The number of neighbors to consider for the sensitivity computation.
+    n_tests : int, optional, default=10
+        The number of tests to perform for the sensitivity computation.
+    std_multiplier : float, optional, default=0.2
+        The multiplier for the standard deviation used in the sensitivity computation.
+    random_state : int, RandomState instance or None, optional, default=None
+        The seed of the pseudo random number generator to use.
+
+    Returns
+    -------
+    float
+        The mean sensitivity score of the outcome for the given row index.
+    """
     rng = check_random_state(random_state)
     # row_cont = np.array(contributions)[row_idx]
 
@@ -102,6 +136,38 @@ def outcome_sensitivity(
     aggregate_results=False,
     random_state=None,
 ):
+    """
+    Evaluate the sensitivity of the outcome to perturbations in the data.
+    
+    Parameters
+    ----------
+    original_data : array-like
+        The original dataset.
+    score_func : callable
+        A function that computes scores for the data.
+    contributions : array-like
+        Contributions of each feature to the score.
+    threshold : float, optional
+        The threshold for determining sensitivity, by default 0.8.
+    n_neighbors : int, optional
+        Number of neighbors to consider for perturbations, by default 10.
+    n_tests : int, optional
+        Number of tests to perform for sensitivity analysis, by default 10.
+    std_multiplier : float, optional
+        Multiplier for the standard deviation in perturbations, by default 0.2.
+    aggregate_results : bool, optional
+        Whether to aggregate results into mean and standard error, by default False.
+    random_state : int or None, optional
+        Seed for random number generator, by default None.
+        
+    Returns
+    -------
+    sensitivities : array-like or tuple
+        If `aggregate_results` is False, returns an array of sensitivities
+        for each data point.
+        If `aggregate_results` is True, returns a tuple containing the mean sensitivity
+        and the standard error.
+    """
     original_scores = score_func(original_data)
     rankings = scores_to_ordering(original_scores)
 
@@ -140,6 +206,41 @@ def row_wise_explanation_sensitivity(
     similar_outcome=True,
     **kwargs,
 ):
+    """
+    Calculate the sensitivity of explanations for a specific row by comparing it
+    to its neighbors.
+    
+    Parameters
+    ----------
+    original_data : array-like
+        The original dataset.
+    contributions : array-like
+        The contributions or explanations for each data point.
+    row_idx : int
+        The index of the row for which to calculate sensitivity.
+    rankings : array-like
+        The rankings of the data points.
+    n_neighbors : int, optional
+        The number of neighbors to consider (default is 10).
+    agg_type : str, optional
+        The type of aggregation to use for the distances ('mean' or 'max', default is 'mean').
+    measure : str, optional
+        The measure to use for calculating distances (default is 'kendall').
+    similar_outcome : bool, optional
+        Whether to consider only neighbors with similar outcomes (default is True).
+    **kwargs : dict
+        Additional keyword arguments to pass to the distance measure function.
+        
+    Returns
+    -------
+    float
+        The aggregated distance between the target row and its neighbors, indicating the sensitivity of the explanation.
+        
+    Raises
+    ------
+    ValueError
+        If an unknown aggregation type is provided.
+    """
     row_cont = np.array(contributions)[row_idx]
 
     # Select close neighbors
@@ -171,6 +272,35 @@ def row_wise_explanation_sensitivity_all_neighbors(
     measure="kendall",
     **kwargs,
 ):
+    """
+    Calculate the sensitivity of row-wise explanations to all neighbors within a threshold.
+    
+    Parameters
+    ----------
+    original_data : array-like
+        The original dataset.
+    contributions : array-like
+        The contributions or explanations for each data point.
+    row_idx : int
+        The index of the row for which to calculate sensitivity.
+    rankings : array-like
+        The rankings of the data points.
+    threshold : float, optional
+        The distance threshold to consider neighbors, by default 0.1.
+    measure : str, optional
+        The measure to use for calculating distance (e.g., "kendall"), by default "kendall".
+    **kwargs : dict
+        Additional keyword arguments to pass to the distance measure function.
+        
+    Returns
+    -------
+    measure_distances : ndarray
+        The distances between the target point's contributions and its neighbors' contributions.
+    rank_differences : ndarray
+        The differences in rankings between the target point and its neighbors.
+    feature_distances : ndarray
+        The distances between the target point's features and its neighbors' features.
+    """
     row_cont = np.array(contributions)[row_idx]
     row_rank = np.array(rankings)[row_idx]
 
@@ -190,8 +320,6 @@ def row_wise_explanation_sensitivity_all_neighbors(
     return measure_distances, row_rank - rank_neighbors, feature_distances
 
 
-# Calculates the explanation sensitivity of every row of original data and its
-# closest neighbors,
 def explanation_sensitivity(
     original_data,
     contributions,
@@ -202,6 +330,33 @@ def explanation_sensitivity(
     similar_outcome=True,
     **kwargs,
 ):
+    """
+    Calculate the sensitivity of explanations for a given dataset.
+    
+    Parameters
+    ----------
+    original_data : array-like
+        The original dataset for which explanations are generated.
+    contributions : array-like
+        The contributions or feature importances for each instance in the dataset.
+    rankings : array-like
+        The rankings of features for each instance in the dataset.
+    n_neighbors : int, optional
+        The number of neighbors to consider for sensitivity calculation, by default 10.
+    agg_type : str, optional
+        The type of aggregation to use for sensitivity calculation, by default "mean".
+    measure : str, optional
+        The measure to use for sensitivity calculation, by default "kendall".
+    similar_outcome : bool, optional
+        Whether to consider only neighbors with similar outcomes, by default True.
+    **kwargs : dict
+        Additional keyword arguments to pass to the row-wise sensitivity function.
+        
+    Returns
+    -------
+    tuple
+        A tuple containing the mean sensitivity and the standard error of the mean sensitivity.
+    """
     sensitivities = np.vectorize(
         lambda row_idx: row_wise_explanation_sensitivity(
             original_data,
@@ -221,6 +376,29 @@ def explanation_sensitivity(
 def explanation_sensitivity_all_neighbors(
     original_data, contributions, rankings, measure="kendall", threshold=0.1, **kwargs
 ):
+    """
+    Calculate the sensitivity of explanations to all neighboring data points.
+
+    Parameters
+    ----------
+    original_data : array-like
+        The original dataset.
+    contributions : array-like
+        The contributions or feature importances for each data point.
+    rankings : array-like
+        The rankings of the features for each data point.
+    measure : str, optional
+        The measure to use for sensitivity calculation. Default is "kendall".
+    threshold : float, optional
+        The threshold value for sensitivity. Default is 0.1.
+    **kwargs : dict
+        Additional keyword arguments to pass to the sensitivity calculation function.
+        
+    Returns
+    -------
+    function
+        A function that calculates row-wise explanation sensitivity for all neighbors.
+    """
     return lambda row_idx: row_wise_explanation_sensitivity_all_neighbors(
         original_data, contributions, row_idx, rankings, threshold, measure, **kwargs
     )
