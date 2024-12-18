@@ -42,7 +42,7 @@ def fetch_atp_data(
     -----
     https://zenodo.org/records/10245175 : link to the data source.
     """
-    
+
     if file.endswith(".xlsx"):
         xl = pd.ExcelFile(urljoin(BASE_URL, file))
         all_sheets = xl.sheet_names

@@ -138,7 +138,7 @@ def outcome_sensitivity(
 ):
     """
     Evaluate the sensitivity of the outcome to perturbations in the data.
-    
+
     Parameters
     ----------
     original_data : array-like
@@ -159,7 +159,7 @@ def outcome_sensitivity(
         Whether to aggregate results into mean and standard error, by default False.
     random_state : int or None, optional
         Seed for random number generator, by default None.
-        
+
     Returns
     -------
     sensitivities : array-like or tuple
@@ -209,7 +209,7 @@ def row_wise_explanation_sensitivity(
     """
     Calculate the sensitivity of explanations for a specific row by comparing it
     to its neighbors.
-    
+
     Parameters
     ----------
     original_data : array-like
@@ -230,12 +230,12 @@ def row_wise_explanation_sensitivity(
         Whether to consider only neighbors with similar outcomes (default is True).
     **kwargs : dict
         Additional keyword arguments to pass to the distance measure function.
-        
+
     Returns
     -------
     float
         The aggregated distance between the target row and its neighbors, indicating the sensitivity of the explanation.
-        
+
     Raises
     ------
     ValueError
@@ -274,7 +274,7 @@ def row_wise_explanation_sensitivity_all_neighbors(
 ):
     """
     Calculate the sensitivity of row-wise explanations to all neighbors within a threshold.
-    
+
     Parameters
     ----------
     original_data : array-like
@@ -291,7 +291,7 @@ def row_wise_explanation_sensitivity_all_neighbors(
         The measure to use for calculating distance (e.g., "kendall"), by default "kendall".
     **kwargs : dict
         Additional keyword arguments to pass to the distance measure function.
-        
+
     Returns
     -------
     measure_distances : ndarray
@@ -332,7 +332,7 @@ def explanation_sensitivity(
 ):
     """
     Calculate the sensitivity of explanations for a given dataset.
-    
+
     Parameters
     ----------
     original_data : array-like
@@ -351,7 +351,7 @@ def explanation_sensitivity(
         Whether to consider only neighbors with similar outcomes, by default True.
     **kwargs : dict
         Additional keyword arguments to pass to the row-wise sensitivity function.
-        
+
     Returns
     -------
     tuple
@@ -393,7 +393,7 @@ def explanation_sensitivity_all_neighbors(
         The threshold value for sensitivity. Default is 0.1.
     **kwargs : dict
         Additional keyword arguments to pass to the sensitivity calculation function.
-        
+
     Returns
     -------
     function
