@@ -8,7 +8,7 @@ from os.path import dirname, abspath, join
 import pandas as pd
 
 
-def fetch_movers_data(test=False):
+def fetch_movers_data(test=False, fair=False):
     """
     Fetches a dataset with fictional info on applications for a moving company
     taken from:
@@ -37,7 +37,12 @@ def fetch_movers_data(test=False):
         The processed moving company data.
     """
     split = "test" if test else "train"
-    filepath = join(dirname(abspath(__file__)), "files", f"R10_{split}_ranklib.txt")
+    filename = (
+        f"fair_res__bias_R10_{split}_ranklib.txt"
+        if fair
+        else f"R10_{split}_ranklib.txt"
+    )
+    filepath = join(dirname(abspath(__file__)), "files", filename)
     df = pd.read_csv(
         filepath,
         delimiter=" ",
