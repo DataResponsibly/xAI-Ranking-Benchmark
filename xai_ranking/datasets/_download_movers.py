@@ -8,7 +8,7 @@ from os.path import dirname, abspath, join
 import pandas as pd
 
 
-def fetch_movers_data(test=False, fair=False):
+def fetch_movers_data(test=False, fair="biased"):
     """
     Fetches a dataset with fictional info on applications for a moving company
     taken from:
@@ -31,17 +31,24 @@ def fetch_movers_data(test=False, fair=False):
         If True, fetches the test set. Otherwise, fetches the training set.
         Default is False.
 
+    fair : str, optional
+        If "fair", fetches the debiased version of the dataset. If "partial", fetches
+        the partially debiased version (gender is debiased, race is not). If "biased",
+        fetches the biased dataset.
+
     Returns
     -------
     pd.DataFrame
         The processed moving company data.
     """
     split = "test" if test else "train"
-    filename = (
-        f"fair_res__bias_R10_{split}_ranklib.txt"
-        if fair
-        else f"R10_{split}_ranklib.txt"
-    )
+    if fair == "biased":
+        f"R10_{split}_ranklib.txt"
+    elif fair == "partial":
+        filename = f"fair_res__bias__R10_{split}_ranklib.txt"
+    elif fair == "fair":
+        filename = f"fair_res__fair_res__R10_{split}_ranklib.txt"
+
     filepath = join(dirname(abspath(__file__)), "files", filename)
     df = pd.read_csv(
         filepath,
