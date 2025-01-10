@@ -43,11 +43,11 @@ def fetch_movers_data(test=False, fair="biased"):
     """
     split = "test" if test else "train"
     if fair == "biased":
-        f"R10_{split}_ranklib.txt"
+        filename = f"R10_{split}_ranklib.txt"
     elif fair == "partial":
-        filename = f"fair_res__bias__R10_{split}_ranklib.txt"
+        filename = f"fair_count__bias__R10_{split}_ranklib.txt"
     elif fair == "fair":
-        filename = f"fair_res__fair_res__R10_{split}_ranklib.txt"
+        filename = f"fair_count__fair_count__R10_{split}_ranklib.txt"
 
     filepath = join(dirname(abspath(__file__)), "files", filename)
     df = pd.read_csv(
